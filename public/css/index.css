@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins';
+}
+
+.flex-container
+{
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    height: 100vh;
+}
+
+.flex-item-left{
+    background: url('../img/TRAINING-TENTANG-SUPPLY-CHAIN-MANAGEMENT.jpg');
+    padding: 10px;
+    flex: 50%;
+    opacity: 0.3;
+}
+
+.flex-item-right{
+    background-color: dodgerblue;
+    padding: 10px;
+    flex: 50%;
+}
+
+.button-bottom {
+    position: relative;
+    top: 2rem;
+}
+
+.btn-primary{
+    position: absolute;
+    bottom: -1rem;
+    right: 1rem;
+}
+
+.btn-danger{
+    position: absolute;
+    bottom: -1rem;
+    right: 6.5rem;
+}
+
+#card {
+    position: relative;
+    top: 6rem;
+    left: 9rem;
+    border-radius: 20px 20px;
+    height: 28rem;
+    width: 28rem;
+    box-shadow: 10px 10px;
+}
+
+.form-email{
+    position: relative;
+    bottom: 8rem;
+    font-size: 25px;
+}
+
+.form-password{
+    position: relative;   
+    bottom: 7rem;
+    font-size: 25px;
+}
+
+.logo_gacoan{
+    position: relative;
+    bottom: 4rem;
+    width: 16rem;
+    height: 15rem;
+    left: 5rem;
+    
+}
+
+.btn-primary{
+    position: relative;
+    bottom: 10rem;
+    left: 20rem;
+}
+
+.btn-danger {
+    position: relative;
+    bottom: 10rem;
+    left: 8.5rem;
+}
+
+@media (max-width: 600px) {
+    .flex-container{
+        flex-direction: column;
+    }
+}
+
+
+
+/* body {
+    background: url('../img/TRAINING-TENTANG-SUPPLY-CHAIN-MANAGEMENT.jpg');
+    background-size: 200vh 60vw;
+    background-repeat: no-repeat;
+    background-color: rgba(200, green, blue, 10.0);
+  }
+
+
+.card{
+    display: flex;
+    position: relative;
+    left: 35%;
+    top: 13vw;
+    bottom: 100%;
+    background-color: rgb(15, 117, 226);
+    z-index: 100;
+    width: 32vw;
+    height: 45vh;
+    border-radius: 15px 15px;
+}
+
+.card-header {
+    color: white;
+}
+
+label{
+    color: white;
+}
+
+footer {
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
+}
+
+label{
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        background: url('../img/TRAINING-TENTANG-SUPPLY-CHAIN-MANAGEMENT.jpg');
+        background-size: 200vh 130vw;
+        background-repeat: no-repeat;
+        background-color: rgba(200, green, blue, 10.0);
+    }
+
+    #card {
+        position: relative;
+        left: 25%;
+        width: 50vw;
+        height: 50vh;
+    }
+} */
