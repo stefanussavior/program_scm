@@ -15,6 +15,7 @@
                 <th>No</th>
                 <th>Nomor PO</th>
                 <th>Supplier</th>
+                <th>Nama Barang</th>
                 <th>Tanggal PO</th>
                 <th>Kode Barang</th>
                 <th>Qty PO Barang</th>  
@@ -64,6 +65,7 @@ $(document).ready(function() {
             { "data": "id" },
             { "data": "nomor_po" },
             { "data" : "pemasok"},
+            {"data" : "nama_barang"},
             { "data": "tanggal_po" },
             { "data": "kode" },
             { "data": "kuantitas" },

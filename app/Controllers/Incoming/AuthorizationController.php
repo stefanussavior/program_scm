@@ -11,19 +11,25 @@ class AuthorizationController extends BaseController
     public function Login() {
         $session = session();
         $userModel = new AuthorizeModel();
-        $email = $this->request->getPost('email');
+        $nik = $this->request->getPost('nik');
         $password = $this->request->getPost('password');
-        $data = $userModel->where('email', $email)->first();
-        if ($data) {
-            $ses_data = [
-                'email' => $data['email'],
-                'password' => $data['password'],
-                'logged_in' => TRUE
-            ];
-            $session->set($ses_data);
-            return redirect()->to(base_url('/dashboard'));
-        } else {
+        $data = $userModel->where('nik', $nik)->first();
+
+        if (!$nik || !$password) {
             return redirect()->to(base_url('/'));
+        } else {
+            if ($data) {
+                $ses_data = [
+                    'nik' => $data['nik'],
+                    'password' => $data['password'],
+                    'nama' => $data['nama'],
+                    'logged_in' => TRUE
+                ];
+                $session->set($ses_data);
+                return redirect()->to(base_url('/dashboard'));
+            } else {
+                return redirect()->to(base_url('/'));
+            }
         }
     }
 

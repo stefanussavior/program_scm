@@ -36,6 +36,8 @@ class FormIdentitasPalletController extends BaseController
         $total_qty = $this->request->getPost('total_qty');
         $max_qty = $this->request->getPost('max_qty');
         $num_paletization = $this->request->getPost('num_paletization');
+        $satuan_berat_array = $this->request->getPost('satuan_berat');
+        $kode_pallet_array = $this->request->getPost('kode_pallet');
         // $seat_number = $this->request->getPost('seat_number');
         // $seat_group = $this->request->getPost('seat_group');
         // $is_reserved = $this->request->getPost('is_reserved');
@@ -47,6 +49,8 @@ class FormIdentitasPalletController extends BaseController
             $gr_id = $GRdata['id'];
         foreach ($nama_barang_array as $key => $nama_barang) {
             $qty_dtg = $qty_dtg_array[$key];
+            $satuan_berat = $satuan_berat_array[$key];
+            $kode_pallet = $kode_pallet_array[$key];
 
             $dataPallet->insert([
                 'gr_id' => $gr_id, 
@@ -57,6 +61,7 @@ class FormIdentitasPalletController extends BaseController
                 'total_qty' => $total_qty,
                 'max_qty' => $max_qty,
                 'num_paletization' => $num_paletization,
+                'satuan_berat' => $satuan_berat,
                 // 'seat_number' => $seat_number,
                 // 'seat_group' => $seat_group,
                 // 'is_reserved' => $is_reserved

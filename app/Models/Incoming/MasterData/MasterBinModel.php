@@ -53,7 +53,7 @@ class MasterBinModel extends Model
 
     public function GetDetailDataSeat($binLocation) {
         return $this->db->table('table_bin')
-        ->select('table_paletization.nomor_gr, table_paletization.nama_barang, table_bin.kode_pallet, table_bin.rack, table_bin.bin_location, table_bin.is_reserved')
+        ->select('table_paletization.nomor_gr, table_paletization.total_qty, table_paletization.nama_barang, table_paletization.satuan_berat, table_bin.kode_pallet, table_bin.rack, table_bin.bin_location, table_bin.is_reserved')
         ->join('table_paletization', 'table_bin.pallet_id = table_paletization.id', 'inner')
         ->where('bin_location',$binLocation)
         ->get()

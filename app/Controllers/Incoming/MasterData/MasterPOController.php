@@ -37,49 +37,65 @@ class MasterPOController extends BaseController
 
     public function getPODetails()
     {
-        // Get the ID of the PO from the AJAX request
         $poId = $this->request->getVar('id');
-
-        // Fetch PO details from the model
         $model = new MasterGRModel();
         $po = $model->find($poId);
 
-        // Check if the PO exists
         if ($po === null) {
-            // Return error response if PO is not found
             return $this->failNotFound('PO not found.');
         }
-
-        // Return the PO details as JSON
         return $this->respond(['data' => $po]);
     }
 
-    public function editPO()
-    {
+    // public function editPO()
+    // {
+    //     $id = $this->request->getPost('id');
+    //     $qty_po = $this->request->getPost('qty_po');
+    //     $qty_dtg = $this->request->getPost('qty_dtg');
+    
+    //     // Check if the PO is now fulfilled
+    //     if ($qty_dtg == $qty_po) {
+    //         $status_gr = 'fulfilled';
+    //     } elseif ($qty_dtg < $qty_po) {
+    //         $status_gr = 'outstanding';
+    //     } elseif ($qty_dtg > $qty_po) {
+    //         $status_gr = "error";
+    //     }
+    
+    //     // Update the PO details and status_gr in the database
+    //     $modelPO = new MasterGRModel();
+    //     $updated = $modelPO->update($id, [
+    //         'qty_po' => $qty_po,
+    //         'status_gr' => $status_gr
+    //     ]);
+    
+    //     if ($updated) {
+    //         // Retrieve the updated PO details from the database
+    //         $updatedPO = $modelPO->find($id);
+    
+    //         // Prepare the updated PO data for JSON response
+    //         $response = [
+    //             'success' => true,
+    //             'data' => $updatedPO // Include the updated PO details
+    //         ];
+    
+    //         return $this->response->setJSON($response);
+    //     } else {
+    //         // Error handling if update fails
+    //         $response = [
+    //             'success' => false,
+    //             'error' => 'Failed to update PO'
+    //         ];
+    
+    //         return $this->response->setJSON($response)->setStatusCode(500);
+    //     }
+    // }
+
+    public function UpdateQtyPO() {
         $id = $this->request->getPost('id');
-        $qty_po = $this->request->getPost('qty_po');
-        $qty_dtg = $this->request->getPost('qty_dtg');
-
-    // Check if the PO is now fulfilled
-    if ($qty_dtg == $qty_po) {
-        $status_gr = 'fullfiled';
-    } elseif ($qty_dtg < $qty_po) {
-        $status_gr = 'outstanding';
-    } elseif ($qty_dtg > $qty_po) {
-        $status_gr = null;
+        $qty_po = $this->request->getPost('qty_po');    
     }
-
-    // Update the PO details and status_gr in the database
-    $modelPO = new MasterGRModel();
-    $modelPO->update($id, [
-        'qty_po' => $qty_po,
-        'status_gr' => $status_gr
-    ]);
-
-    return $this->response->setJSON(['success' => true]);
-    }
-
-
+    
     public function UpdateDataMasterPO() {
         $id = $this->request->getPost('id');
         $qty_dtg = $this->request->getPost('qty_dtg');
@@ -100,6 +116,50 @@ class MasterPOController extends BaseController
     
             echo json_encode(['success' => true, 'message' => 'Data updated successfully']);
         } catch (\Exception $e) {
+            echo json_encode(['success' => false, 'message' => 'Failed to update data: ' . $e->getMessage()]);
+        }
+    }
+
+
+    public function MasterPOCountDetail() {
+        return view('dashboard/master_data/master_total_po');
+    }
+
+    public function tablePODetails() {
+        $dataPODetails = new MasterPOModel();
+        $data =  $dataPODetails->GetCountDetailPO();
+        echo json_encode(['data' => $data]);
+    }
+
+
+
+    public function updateQuantity() {
+        $id = $this->request->getPost('id');
+        $qty_po = $this->request->getPost('qty_po');
+   
+        // Validation: Check if ID and quantity are provided
+        if (!$id || !$qty_po) {
+            echo json_encode(['success' => false, 'message' => 'ID and quantity are required']);
+            return;
+        }
+        // Validasi: Periksa apakah ID dan quantity disediakan
+    if ($id === null || $qty_po === null) {
+        echo json_encode(['status' => 'error', 'message' => 'ID and quantity are required']);
+        return;
+    }
+   
+        // Load your model
+        $model = new MasterPOModel(); // Ganti YourModel dengan nama model yang sesuai
+   
+        // Update data in the database
+        try {
+            // Asumsikan model Anda memiliki metode untuk memperbarui kuantitas berdasarkan ID
+            $model->updateQuantity($id, $qty_po);
+           
+            // Mengirimkan respons JSON
+            echo json_encode(['status' => 'success', 'message' => 'Data updated successfully']);
+        } catch (\Exception $e) {
+            // Menangani kesalahan jika gagal memperbarui data
             echo json_encode(['success' => false, 'message' => 'Failed to update data: ' . $e->getMessage()]);
         }
     }

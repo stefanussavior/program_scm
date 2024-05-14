@@ -42,6 +42,10 @@ $routes->get('/master_barang', [MasterBarangController::class,'MasterBarangView'
 $routes->get('/master_palletization', [MasterPalletizationController::class,'MasterPalletView']);
 $routes->get('/master_upload_po',[MasterPOController::class,'MasterUploadDataPO']);
 
+$routes->get('/master_detail_count_po', [MasterPOController::class,'MasterPOCountDetail']);
+
+
+
 //form get routes
 $routes->get('/form_schedule_incoming',[ScmController::class,'FormScheduleIncoming']);
 $routes->get('/form_good_receive',[FormGRController::class,'FormGoodReceive']);
@@ -90,6 +94,15 @@ $routes->get('/ajax_get_master_supplier', [MasterSupplierController::class,'Cari
 $routes->get('/ajax_get_master_warehouse', [MasterWarehouseController::class, 'CariDataMasterWarehouse']);
 $routes->get('/ajax_get_data_pallet',[MasterPalletizationController::class,'ListDataPallet']);
 
+
+$routes->get('/ajax_master_detail_count_po', [MasterPOController::class,'tablePODetails']);
+
+$routes->post('/fetch_kode_barang', [FormGRController::class,'fetchKodeBarang']);
+$routes->post('/fetch_barang_details', [FormGRController::class, 'fetchBarangDetail']);
+
+$routes->post('/fetch_qty_dtg', [FormGRController::class,'fetchQtyDtg']);
+
+
 //kode otomatis
 $routes->get('/ambil_kode_gr', [FormGRController::class,'BuatKodeGR']);
 $routes->get('/ambil_kode_batch', [FormGRController::class,'BuatKodeBatch']);
@@ -107,3 +120,11 @@ $routes->post('/check_po_fullfiled', [FormGRController::class,'checkPOFulfilled'
 //update data PO status
 $routes->get('/ajax_get_po_details', [MasterPOController::class,'getPODetails']);
 $routes->post('/ajax_edit_po', [MasterPOController::class,'editPO']);
+
+
+//update status GR on status PO
+$routes->post('/update_status_gr', [MasterPOController::class,'updateStatusGR']);
+
+$routes->post('/update_qty_po', [MasterPOController::class,'UpdateQuantity']);
+
+$routes->get('/check_kode_pallet_empty', [MasterPalletizationController::class,'checkKodePalletEmpty']);

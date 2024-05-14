@@ -18,9 +18,9 @@
                 <th>Nama Supplier</th>
                 <th>Kode Barang</th>
                 <th>Nama Barang</th>
-                <th>Satuan</th>
                 <th>Qty PO Barang</th>
                 <th>Qty Terproses</th>
+                <th>Satuan</th>
                 <th>Qty Belum Terproses</th>
                 <th>Status PO</th>
                 <th>Action</th>
@@ -66,10 +66,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
 <script>
-$(document).ready(function() {
-
+$(document).ready(function(){
+        var editModal = $('#editModal');
+        var editForm = $('#editForm');
 
     var table = $('#master-data').DataTable({
+        
         "ajax": "<?= site_url('/ajax_get_master_po'); ?>",
         "columns": [
             { "data": "id" },
@@ -102,57 +104,41 @@ $(document).ready(function() {
             {
                 "data": null,
                 "render": function(data, type, row) {
-                    if (row.status_gr !== 'fulfilled') {
-                        return '<button class="btn btn-primary btn-edit" data-id="' + row.id + '">Edit</button>';
-                    } else {
-                        return ''; // Return empty string if status is fulfilled
-                    }
-                }
+        if (row.status_gr !== 'fulfilled') {
+            return '<button class="btn btn-primary btn-edit" data-id="' + row.id + '">Edit</button>';
+        } else {
+            // Disable the button if status is fulfilled
+            return '';
+        }
+    }
             }
         ]
     });
 
-     // Handle edit button click
-     $('#master-data').on('click', '.btn-edit', function() {
-        var id = $(this).data('id');
-        // Fetch PO details using AJAX and populate the modal
-        $.ajax({
-            url: '<?= site_url('/ajax_get_po_details'); ?>',
-            type: 'GET',
-            data: { id: id },
-            success: function(response) {
-                var po = response.data;
-                $('#editId').val(po.id);
-                $('#editNomorPO').val(po.nomor_po);
-                $('#editQtyPO').val(po.qty_po);
-                // Populate other fields similarly
-                // Show the modal
-                $('#editModal').modal('show');
-            },
-            error: function(xhr, status, error) {
-                console.error(xhr.responseText);
-            }
-        });
-    });
 
-    // Handle form submission for editing
-    $('#editForm').submit(function(e) {
-        e.preventDefault();
-        var formData = $(this).serialize();
-        $.ajax({
-            url: '<?= site_url('/ajax_edit_po'); ?>',
-            type: 'POST',
-            data: formData,
-            success: function(response) {
-                // Refresh the DataTable after successful edit
-                table.ajax.reload(null, false);
-                $('#editModal').modal('hide');
-            },
-            error: function(xhr, status, error) {
-                console.error(xhr.responseText);
-            }
+       // Handle edit button click
+    $('#master-data tbody').on('click', '.btn-edit', function() {
+            var data = table.row($(this).closest('tr')).data();
+            $('#editId').val(data.id);
+            $('#editNomorPO').val(data.nomor_po);
+            $('#editQtyPO').val(data.qty_po);
+            editModal.modal('show');
         });
-    });
+
+        editForm.submit(function(e) {
+            e.preventDefault();
+            var formData = $(this).serialize();
+            $.ajax({
+                type: "POST",
+                url: "<?= site_url('/update_qty_po'); ?>", // Change the URL to your controller method
+                data: formData,
+                success: function(response) {
+                    // Reload DataTable after successful update
+                    table.ajax.reload();
+                    editModal.modal('hide');
+                }
+            });
+        });
 });
 
 </script>
