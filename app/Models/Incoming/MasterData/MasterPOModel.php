@@ -70,6 +70,7 @@ class MasterPOModel extends Model
     public function GetBarangByPO($nomor_po) {
         return $this->select('nama_barang, kuantitas, kode, pemasok, satuan')->where('nomor_po', $nomor_po)->findAll();
     }
+    
     public function updateData($id,$data) 
     {
         return $this->update($id,$data);
@@ -83,8 +84,9 @@ class MasterPOModel extends Model
     public function GetMultiTableData()
     {
         return $this->db->table('table_po')
-        ->select('table_gr.id, table_gr.nama_barang, table_gr.nomor_po, table_gr.supplier, table_gr.qty_po, table_gr.tanggal_po, table_gr.kode, table_gr.qty_dtg, table_gr.status_gr, table_gr.satuan', false)
+        ->select('table_gr.id, table_gr.nama_barang, table_gr.nomor_po, table_gr.supplier, SUM(table_gr.qty_po) AS qty_po, table_gr.tanggal_po, table_gr.kode, SUM(table_gr.qty_dtg) AS qty_dtg, table_gr.status_gr, table_gr.satuan', false)
         ->join('table_gr', 'table_gr.po_id = table_po.id', 'inner')
+        ->groupBy('table_gr.kode')
         ->get()
         ->getResult();
     }
@@ -103,11 +105,43 @@ class MasterPOModel extends Model
         return $this->affectedRows() > 0;
     }
 
-    public function updateQuantity($id, $qty_dtg) {
-        // Assuming 'your_table' is the name of your database table
-        $this->db->table('your_table')
-                 ->where('id', $id)
-                 ->update(['qty_dtg' => $qty_dtg]);
+    public function updateQuantity($id, $qty_po) {
+        $data = [
+            'qty_po' => $qty_po
+        ];
+ 
+        // Update operation
+        $this->db->table('table_gr')
+             ->where('id', $id)
+             ->update($data);
+       
+        // Check if any row is affected
+        return $this->affectedRows() > 0;
+    }
+
+    public function GetCountDetailPO() {
+        return $this->db->table('table_po')
+            ->select('id, nomor_po, SUM(kuantitas) AS kuantitas_count, kode, nama_barang')
+            ->groupBy('kode')
+            ->get()
+            ->getResult();
     }
     
+    public function getKodeBarangPO($nomor_po) {
+        $query =  $this->select('kode')->where('nomor_po',$nomor_po)->get();
+
+        if ($query->getNumRows() > 0) {
+            return $query->getRow()->kode;
+        } else {
+            return '';
+        }
+    }
+
+    public function getKodeBarangByNomorPO($nomor_po) {
+        return $this->where('nomor_po',$nomor_po)->findAll();
+    }
+
+    public function getBarangDetailNomorPO($kode_barang) {
+        return $this->where('kode',$kode_barang)->first();
+    }
 }

@@ -99,7 +99,15 @@ class MasterPaletizationModel extends Model
     }
 
     public function GetDetailBarangPallet($binLocation){
-        return $this->select('nama_barang')->first();
+        return $this->db->table('table_bin')
+            ->select('table_bin.kode_pallet, table_bin.rack, table_bin.bin_location, table_paletization.nama_barang, table_paletization.total_qty, table_paletization.satuan_berat', false)
+            ->join('table_paletization','table_bin.pallet_id = table_bin.id','inner')
+            ->where('bin_location',$binLocation)
+            ->get()
+            ->getResult();
+        // return $this->select('nama_barang')->first();
     }
     
+
+
 }

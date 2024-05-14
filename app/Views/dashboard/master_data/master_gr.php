@@ -14,6 +14,7 @@
     <thead class="thead-dark">
       <tr>
         <th>No</th>
+        <th>Nomor PO</th>
         <th>Tanggal PO</th>
         <th>Nomor GR</th>
         <th>Kode Barang</th>
@@ -23,6 +24,7 @@
         <th>Estimasi Kirim</th>
         <th>Qty PO</th>
         <th>Qty Datang</th>
+        <th>Qty Belum Terproses</th>
         <th>Satuan Berat</th>
         <th>Kode Batch</th>
         <th>Kode PRD </th>
@@ -45,6 +47,7 @@
       "ajax": "<?= site_url('/ajax_get_master_gr'); ?>",
       "columns" : [
         {"data" : "id"},
+        {"data" : "nomor_po"},
         {"data" : "tanggal_po"},
         {"data": "nomor_gr"},
         {"data" : "kode"},
@@ -54,6 +57,7 @@
         {"data": "est_kirim"},
         {"data": "qty_po"},
         {"data": "qty_dtg"},
+        {"data" :  "qty_gr_outstd"},
         {"data": "satuan"},
         {"data": "kode_batch"},
         {"data": "kode_prd"},

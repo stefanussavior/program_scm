@@ -26,6 +26,7 @@ class MasterGRModel extends Model
         'qty_po',
         'qty_dtg',
         'kode_prd',
+        'qty_gr_outstd',
         'kode_batch',
         'exp_date',
         'satuan',
@@ -170,13 +171,34 @@ class MasterGRModel extends Model
         return $this->affectedRows() > 0;
     }
 
-    public function isPOFullFiled($nomor_po) {
-        return $this->where('nomor_po', $nomor_po)
-                    ->where('status_gr', 'fulfilled')
-                    ->countAllResults() > 0;
+   // Model: MasterGRModel.php
+
+public function isPOFullFiled($nomor_po) {
+    // Check if there are any outstanding items for the given PO
+    $outstandingCount = $this->where('nomor_po', $nomor_po)
+                             ->where('status_gr', 'outstanding')
+                             ->countAllResults();
+
+    // Check if there are any fulfilled items for the given PO
+    $fulfilledCount = $this->where('nomor_po', $nomor_po)
+                           ->where('status_gr', 'fulfilled')
+                           ->countAllResults();
+
+    // If there are any outstanding items, return 'outstanding'
+    if ($outstandingCount > 0) {
+        return 'outstanding';
     }
     
+    // If there are any fulfilled items but no outstanding items, return 'fulfilled'
+    if ($fulfilledCount > 0) {
+        return 'fulfilled';
+    }
 
+    // If there are neither outstanding nor fulfilled items, return 'not_fulfilled'
+    return 'not_fulfilled';
+}
+
+    
 
     public function getQuantity($poId)
     {
@@ -196,5 +218,14 @@ class MasterGRModel extends Model
             ->where('po_id', $poId)
             ->set('qty_po', $newQty)
             ->update();
+    }
+
+
+    public function getKodeBarangByNomorPO($nomor_po) {
+        return $this->where('nomor_po',$nomor_po)->findAll();
+    }
+
+    public function getBarangDetailNomorPO($kode_barang) {
+        return $this->where('kode',$kode_barang)->first();
     }
 }

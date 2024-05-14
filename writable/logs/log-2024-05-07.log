@@ -1208,3 +1208,143 @@ WARNING - 2024-05-07 07:51:12 --> [DEPRECATED] substr(): Passing null to paramet
  7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
  9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-07 11:19:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 11:19:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 20:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 20:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-07 20:50:27 --> ErrorException: Undefined variable $qty_dtg
+[Method: POST, Route: ajax_edit_po]
+in APPPATH/Controllers/Incoming/MasterData/MasterPOController.php on line 62.
+ 1 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $qty_dtg', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/MasterData/MasterPOController.php', 62)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->editPO()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-07 20:50:28 --> ErrorException: Undefined variable $qty_dtg
+[Method: POST, Route: ajax_edit_po]
+in APPPATH/Controllers/Incoming/MasterData/MasterPOController.php on line 62.
+ 1 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $qty_dtg', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/MasterData/MasterPOController.php', 62)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->editPO()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-07 20:50:28 --> ErrorException: Undefined variable $qty_dtg
+[Method: POST, Route: ajax_edit_po]
+in APPPATH/Controllers/Incoming/MasterData/MasterPOController.php on line 62.
+ 1 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $qty_dtg', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/MasterData/MasterPOController.php', 62)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->editPO()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-07 20:50:28 --> ErrorException: Undefined variable $qty_dtg
+[Method: POST, Route: ajax_edit_po]
+in APPPATH/Controllers/Incoming/MasterData/MasterPOController.php on line 62.
+ 1 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $qty_dtg', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/MasterData/MasterPOController.php', 62)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->editPO()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-07 20:51:11 --> ErrorException: Undefined variable $qty_dtg
+[Method: POST, Route: ajax_edit_po]
+in APPPATH/Controllers/Incoming/MasterData/MasterPOController.php on line 62.
+ 1 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $qty_dtg', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/MasterData/MasterPOController.php', 62)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->editPO()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-07 20:52:26 --> ErrorException: Undefined variable $qty_dtg
+[Method: POST, Route: ajax_edit_po]
+in APPPATH/Controllers/Incoming/MasterData/MasterPOController.php on line 62.
+ 1 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $qty_dtg', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/MasterData/MasterPOController.php', 62)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->editPO()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-07 20:53:26 --> ErrorException: Undefined variable $qty_dtg
+[Method: POST, Route: ajax_edit_po]
+in APPPATH/Controllers/Incoming/MasterData/MasterPOController.php on line 62.
+ 1 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $qty_dtg', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/MasterData/MasterPOController.php', 62)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->editPO()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+WARNING - 2024-05-07 20:57:45 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 76.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(76): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(132): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisGR()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodeGR()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+WARNING - 2024-05-07 20:57:45 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 93.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(93): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(138): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisKodeBatch()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodeBatch()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+WARNING - 2024-05-07 20:57:45 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 111.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(111): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(144): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisPRD()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodePRD()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-07 21:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 21:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 21:18:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 21:18:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 21:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 21:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 21:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-07 21:31:32 --> ErrorException: Undefined variable $qty_dtg
+[Method: POST, Route: update_status_gr]
+in APPPATH/Controllers/Incoming/MasterData/MasterPOController.php on line 135.
+ 1 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $qty_dtg', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/MasterData/MasterPOController.php', 135)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->updateStatusGR()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-07 22:30:28 --> ErrorException: Undefined variable $qty_dtg
+[Method: POST, Route: ajax_edit_po]
+in APPPATH/Controllers/Incoming/MasterData/MasterPOController.php on line 62.
+ 1 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $qty_dtg', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/MasterData/MasterPOController.php', 62)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->editPO()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')

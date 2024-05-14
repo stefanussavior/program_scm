@@ -1,0 +1,910 @@
+INFO - 2024-05-09 02:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 02:08:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 02:08:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 02:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 06:38:28 --> TypeError: CodeIgniter\Database\BaseBuilder::select(): Argument #2 ($escape) must be of type ?bool, string given, called in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php on line 919
+[Method: GET, Route: ajax_get_seat_data]
+in SYSTEMPATH/Database/BaseBuilder.php on line 397.
+ 1 SYSTEMPATH/Model.php(919): CodeIgniter\Database\BaseBuilder->select('nama_barang', 'total_qty')
+ 2 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(102): CodeIgniter\Model->__call('select', [...])
+ 3 APPPATH/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('1')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-09 06:38:30 --> TypeError: CodeIgniter\Database\BaseBuilder::select(): Argument #2 ($escape) must be of type ?bool, string given, called in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php on line 919
+[Method: GET, Route: ajax_get_seat_data]
+in SYSTEMPATH/Database/BaseBuilder.php on line 397.
+ 1 SYSTEMPATH/Model.php(919): CodeIgniter\Database\BaseBuilder->select('nama_barang', 'total_qty')
+ 2 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(102): CodeIgniter\Model->__call('select', [...])
+ 3 APPPATH/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('1')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-09 06:38:30 --> TypeError: CodeIgniter\Database\BaseBuilder::select(): Argument #2 ($escape) must be of type ?bool, string given, called in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php on line 919
+[Method: GET, Route: ajax_get_seat_data]
+in SYSTEMPATH/Database/BaseBuilder.php on line 397.
+ 1 SYSTEMPATH/Model.php(919): CodeIgniter\Database\BaseBuilder->select('nama_barang', 'total_qty')
+ 2 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(102): CodeIgniter\Model->__call('select', [...])
+ 3 APPPATH/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('1')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-09 06:38:31 --> TypeError: CodeIgniter\Database\BaseBuilder::select(): Argument #2 ($escape) must be of type ?bool, string given, called in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php on line 919
+[Method: GET, Route: ajax_get_seat_data]
+in SYSTEMPATH/Database/BaseBuilder.php on line 397.
+ 1 SYSTEMPATH/Model.php(919): CodeIgniter\Database\BaseBuilder->select('nama_barang', 'total_qty')
+ 2 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(102): CodeIgniter\Model->__call('select', [...])
+ 3 APPPATH/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('2')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-09 06:39:03 --> TypeError: CodeIgniter\Database\BaseBuilder::select(): Argument #2 ($escape) must be of type ?bool, string given, called in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php on line 919
+[Method: GET, Route: ajax_get_seat_data]
+in SYSTEMPATH/Database/BaseBuilder.php on line 397.
+ 1 SYSTEMPATH/Model.php(919): CodeIgniter\Database\BaseBuilder->select('nama_barang', 'total_qty')
+ 2 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(102): CodeIgniter\Model->__call('select', [...])
+ 3 APPPATH/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('1')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-09 06:40:49 --> TypeError: CodeIgniter\Database\BaseBuilder::select(): Argument #2 ($escape) must be of type ?bool, string given, called in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php on line 919
+[Method: GET, Route: ajax_get_seat_data]
+in SYSTEMPATH/Database/BaseBuilder.php on line 397.
+ 1 SYSTEMPATH/Model.php(919): CodeIgniter\Database\BaseBuilder->select('nama_barang', 'total_qty')
+ 2 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(102): CodeIgniter\Model->__call('select', [...])
+ 3 APPPATH/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('1')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-09 06:41:25 --> TypeError: CodeIgniter\Database\BaseBuilder::select(): Argument #2 ($escape) must be of type ?bool, string given, called in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php on line 919
+[Method: GET, Route: ajax_get_seat_data]
+in SYSTEMPATH/Database/BaseBuilder.php on line 397.
+ 1 SYSTEMPATH/Model.php(919): CodeIgniter\Database\BaseBuilder->select('nama_barang', 'total_qty')
+ 2 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(102): CodeIgniter\Model->__call('select', [...])
+ 3 APPPATH/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('1')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 08:26:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 08:26:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 08:26:44 --> ErrorException: Undefined variable $email
+[Method: POST, Route: submit_login]
+in APPPATH/Controllers/Incoming/AuthorizationController.php on line 18.
+ 1 APPPATH/Controllers/Incoming/AuthorizationController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $email', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/AuthorizationController.php', 18)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Login()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 08:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 08:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 08:27:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 08:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 08:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 08:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 08:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 09:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 09:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 09:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 09:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 09:40:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 09:40:34 --> ErrorException: Attempt to read property "nama" on array
+[Method: POST, Route: submit_login]
+in APPPATH/Controllers/Incoming/AuthorizationController.php on line 29.
+ 1 APPPATH/Controllers/Incoming/AuthorizationController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama" on array', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/AuthorizationController.php', 29)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Login()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 09:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 09:41:10 --> Error: Object of type CodeIgniter\Session\Session is not callable
+[Method: POST, Route: submit_login]
+in APPPATH/Controllers/Incoming/AuthorizationController.php on line 28.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Login()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 09:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 09:41:47 --> ErrorException: Attempt to read property "nama" on array
+[Method: POST, Route: submit_login]
+in APPPATH/Controllers/Incoming/AuthorizationController.php on line 28.
+ 1 APPPATH/Controllers/Incoming/AuthorizationController.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama" on array', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/AuthorizationController.php', 28)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Login()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 09:42:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 09:42:28 --> TypeError: CodeIgniter\Database\BaseBuilder::getOperatorFromWhereKey(): Argument #1 ($whereKey) must be of type string, int given, called in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php on line 760
+[Method: POST, Route: submit_login]
+in SYSTEMPATH/Database/BaseBuilder.php on line 3453.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(760): CodeIgniter\Database\BaseBuilder->getOperatorFromWhereKey(0)
+ 2 SYSTEMPATH/Database/BaseBuilder.php(701): CodeIgniter\Database\BaseBuilder->whereHaving('QBWhere', [...], null, 'AND ', true)
+ 3 SYSTEMPATH/Model.php(919): CodeIgniter\Database\BaseBuilder->where([...])
+ 4 APPPATH/Controllers/Incoming/AuthorizationController.php(16): CodeIgniter\Model->__call('where', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Login()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 09:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 09:43:01 --> ErrorException: Attempt to read property "nama" on array
+[Method: POST, Route: submit_login]
+in APPPATH/Controllers/Incoming/AuthorizationController.php on line 29.
+ 1 APPPATH/Controllers/Incoming/AuthorizationController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama" on array', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/AuthorizationController.php', 29)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Login()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 09:43:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 09:43:39 --> ErrorException: Attempt to read property "nama" on array
+[Method: POST, Route: submit_login]
+in APPPATH/Controllers/Incoming/AuthorizationController.php on line 29.
+ 1 APPPATH/Controllers/Incoming/AuthorizationController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama" on array', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/AuthorizationController.php', 29)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Login()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 09:44:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 09:44:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 09:44:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 09:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 09:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 09:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 09:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 09:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 09:45:19 --> ErrorException: Attempt to read property "nama" on array
+[Method: POST, Route: submit_login]
+in APPPATH/Controllers/Incoming/AuthorizationController.php on line 29.
+ 1 APPPATH/Controllers/Incoming/AuthorizationController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama" on array', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/AuthorizationController.php', 29)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Login()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 10:10:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 10:10:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 12:52:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 12:52:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 12:52:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 12:53:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 12:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 12:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 12:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 12:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 12:55:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 12:55:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 12:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 12:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 12:56:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 12:56:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 13:01:12 --> ErrorException: Array to string conversion
+[Method: GET, Route: dashboard]
+in APPPATH/Views/template/navigation_bar.php on line 350.
+ 1 APPPATH/Views/template/navigation_bar.php(350): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php', 350)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(484): CodeIgniter\View\View->render('template/navigation_bar', null, true)
+ 5 APPPATH/Views/dashboard/dashboard.php(1): CodeIgniter\View\View->include('template/navigation_bar')
+ 6 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/dashboard/dashboard.php')
+ 7 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 9 APPPATH/Controllers/Incoming/AuthorizationController.php(43): view('dashboard/dashboard')
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Dashboard()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 13:01:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 13:01:30 --> ErrorException: Array to string conversion
+[Method: GET, Route: dashboard]
+in APPPATH/Views/template/navigation_bar.php on line 350.
+ 1 APPPATH/Views/template/navigation_bar.php(350): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php', 350)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(484): CodeIgniter\View\View->render('template/navigation_bar', null, true)
+ 5 APPPATH/Views/dashboard/dashboard.php(1): CodeIgniter\View\View->include('template/navigation_bar')
+ 6 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/dashboard/dashboard.php')
+ 7 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 9 APPPATH/Controllers/Incoming/AuthorizationController.php(43): view('dashboard/dashboard')
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Dashboard()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 13:01:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 13:01:31 --> ErrorException: Array to string conversion
+[Method: GET, Route: dashboard]
+in APPPATH/Views/template/navigation_bar.php on line 350.
+ 1 APPPATH/Views/template/navigation_bar.php(350): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php', 350)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(484): CodeIgniter\View\View->render('template/navigation_bar', null, true)
+ 5 APPPATH/Views/dashboard/dashboard.php(1): CodeIgniter\View\View->include('template/navigation_bar')
+ 6 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/dashboard/dashboard.php')
+ 7 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 9 APPPATH/Controllers/Incoming/AuthorizationController.php(43): view('dashboard/dashboard')
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Dashboard()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 13:01:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 13:01:31 --> ErrorException: Array to string conversion
+[Method: GET, Route: dashboard]
+in APPPATH/Views/template/navigation_bar.php on line 350.
+ 1 APPPATH/Views/template/navigation_bar.php(350): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php', 350)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(484): CodeIgniter\View\View->render('template/navigation_bar', null, true)
+ 5 APPPATH/Views/dashboard/dashboard.php(1): CodeIgniter\View\View->include('template/navigation_bar')
+ 6 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/dashboard/dashboard.php')
+ 7 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 9 APPPATH/Controllers/Incoming/AuthorizationController.php(43): view('dashboard/dashboard')
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Dashboard()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 13:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 13:03:27 --> ErrorException: Undefined array key "sess_data"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/template/navigation_bar.php on line 350.
+ 1 APPPATH/Views/template/navigation_bar.php(350): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sess_data"', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php', 350)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(484): CodeIgniter\View\View->render('template/navigation_bar', null, true)
+ 5 APPPATH/Views/dashboard/dashboard.php(1): CodeIgniter\View\View->include('template/navigation_bar')
+ 6 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/dashboard/dashboard.php')
+ 7 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 9 APPPATH/Controllers/Incoming/AuthorizationController.php(43): view('dashboard/dashboard')
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Dashboard()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 13:03:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 13:03:38 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/template/navigation_bar.php on line 350.
+ 1 APPPATH/Views/template/navigation_bar.php(350): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php', 350)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(484): CodeIgniter\View\View->render('template/navigation_bar', null, true)
+ 5 APPPATH/Views/dashboard/dashboard.php(1): CodeIgniter\View\View->include('template/navigation_bar')
+ 6 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/dashboard/dashboard.php')
+ 7 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 9 APPPATH/Controllers/Incoming/AuthorizationController.php(43): view('dashboard/dashboard')
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Dashboard()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 13:04:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 13:04:10 --> ErrorException: Array to string conversion
+[Method: GET, Route: dashboard]
+in APPPATH/Views/template/navigation_bar.php on line 350.
+ 1 APPPATH/Views/template/navigation_bar.php(350): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php', 350)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(484): CodeIgniter\View\View->render('template/navigation_bar', null, true)
+ 5 APPPATH/Views/dashboard/dashboard.php(1): CodeIgniter\View\View->include('template/navigation_bar')
+ 6 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/dashboard/dashboard.php')
+ 7 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 9 APPPATH/Controllers/Incoming/AuthorizationController.php(43): view('dashboard/dashboard')
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Dashboard()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 13:04:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 13:04:32 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/template/navigation_bar.php on line 350.
+ 1 APPPATH/Views/template/navigation_bar.php(350): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php', 350)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(484): CodeIgniter\View\View->render('template/navigation_bar', null, true)
+ 5 APPPATH/Views/dashboard/dashboard.php(1): CodeIgniter\View\View->include('template/navigation_bar')
+ 6 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/dashboard/dashboard.php')
+ 7 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 9 APPPATH/Controllers/Incoming/AuthorizationController.php(43): view('dashboard/dashboard')
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Dashboard()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 13:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 13:05:01 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/template/navigation_bar.php on line 350.
+ 1 APPPATH/Views/template/navigation_bar.php(350): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php', 350)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(484): CodeIgniter\View\View->render('template/navigation_bar', null, true)
+ 5 APPPATH/Views/dashboard/dashboard.php(1): CodeIgniter\View\View->include('template/navigation_bar')
+ 6 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/dashboard/dashboard.php')
+ 7 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 9 APPPATH/Controllers/Incoming/AuthorizationController.php(43): view('dashboard/dashboard')
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Dashboard()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 13:09:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 13:09:58 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/template/navigation_bar.php on line 350.
+ 1 APPPATH/Views/template/navigation_bar.php(350): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php', 350)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(484): CodeIgniter\View\View->render('template/navigation_bar', null, true)
+ 5 APPPATH/Views/dashboard/dashboard.php(1): CodeIgniter\View\View->include('template/navigation_bar')
+ 6 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/dashboard/dashboard.php')
+ 7 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 9 APPPATH/Controllers/Incoming/AuthorizationController.php(48): view('dashboard/dashboard')
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Dashboard()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 13:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 13:09:59 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/template/navigation_bar.php on line 350.
+ 1 APPPATH/Views/template/navigation_bar.php(350): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php', 350)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(484): CodeIgniter\View\View->render('template/navigation_bar', null, true)
+ 5 APPPATH/Views/dashboard/dashboard.php(1): CodeIgniter\View\View->include('template/navigation_bar')
+ 6 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/dashboard/dashboard.php')
+ 7 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 9 APPPATH/Controllers/Incoming/AuthorizationController.php(48): view('dashboard/dashboard')
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Dashboard()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 13:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 13:10:15 --> ErrorException: Attempt to read property "password" on array
+[Method: POST, Route: submit_login]
+in APPPATH/Controllers/Incoming/AuthorizationController.php on line 21.
+ 1 APPPATH/Controllers/Incoming/AuthorizationController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "password" on array', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/AuthorizationController.php', 21)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Login()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 13:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 13:10:47 --> TypeError: CodeIgniter\Database\BaseBuilder::getOperatorFromWhereKey(): Argument #1 ($whereKey) must be of type string, int given, called in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php on line 760
+[Method: POST, Route: submit_login]
+in SYSTEMPATH/Database/BaseBuilder.php on line 3453.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(760): CodeIgniter\Database\BaseBuilder->getOperatorFromWhereKey(0)
+ 2 SYSTEMPATH/Database/BaseBuilder.php(701): CodeIgniter\Database\BaseBuilder->whereHaving('QBWhere', [...], null, 'AND ', true)
+ 3 SYSTEMPATH/Model.php(919): CodeIgniter\Database\BaseBuilder->where([...])
+ 4 APPPATH/Controllers/Incoming/AuthorizationController.php(16): CodeIgniter\Model->__call('where', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Login()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 13:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 13:11:24 --> TypeError: CodeIgniter\Database\BaseBuilder::getOperatorFromWhereKey(): Argument #1 ($whereKey) must be of type string, int given, called in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php on line 760
+[Method: POST, Route: submit_login]
+in SYSTEMPATH/Database/BaseBuilder.php on line 3453.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(760): CodeIgniter\Database\BaseBuilder->getOperatorFromWhereKey(0)
+ 2 SYSTEMPATH/Database/BaseBuilder.php(701): CodeIgniter\Database\BaseBuilder->whereHaving('QBWhere', [...], null, 'AND ', true)
+ 3 SYSTEMPATH/Model.php(919): CodeIgniter\Database\BaseBuilder->where([...])
+ 4 APPPATH/Controllers/Incoming/AuthorizationController.php(16): CodeIgniter\Model->__call('where', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Login()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 13:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 13:13:28 --> ErrorException: Attempt to read property "password" on array
+[Method: POST, Route: submit_login]
+in APPPATH/Controllers/Incoming/AuthorizationController.php on line 21.
+ 1 APPPATH/Controllers/Incoming/AuthorizationController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "password" on array', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/AuthorizationController.php', 21)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Login()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 13:15:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:17:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 13:20:04 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/template/navigation_bar.php on line 350.
+ 1 APPPATH/Views/template/navigation_bar.php(350): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php', 350)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(484): CodeIgniter\View\View->render('template/navigation_bar', null, true)
+ 5 APPPATH/Views/dashboard/dashboard.php(1): CodeIgniter\View\View->include('template/navigation_bar')
+ 6 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/dashboard/dashboard.php')
+ 7 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 9 APPPATH/Controllers/Incoming/AuthorizationController.php(42): view('dashboard/dashboard')
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Dashboard()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 13:20:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 13:20:44 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/template/navigation_bar.php on line 350.
+ 1 APPPATH/Views/template/navigation_bar.php(350): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php', 350)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/template/navigation_bar.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(484): CodeIgniter\View\View->render('template/navigation_bar', null, true)
+ 5 APPPATH/Views/dashboard/dashboard.php(1): CodeIgniter\View\View->include('template/navigation_bar')
+ 6 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/dashboard/dashboard.php')
+ 7 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 9 APPPATH/Controllers/Incoming/AuthorizationController.php(43): view('dashboard/dashboard')
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Dashboard()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 13:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 13:20:52 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: dashboard]
+in APPPATH/Views/template/navigation_bar.php on line 350.
+ 1 SYSTEMPATH/View/View.php(234): include()
+ 2 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(484): CodeIgniter\View\View->render('template/navigation_bar', null, true)
+ 4 APPPATH/Views/dashboard/dashboard.php(1): CodeIgniter\View\View->include('template/navigation_bar')
+ 5 SYSTEMPATH/View/View.php(234): include('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Views/dashboard/dashboard.php')
+ 6 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 8 APPPATH/Controllers/Incoming/AuthorizationController.php(43): view('dashboard/dashboard')
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Dashboard()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 13:21:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:21:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:53:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:53:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:54:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:55:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:55:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 13:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:07:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-09 14:07:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paleti...' at line 1 in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php(308): mysqli->query('SELECT `select`...', 0)
+#1 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `select`...')
+#2 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `select`...')
+#3 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `select`...', Array, false)
+#4 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Models/Incoming/MasterData/MasterPaletizationModel.php(106): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('1')
+#6 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+#7 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+#8 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Commands/Server/rewrite.php(49): require_once('/Users/stefanus...')
+#13 {main}
+CRITICAL - 2024-05-09 14:07:44 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paleti...' at line 1
+[Method: GET, Route: ajax_get_seat_data]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `select` `table_bin`.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paletization`.`nama_barang`, `table_paletization`.`total_qty`, `table_paletization`.`satuan_berat`
+FROM `table_bin`
+JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = :bin_location:', [...], false)
+ 2 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(106): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('1')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-09 14:07:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paleti...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `select` `table_bin`.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paletization`.`nama_barang`, `table_paletization`.`total_qty`, `table_paletization`.`satuan_berat`
+FROM `table_bin`
+JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = \'1\'')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `select` `table_bin`.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paletization`.`nama_barang`, `table_paletization`.`total_qty`, `table_paletization`.`satuan_berat`
+FROM `table_bin`
+JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = \'1\'')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `select` `table_bin`.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paletization`.`nama_barang`, `table_paletization`.`total_qty`, `table_paletization`.`satuan_berat`
+FROM `table_bin`
+JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = :bin_location:', [...], false)
+ 4 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(106): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('1')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-09 14:07:44 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paleti...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('SELECT `select` `table_bin`.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paletization`.`nama_barang`, `table_paletization`.`total_qty`, `table_paletization`.`satuan_berat`
+FROM `table_bin`
+JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = \'1\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `select` `table_bin`.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paletization`.`nama_barang`, `table_paletization`.`total_qty`, `table_paletization`.`satuan_berat`
+FROM `table_bin`
+JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = \'1\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `select` `table_bin`.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paletization`.`nama_barang`, `table_paletization`.`total_qty`, `table_paletization`.`satuan_berat`
+FROM `table_bin`
+JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = \'1\'')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `select` `table_bin`.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paletization`.`nama_barang`, `table_paletization`.`total_qty`, `table_paletization`.`satuan_berat`
+FROM `table_bin`
+JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = :bin_location:', [...], false)
+ 5 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(106): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('1')
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 14:08:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-09 14:08:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paleti...' at line 1 in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php(308): mysqli->query('SELECT `select`...', 0)
+#1 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `select`...')
+#2 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `select`...')
+#3 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `select`...', Array, false)
+#4 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Models/Incoming/MasterData/MasterPaletizationModel.php(106): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('1')
+#6 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+#7 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+#8 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Commands/Server/rewrite.php(49): require_once('/Users/stefanus...')
+#13 {main}
+CRITICAL - 2024-05-09 14:08:04 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paleti...' at line 1
+[Method: GET, Route: ajax_get_seat_data]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `select` `table_bin`.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paletization`.`nama_barang`, `table_paletization`.`total_qty`, `table_paletization`.`satuan_berat`
+FROM `table_bin`
+INNER JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = :bin_location:', [...], false)
+ 2 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(106): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('1')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-09 14:08:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paleti...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `select` `table_bin`.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paletization`.`nama_barang`, `table_paletization`.`total_qty`, `table_paletization`.`satuan_berat`
+FROM `table_bin`
+INNER JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = \'1\'')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `select` `table_bin`.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paletization`.`nama_barang`, `table_paletization`.`total_qty`, `table_paletization`.`satuan_berat`
+FROM `table_bin`
+INNER JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = \'1\'')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `select` `table_bin`.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paletization`.`nama_barang`, `table_paletization`.`total_qty`, `table_paletization`.`satuan_berat`
+FROM `table_bin`
+INNER JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = :bin_location:', [...], false)
+ 4 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(106): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('1')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-09 14:08:04 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paleti...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('SELECT `select` `table_bin`.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paletization`.`nama_barang`, `table_paletization`.`total_qty`, `table_paletization`.`satuan_berat`
+FROM `table_bin`
+INNER JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = \'1\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `select` `table_bin`.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paletization`.`nama_barang`, `table_paletization`.`total_qty`, `table_paletization`.`satuan_berat`
+FROM `table_bin`
+INNER JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = \'1\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `select` `table_bin`.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paletization`.`nama_barang`, `table_paletization`.`total_qty`, `table_paletization`.`satuan_berat`
+FROM `table_bin`
+INNER JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = \'1\'')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `select` `table_bin`.`kode_pallet`, `table_bin`.`rack`, `table_bin`.`bin_location`, `table_paletization`.`nama_barang`, `table_paletization`.`total_qty`, `table_paletization`.`satuan_berat`
+FROM `table_bin`
+INNER JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = :bin_location:', [...], false)
+ 5 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(106): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('1')
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 14:08:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-09 14:08:30 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'select table_bin.kode_pallet, table_bin.rack, table_bin.bin_location, table_p...' at line 1 in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php(308): mysqli->query('SELECT select t...', 0)
+#1 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT select t...')
+#2 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT select t...')
+#3 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT select t...', Array, false)
+#4 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Models/Incoming/MasterData/MasterPaletizationModel.php(106): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('1')
+#6 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+#7 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+#8 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Commands/Server/rewrite.php(49): require_once('/Users/stefanus...')
+#13 {main}
+CRITICAL - 2024-05-09 14:08:30 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'select table_bin.kode_pallet, table_bin.rack, table_bin.bin_location, table_p...' at line 1
+[Method: GET, Route: ajax_get_seat_data]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT select table_bin.kode_pallet, table_bin.rack, table_bin.bin_location, table_paletization.nama_barang, table_paletization.total_qty, table_paletization.satuan_berat
+FROM `table_bin`
+INNER JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = :bin_location:', [...], false)
+ 2 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(106): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('1')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-09 14:08:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'select table_bin.kode_pallet, table_bin.rack, table_bin.bin_location, table_p...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT select table_bin.kode_pallet, table_bin.rack, table_bin.bin_location, table_paletization.nama_barang, table_paletization.total_qty, table_paletization.satuan_berat
+FROM `table_bin`
+INNER JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = \'1\'')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT select table_bin.kode_pallet, table_bin.rack, table_bin.bin_location, table_paletization.nama_barang, table_paletization.total_qty, table_paletization.satuan_berat
+FROM `table_bin`
+INNER JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = \'1\'')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT select table_bin.kode_pallet, table_bin.rack, table_bin.bin_location, table_paletization.nama_barang, table_paletization.total_qty, table_paletization.satuan_berat
+FROM `table_bin`
+INNER JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = :bin_location:', [...], false)
+ 4 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(106): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('1')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-09 14:08:30 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'select table_bin.kode_pallet, table_bin.rack, table_bin.bin_location, table_p...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('SELECT select table_bin.kode_pallet, table_bin.rack, table_bin.bin_location, table_paletization.nama_barang, table_paletization.total_qty, table_paletization.satuan_berat
+FROM `table_bin`
+INNER JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = \'1\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT select table_bin.kode_pallet, table_bin.rack, table_bin.bin_location, table_paletization.nama_barang, table_paletization.total_qty, table_paletization.satuan_berat
+FROM `table_bin`
+INNER JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = \'1\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT select table_bin.kode_pallet, table_bin.rack, table_bin.bin_location, table_paletization.nama_barang, table_paletization.total_qty, table_paletization.satuan_berat
+FROM `table_bin`
+INNER JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = \'1\'')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT select table_bin.kode_pallet, table_bin.rack, table_bin.bin_location, table_paletization.nama_barang, table_paletization.total_qty, table_paletization.satuan_berat
+FROM `table_bin`
+INNER JOIN `table_paletization` ON `table_bin`.`pallet_id` = `table_bin`.`id`
+WHERE `bin_location` = :bin_location:', [...], false)
+ 5 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(106): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Incoming/Form/FormBINController.php(116): App\Models\Incoming\MasterData\MasterPaletizationModel->GetDetailBarangPallet('1')
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->GetSeatData()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 14:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:10:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:18:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:18:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:18:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:21:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:21:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:21:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:21:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:21:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:21:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-09 14:25:19 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 70.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(70): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 14:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:25:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:25:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:26:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:26:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:26:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:26:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:27:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 14:28:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:09:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:09:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:12:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:13:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:19:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-09 22:19:37 --> Error: Call to undefined function sessions()
+[Method: GET, Route: dashboard]
+in APPPATH/Views/dashboard/dashboard.php on line 10.
+ 1 SYSTEMPATH/View/View.php(234): include()
+ 2 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 4 APPPATH/Controllers/Incoming/AuthorizationController.php(43): view('dashboard/dashboard')
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\AuthorizationController->Dashboard()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\AuthorizationController))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-09 22:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-09 22:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

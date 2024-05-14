@@ -1,0 +1,334 @@
+INFO - 2024-05-12 10:53:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 10:53:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 10:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-12 10:53:49 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::count()
+[Method: GET, Route: ajax_master_detail_count_po]
+in APPPATH/Models/Incoming/MasterData/MasterPOModel.php on line 116.
+ 1 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(130): App\Models\Incoming\MasterData\MasterPOModel->GetCountDetailPO()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->tablePODetails()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-12 10:53:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 10:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-12 10:53:59 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::count()
+[Method: GET, Route: ajax_master_detail_count_po]
+in APPPATH/Models/Incoming/MasterData/MasterPOModel.php on line 116.
+ 1 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(130): App\Models\Incoming\MasterData\MasterPOModel->GetCountDetailPO()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->tablePODetails()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-12 10:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-12 10:54:35 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::count()
+[Method: GET, Route: ajax_master_detail_count_po]
+in APPPATH/Models/Incoming/MasterData/MasterPOModel.php on line 116.
+ 1 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(130): App\Models\Incoming\MasterData\MasterPOModel->GetCountDetailPO()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->tablePODetails()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-12 10:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-12 10:54:52 --> Error: Call to a member function groupBy() on int
+[Method: GET, Route: ajax_master_detail_count_po]
+in APPPATH/Models/Incoming/MasterData/MasterPOModel.php on line 117.
+ 1 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(130): App\Models\Incoming\MasterData\MasterPOModel->GetCountDetailPO()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->tablePODetails()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-12 10:55:20 --> Error: Call to a member function groupBy() on int
+[Method: GET, Route: ajax_master_detail_count_po]
+in APPPATH/Models/Incoming/MasterData/MasterPOModel.php on line 117.
+ 1 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(130): App\Models\Incoming\MasterData\MasterPOModel->GetCountDetailPO()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->tablePODetails()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-12 10:56:13 --> Error: Call to a member function groupBy() on int
+[Method: GET, Route: ajax_master_detail_count_po]
+in APPPATH/Models/Incoming/MasterData/MasterPOModel.php on line 117.
+ 1 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(130): App\Models\Incoming\MasterData\MasterPOModel->GetCountDetailPO()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->tablePODetails()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-12 10:56:49 --> Error: Call to a member function get() on int
+[Method: GET, Route: ajax_master_detail_count_po]
+in APPPATH/Models/Incoming/MasterData/MasterPOModel.php on line 118.
+ 1 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(130): App\Models\Incoming\MasterData\MasterPOModel->GetCountDetailPO()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->tablePODetails()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-12 10:57:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 10:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 10:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 11:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 11:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 11:04:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 11:08:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 11:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 11:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 11:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:18:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:19:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:26:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:26:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:27:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:27:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:27:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:34:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:34:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:37:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-12 12:41:04 --> mysqli_sql_exception: Unknown column 'table_po.qty_po' in 'field list' in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php(308): mysqli->query('SELECT table_gr...', 0)
+#1 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT table_gr...')
+#2 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT table_gr...')
+#3 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT table_gr...', Array, false)
+#4 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Models/Incoming/MasterData/MasterPOModel.php(89): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/MasterData/MasterPOController.php(26): App\Models\Incoming\MasterData\MasterPOModel->GetMultiTableData()
+#6 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->ListDataPO()
+#7 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+#8 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Commands/Server/rewrite.php(49): require_once('/Users/stefanus...')
+#13 {main}
+CRITICAL - 2024-05-12 12:41:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'table_po.qty_po' in 'field list'
+[Method: GET, Route: ajax_get_master_po]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT table_gr.id, table_gr.nama_barang, table_gr.nomor_po, table_gr.supplier, SUM(table_po.qty_po), table_gr.tanggal_po, table_gr.kode, table_gr.qty_dtg, table_gr.status_gr, table_gr.satuan
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+GROUP BY `table_gr`.`kode`', [], false)
+ 2 APPPATH/Models/Incoming/MasterData/MasterPOModel.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(26): App\Models\Incoming\MasterData\MasterPOModel->GetMultiTableData()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->ListDataPO()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-12 12:41:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'table_po.qty_po' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT table_gr.id, table_gr.nama_barang, table_gr.nomor_po, table_gr.supplier, SUM(table_po.qty_po), table_gr.tanggal_po, table_gr.kode, table_gr.qty_dtg, table_gr.status_gr, table_gr.satuan
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+GROUP BY `table_gr`.`kode`')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT table_gr.id, table_gr.nama_barang, table_gr.nomor_po, table_gr.supplier, SUM(table_po.qty_po), table_gr.tanggal_po, table_gr.kode, table_gr.qty_dtg, table_gr.status_gr, table_gr.satuan
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+GROUP BY `table_gr`.`kode`')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT table_gr.id, table_gr.nama_barang, table_gr.nomor_po, table_gr.supplier, SUM(table_po.qty_po), table_gr.tanggal_po, table_gr.kode, table_gr.qty_dtg, table_gr.status_gr, table_gr.satuan
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+GROUP BY `table_gr`.`kode`', [], false)
+ 4 APPPATH/Models/Incoming/MasterData/MasterPOModel.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(26): App\Models\Incoming\MasterData\MasterPOModel->GetMultiTableData()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->ListDataPO()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-12 12:41:04 --> [Caused by] mysqli_sql_exception: Unknown column 'table_po.qty_po' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('SELECT table_gr.id, table_gr.nama_barang, table_gr.nomor_po, table_gr.supplier, SUM(table_po.qty_po), table_gr.tanggal_po, table_gr.kode, table_gr.qty_dtg, table_gr.status_gr, table_gr.satuan
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+GROUP BY `table_gr`.`kode`', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT table_gr.id, table_gr.nama_barang, table_gr.nomor_po, table_gr.supplier, SUM(table_po.qty_po), table_gr.tanggal_po, table_gr.kode, table_gr.qty_dtg, table_gr.status_gr, table_gr.satuan
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+GROUP BY `table_gr`.`kode`')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT table_gr.id, table_gr.nama_barang, table_gr.nomor_po, table_gr.supplier, SUM(table_po.qty_po), table_gr.tanggal_po, table_gr.kode, table_gr.qty_dtg, table_gr.status_gr, table_gr.satuan
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+GROUP BY `table_gr`.`kode`')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT table_gr.id, table_gr.nama_barang, table_gr.nomor_po, table_gr.supplier, SUM(table_po.qty_po), table_gr.tanggal_po, table_gr.kode, table_gr.qty_dtg, table_gr.status_gr, table_gr.satuan
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+GROUP BY `table_gr`.`kode`', [], false)
+ 5 APPPATH/Models/Incoming/MasterData/MasterPOModel.php(89): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Incoming/MasterData/MasterPOController.php(26): App\Models\Incoming\MasterData\MasterPOModel->GetMultiTableData()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\MasterData\MasterPOController->ListDataPO()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\MasterData\MasterPOController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-12 12:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:42:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:43:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:43:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-12 12:43:55 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 76.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(76): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(132): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisGR()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodeGR()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+WARNING - 2024-05-12 12:43:55 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 93.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(93): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(138): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisKodeBatch()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodeBatch()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+WARNING - 2024-05-12 12:43:55 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 111.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(111): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(144): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisPRD()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodePRD()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-12 12:44:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:47:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:47:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:51:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-12 12:53:59 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 76.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(76): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(132): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisGR()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodeGR()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+WARNING - 2024-05-12 12:53:59 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 93.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(93): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(138): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisKodeBatch()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodeBatch()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+WARNING - 2024-05-12 12:53:59 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 111.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(111): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(144): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisPRD()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodePRD()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-12 12:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-12 12:54:38 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 76.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(76): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(132): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisGR()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodeGR()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+WARNING - 2024-05-12 12:54:38 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 93.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(93): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(138): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisKodeBatch()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodeBatch()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+WARNING - 2024-05-12 12:54:38 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 111.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(111): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(144): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisPRD()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodePRD()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-12 12:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:56:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:56:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:57:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:57:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:57:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:57:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:58:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 12:58:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 13:00:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 13:00:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 13:00:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 13:00:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 13:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 13:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 13:00:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 13:01:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 13:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 13:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

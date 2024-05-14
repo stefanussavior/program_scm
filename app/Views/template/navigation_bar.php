@@ -73,6 +73,8 @@
                         <a class="collapse-item" href="/master_warehouse">Master Warehouse</a>
                         <a class="collapse-item" href="/master_barang">Master Barang</a>
                         <a class="collapse-item" href="/master_palletization">Master Data Pallet</a>
+                        <a class="collapse-item" href="/master_detail_count_po">Master View Count PO</a>
+
                     </div>
                 </div>
             </li>
@@ -347,7 +349,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= session()->get('nama'); ?></span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>

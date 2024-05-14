@@ -58,6 +58,7 @@ class FormGRController extends BaseController
         $nama_barang_array = $this->request->getPost('nama_barang');
         $qty_dtg_array = $this->request->getPost('qty_dtg');
         $satuan_berat_array = $this->request->getPost('satuan');
+        $qty_gr_outstd_array = $this->request->getPost('qty_gr_outstd');
 
          // Fetch the last good receive record
     $lastGoodReceive = $GoodReceive->orderBy('created_at', 'desc')->first();
@@ -70,8 +71,11 @@ class FormGRController extends BaseController
         if ($poData) {
             $po_id = $poData['id'];
 
-        // Iterate through each item's qty_po and qty_dtg
         foreach ($qty_dtg_array as $key => $qty_dtg) {
+
+            if (isset($qty_po_array[$key]) && isset($nama_barang_array[$key]) && isset($kode_batch_array[$key]) && isset($exp_date_array[$key]) &&
+            isset($satuan_berat_array[$key]) && isset($kode_barang_array[$key]) && isset($supplier_array[$key]) && isset($qty_gr_outstd_array[$key])) {
+
             $qty_po = $qty_po_array[$key];
             $nama_barang = $nama_barang_array[$key];
             $kode_batch = $kode_batch_array[$key];
@@ -79,6 +83,11 @@ class FormGRController extends BaseController
             $satuan_berat = $satuan_berat_array[$key];
             $kode_barang = $kode_barang_array[$key];
             $supplier_barang = $supplier_array[$key];
+            $qty_gr_outstd = $qty_gr_outstd_array[$key];
+        } else {
+            log_message('error', 'Missing key at index ' . $key);
+            return redirect()->back()->withInput()->with('error', 'Missing data at index ' . $key);
+        }
     
 
             if ($qty_dtg == $qty_po) {
@@ -109,6 +118,7 @@ class FormGRController extends BaseController
                 'kode_prd' => $kode_prd,
                 'exp_date' => $exp_date,
                 'satuan' => $satuan_berat,
+                'qty_gr_outstd' => $qty_gr_outstd,
                 'status_gr' => $status_gr,
                 'created_at' => date('Y-m-d H:i:s')
                  // Set status_gr based on the conditions
@@ -148,9 +158,39 @@ class FormGRController extends BaseController
     public function checkPOFulfilled() {
         $nomor_po = $this->request->getPost('nomor_po');
         $modelGR = new MasterGRModel();
-        $isFulfilled = $modelGR->isPOFullFiled($nomor_po);
-        $response = array('fulfilled' => $isFulfilled);
+        $status = $modelGR->isPOFullFiled($nomor_po);
+        
+        switch ($status) {
+            case 'outstanding':
+                $message = 'Nomor PO ' . $nomor_po . ' masih outstanding.';
+                break;
+            case 'fulfilled':
+                $message = 'Nomor PO ' . $nomor_po . ' sudah selesai diproses.';
+                break;
+            case 'not_fulfilled':
+                $message = 'Nomor PO ' . $nomor_po . ' belum diproses.';
+                break;
+            default:
+                $message = 'Error occurred while checking PO status.';
+                break;
+        }
+        
+        $response = array('status' => $status, 'message' => $message);
         echo json_encode($response);
     }
-    
+
+    public function fetchKodeBarang()
+    {
+        $nomor_po = $this->request->getPost('nomor_po');
+        $dataPO = new MasterPOModel();
+        $kode_barang_data = $dataPO->getKodeBarangByNomorPO($nomor_po);
+        return $this->response->setJSON($kode_barang_data);
+    }
+
+    public function fetchBarangDetail(){
+        $kode_barang = $this->request->getPost('kode');
+        $dataPO = new MasterGRModel();
+        $data = $dataPO->getBarangDetailNomorPO($kode_barang);
+        return $this->response->setJSON(['data' => $data]);
+    }
 }
