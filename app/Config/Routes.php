@@ -82,6 +82,7 @@ $routes->post('/group_bin_data', [FormBINController::class,'GroupBySeatGroup']);
 $routes->GET('/ajax_get_seat_data', [FormBINController::class,'GetSeatData']);
 $routes->get('/ajax_get_nomor_po_bin', [FormBINController::class,'AjaxDataPOByIDBIN']);
 $routes->get('/ajax_get_upload_data_po',[MasterPOController::class, 'GetAllDataUploadPO']);
+$routes->get('/ajax_get_upload_data_po_no_gr', [MasterPOController::class, 'GetAllDataUploadPONoGR']);
 
 $routes->post('/ajax_update_data_master_po', [MasterPOController::class,'UpdateDataMasterPO']);
 

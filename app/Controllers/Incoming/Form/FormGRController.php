@@ -13,7 +13,6 @@ use App\Models\Incoming\MasterData\MasterGRModel;
 class FormGRController extends BaseController
 {
     public function FormGoodReceive(){
-        $pemasok = $this->request->getGet('pemasok');
         $dataPO = new MasterPOModel();
         $dataWarehouse =  new MasterWarehouseModel();
         $dataSupplier = new MasterSupplierModel();
@@ -28,9 +27,10 @@ class FormGRController extends BaseController
 
     public function AjaxDataPOByID() {
         $nomor_po = $this->request->getGet('nomor_po');
+        $kode = $this->request->getGet('kode');
         $POModel = new MasterPOModel();
-        $data['record'] = $POModel->GetDataByPO($nomor_po);
-        $data['data'] = $POModel->GetBarangByPO($nomor_po);
+        $data['record'] = $POModel->GetDataByPO($nomor_po,$kode);
+        $data['data'] = $POModel->GetBarangByPO($nomor_po,$kode);
         return $this->response->setJSON($data);
     }
 
@@ -38,10 +38,10 @@ class FormGRController extends BaseController
     {
         $GoodReceive = new MasterGRModel();
 
-          // Set timezone to Indonesia
+
     date_default_timezone_set('Asia/Jakarta');
     
-        // Get form data
+
         $kode_barang_array = $this->request->getPost('kode');
         $nomor_po = $this->request->getPost('nomor_po');
         $tanggal_po = $this->request->getVar('tanggal_po');
@@ -74,7 +74,8 @@ class FormGRController extends BaseController
         foreach ($qty_dtg_array as $key => $qty_dtg) {
 
             if (isset($qty_po_array[$key]) && isset($nama_barang_array[$key]) && isset($kode_batch_array[$key]) && isset($exp_date_array[$key]) &&
-            isset($satuan_berat_array[$key]) && isset($kode_barang_array[$key]) && isset($supplier_array[$key]) && isset($qty_gr_outstd_array[$key])) {
+            isset($satuan_berat_array[$key]) && isset($kode_barang_array[$key]) && isset($supplier_array[$key]) && isset($qty_gr_outstd_array[$key])
+            ) {
 
             $qty_po = $qty_po_array[$key];
             $nama_barang = $nama_barang_array[$key];
@@ -98,7 +99,7 @@ class FormGRController extends BaseController
                 $status_gr = 'outstanding';
             }
     
-            // Insert data into the database
+
             $GoodReceive->insert([
                 'po_id' => $po_id,
                 'nomor_po' => $nomor_po,
@@ -124,7 +125,7 @@ class FormGRController extends BaseController
                  // Set status_gr based on the conditions
             ]);
         }
-        return redirect()->to(base_url('master_gr'));
+        return redirect()->to(base_url('master_data_po'));
     } else {
         return redirect()->back()->withInput()->with('error', 'Failed to insert data into table_gr.');
     }
@@ -159,10 +160,17 @@ class FormGRController extends BaseController
         $nomor_po = $this->request->getPost('nomor_po');
         $modelGR = new MasterGRModel();
         $status = $modelGR->isPOFullFiled($nomor_po);
+        $totalQtyPerBarang = $modelGR->GettotalQtyDtgPerBarang();
+        
+        // Convert the array $totalQtyPerBarang to a string
+        $totalQtyString = '';
+        foreach ($totalQtyPerBarang as $qty) {
+            $totalQtyString .= "Kode: {$qty['kode']}, Nama Barang: {$qty['nama_barang']}, Qty: {$qty['qty_total']},  | ";
+        }
         
         switch ($status) {
             case 'outstanding':
-                $message = 'Nomor PO ' . $nomor_po . ' masih outstanding.';
+                $message = 'Nomor PO ' . $nomor_po . ' masih outstanding. saat ini Total Qty yang belum terproses dari masing-masing barang : ' . $totalQtyString . '\nKlik Tambah Form GR untuk menambahkan data barang baru';
                 break;
             case 'fullfiled':
                 $message = 'Nomor PO ' . $nomor_po . ' sudah selesai diproses.';
@@ -194,10 +202,24 @@ class FormGRController extends BaseController
         return $this->response->setJSON(['data' => $data]);
     }
 
-    public function fetchQtyDtg(){
+    public function fetchQtyDtg() {
         $nomor_po = $this->request->getPost('nomor_po');
-        $dataGR = new MasterGRModel();
-        $data = $dataGR->getDataQtyDtg($nomor_po);
-        return $this->response->setJSON($data);
+        $modelGR = new MasterGRModel();
+        $data = $modelGR->getDataQtyDtg($nomor_po);
+    
+        if (!empty($data)) {
+            $response = [
+                'status' => 'success',
+                'qty_dtg' => $data[0]->qty_dtg // Adjust according to your actual data structure
+            ];
+        } else {
+            $response = [
+                'status' => 'error',
+                'message' => 'No data found for the given PO number.'
+            ];
+        }
+    
+        return $this->response->setJSON($response);
     }
+    
 }

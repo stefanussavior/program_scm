@@ -29,7 +29,7 @@ class FormIdentitasPalletController extends BaseController
     public function InputIdentitasPallet() {
         $dataPallet = new MasterPaletizationModel();
 
-        $kode_pallet = $this->request->getPost('kode_pallet');
+        // $kode_pallet = $this->request->getPost('kode_pallet');
         $nomor_gr = $this->request->getPost('nomor_gr');
         $nama_barang_array = $this->request->getPost('nama_barang');
         $qty_dtg_array = $this->request->getPost('qty_dtg');

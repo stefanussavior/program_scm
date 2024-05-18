@@ -20,6 +20,8 @@
                 <th>Kode Barang</th>
                 <th>Qty PO Barang</th>  
                 <th>Satuan Barang</th>
+                <th>Status PO</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -28,52 +30,65 @@
 </div>
 
 <!-- Edit Modal -->
-<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="editModalLabel">Edit Data PO</h5>
+                <h5 class="modal-title" id="editModalLabel">Edit PO Details</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form id="editForm">
-                <div class="modal-body">
-                    <input type="hidden" name="id" id="editId">
+            <div class="modal-body">
+                <!-- Form for editing PO details -->
+                <!-- You can customize this form based on your requirements -->
+                <form id="editForm">
+                    <input type="hidden" id="editId" name="id">
                     <div class="form-group">
-                        <label for="qty_terproses">Qty Terproses:</label>
-                        <input type="text" class="form-control" id="qty_dtg" name="qty_dtg">
+                        <label for="editNomorPO">Nomor PO : </label>
+                        <input type="text" class="form-control" id="editNomorPO" name="nomor_po" readonly>
+                        <label for="editQtyPO">Edit Qty PO : </label>
+                        <input type="number" class="form-control" name="qty_po" id="editQtyPO">
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save Changes</button>
-                </div>
-            </form>
+                    <!-- Add other fields here -->
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
 <script>
 $(document).ready(function() {
     var table = $('#master-data').DataTable({
-        "ajax": "<?= site_url('/ajax_get_upload_data_po'); ?>",
+        "ajax": "<?= site_url('/ajax_get_upload_data_po_no_gr'); ?>",
         "columns": [
             { "data": "id" },
             { "data": "nomor_po" },
-            { "data" : "pemasok"},
+            { "data" : "supplier"},
             {"data" : "nama_barang"},
             { "data": "tanggal_po" },
             { "data": "kode" },
-            { "data": "kuantitas" },
+            { "data": "qty_po" },
             { "data" : "satuan"},
-        ]
+            {"data" : "status_po"},
+            {
+                "data": null,
+                "render" :  function(data, type, row) {
+                    if (row.status_po != 'fullfiled') {
+                        return '<button class="btn btn-primary btn-edit" data-id="' + row.id + '">Edit</button>';
+                    } else {
+                        return '';
+                    }
+                }
+            } 
+        ],
+        "createdRow": function(row, data, dataIndex) {
+            $('td', row).eq(0).html(dataIndex + 1);
+        }
     });
-
-    // Rest of your code remains unchanged
 });
 
 </script>

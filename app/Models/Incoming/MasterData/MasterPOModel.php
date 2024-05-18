@@ -14,7 +14,7 @@ class MasterPOModel extends Model
     protected $protectFields    = true;
     protected $allowedFields    = [
         'id',
-        'pemasok',
+        'supplier',
         'nomor_po',
         'tanggal_po',
         'keterangan_po',
@@ -22,7 +22,7 @@ class MasterPOModel extends Model
         'kode',
         'nama_barang',
         'catatan',
-        'kuantitas',
+        'qty_po',
         'qty_terproses',
         'qty_belum_terp',
         'satuan'
@@ -67,8 +67,33 @@ class MasterPOModel extends Model
         return $this->select('*')->where('nomor_po',$nomor_po)->first();
     }
     
-    public function GetBarangByPO($nomor_po) {
-        return $this->select('nama_barang, kuantitas, kode, pemasok, satuan')->where('nomor_po', $nomor_po)->findAll();
+    public function GetBarangByPO($nomor_po,$kode) {
+        $hasStatusGr = $this->db->table('table_gr')
+                            ->select('status_gr')
+                            ->where('nomor_po', $nomor_po)
+                            ->where('kode',$kode)
+                            ->where('status_gr IS NOT NULL', null, false)
+                            ->countAllResults();
+
+    if ($hasStatusGr > 0) {
+        // If there are records with a non-null status_gr, run the original query
+        return $this->db->table('table_po') // primary table
+            ->select('table_gr.id, table_gr.nama_barang, table_gr.nomor_po, table_gr.supplier, SUM(table_gr.qty_po) AS qty_po, table_gr.tanggal_po, table_gr.kode, SUM(table_gr.qty_dtg) AS qty_dtg, table_gr.status_gr, table_gr.satuan', false)
+            ->where('table_gr.nomor_po', $nomor_po)
+            ->where('kode',$kode)
+            ->join('table_gr', 'table_gr.po_id = table_po.id', 'inner') // joining with table_gr
+            ->groupBy('table_gr.kode')
+            ->get()
+            ->getResult();
+    } else {
+        // If all status_gr are null, run the alternative query
+        return $this->db->table('table_po')
+            ->select('nama_barang, qty_po, kode, supplier, satuan')
+            ->where('nomor_po', $nomor_po)
+            ->get()
+            ->getResult();
+        }
+
     }
     
     public function updateData($id,$data) 
@@ -101,23 +126,17 @@ class MasterPOModel extends Model
              ->where('id', $id)
              ->update($data);
         
-        // Check if any row is affected
         return $this->affectedRows() > 0;
     }
 
-    public function updateQuantity($id, $qty_po) {
-        $data = [
-            'qty_po' => $qty_po
-        ];
- 
-        // Update operation
+    public function updateQuantity($kode, $qty_po) {
         $this->db->table('table_gr')
-             ->where('id', $id)
-             ->update($data);
-       
-        // Check if any row is affected
-        return $this->affectedRows() > 0;
+            ->where('kode', $kode)
+            ->set('qty_po', 'qty_po + ' . $qty_po, false) 
+            ->update();
+        return $this->db->affectedRows() > 0;
     }
+    
 
     public function GetCountDetailPO() {
         return $this->db->table('table_po')
@@ -143,5 +162,13 @@ class MasterPOModel extends Model
 
     public function getBarangDetailNomorPO($kode_barang) {
         return $this->where('kode',$kode_barang)->first();
+    }
+
+    public function GetDataPONoGR(){
+        return $this->db->table('table_po')
+        ->select('table_po.*, table_gr.status_gr as status_po', false)
+        ->join('table_gr', 'table_gr.po_id = table_po.id', 'inner')
+        ->get()
+        ->getResult();
     }
 }

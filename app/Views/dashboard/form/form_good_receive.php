@@ -61,7 +61,7 @@
         <div id="barang_container">
         </div>
         <br>
-        <button type="button" id="add_field" class="btn btn-success">Add Field</button>
+        <button type="button" id="add_field" class="btn btn-success">Tambah data Form GR Barang</button>
     </div>
 </div>
 
@@ -164,51 +164,54 @@
     });
 
     function checkPOStatus(nomor_po) {
-        $.ajax({
-            url: '/check_po_fullfiled', // Update the URL as needed
-            method: 'POST',
-            data: { nomor_po: nomor_po },
-            dataType: 'json',
-            success: function (response) {
-                // Check the status returned from the server
-                switch (response.status) {
-                    case 'outstanding':
-                        alert(response.message);
-                        $('input[name^="qty_dtg"]').prop('readonly', true);
-                        $('input[name^="exp_date"]').prop('readonly', true);
-                        $('input[name^="kode_batch"]').prop('readonly', true);
-                        $.ajax({
-                            url: '/fetch_qty_dtg', // Update the URL as needed
-                            method: 'POST',
-                            data: { nomor_po: nomor_po },
-                            dataType: 'json',
-                            success: function (qtyDtGResponse) {
-                                // Populate qty_dtg field with fetched data
-                                $('input[name^="qty_dtg"]').val(qtyDtGResponse.qty_dtg);
-                                $('input[name^="exp_date"]').val(qtyDtGResponse.exp_date);
-                                $('input[name^="kode_batch"]').val(qtyDtGResponse.kode_batch);
-                            },
-                error: function () {
-                    alert('Error fetching qty_dtg data.');
-                }
-            });
-                        break;
-                    case 'fullfiled':
-                        alert(response.message); // Display an alert for fulfilled PO
-                        break;
-                    case 'not_fulfilled':
-                        alert(response.message); // Display an alert for not fulfilled PO
-                        break;
-                    default:
-                        alert('Error occurred while checking PO status.'); // Display an error alert
-                        break;
-                }
-            },
-            error: function () {
-                alert('Error occurred while checking PO status.'); // Display an error alert
+    $.ajax({
+        url: '/check_po_fullfiled', // Update the URL as needed
+        method: 'POST',
+        data: { nomor_po: nomor_po },
+        dataType: 'json',
+        success: function (response) {
+            // Check the status returned from the server
+            switch (response.status) {
+                case 'outstanding':
+                    alert(response.message);
+                    $('input[name^="qty_dtg"]').val(0).prop('readonly', true); // Clear the value and make it readonly
+                    $('input[name^="kode_batch"]').val(0).prop('readonly', true); // Clear the value and make it readonly
+                    $('input[name^="qty_gr_outstd"]').val(0).prop('readonly', true);
+                    $('#barang_container').empty();
+                    $.ajax({
+                        url: '/fetch_qty_dtg', // Update the URL as needed
+                        method: 'POST',
+                        data: { nomor_po: nomor_po },
+                        dataType: 'json',
+                        success: function (qtyDtGResponse) {
+                            // Populate qty_dtg field with fetched data
+                            // $('input[name^="qty_dtg"]').val(qtyDtGResponse.qty_dtg);
+                        },
+                        error: function () {
+                            alert('Error fetching qty_dtg data.');
+                        }
+                    });
+                    break;
+                case 'fullfiled':
+                    alert(response.message); // Display an alert for fulfilled PO
+                    $('input[name^="qty_dtg"]').prop('readonly', false); // Ensure it is editable if needed
+                    break;
+                case 'not_fulfilled':
+                    alert(response.message); // Display an alert for not fulfilled PO
+                    $('input[name^="qty_dtg"]').prop('readonly', false); // Ensure it is editable if needed
+                
+                    break;
+                default:
+                    alert('Error occurred while checking PO status.'); // Display an error alert
+                    break;
             }
-        });
-    }
+        },
+        error: function () {
+            alert('Error occurred while checking PO status.'); // Display an error alert
+        }
+    });
+}
+
 
 
     $(add_button).click(function (e) {
@@ -216,6 +219,9 @@
         if (x < max_fields) {
             x++;
             var fieldHtml = `
+            <br>
+            <h3> Form tambahan untuk GR </h3>
+            <br>
                 <div class="row mb-2">
                     <div class="col-sm-3">
                         <label>Kode Barang ${x} : </label>
@@ -225,35 +231,29 @@
                     </div>
                     <div class="col-sm-3">
                         <label>Supplier Barang ${x} : </label>
-                        <input type="text" class="form-control" name="pemasok[]" readonly>
+                        <input type="text" class="form-control" name="supplier[]" readonly>
                     </div>
                     <div class="col-sm-3">
                         <label>Nama Barang ${x} : </label>
                         <input type="text" class="form-control" name="nama_barang[]" readonly>
                     </div>
-                    <div class="col-sm-3">
-                        <label>Qty PO Barang ${x} : </label>
-                        <input type="text" class="form-control" name="qty_po[]" readonly>
-                    </div>
+                        <input type="hidden" class="form-control" name="qty_po[]" value="NULL" readonly>
+                        <input type="hidden" class="form-control" name="qty_gr_outstd[]" value="NULL" readonly>
                     <div class="col-sm-3">
                         <label>Kode Batch ${x} : </label>
                         <input type="text" class="form-control" name="kode_batch[]" >
-                    </div>
-                    <div class="col-sm-3">
-                        <label>Qty GR Outstanding ${x} : </label>
-                        <input type="text" class="form-control" name="qty_gr_outstd[]"readonly>
                     </div>
                     <div class="col-sm-3">
                         <label>Qty Barang Datang ${x} : </label>
                         <input type="number" class="form-control" name="qty_dtg[]">
                     </div>
                     <div class="col-sm-3">
-                        <label>Expired Date Barang ${x} : </label>
-                        <input type="date" class="form-control" name="exp_date[]">
+                    <label>Satuan Berat ${x} : </label>
+                    <input type="text" class="form-control" name="satuan[]" readonly>
                     </div>
                     <div class="col-sm-3">
-                        <label>Satuan Berat ${x} : </label>
-                        <input type="text" class="form-control" name="satuan[]" readonly>
+                        <label>Expired Date Barang ${x} : </label>
+                        <input type="date" class="form-control" name="exp_date[]">
                     </div>
                     <div class="col-sm-3">
                         <button type="button" class="remove_field btn btn-danger mt-4">Remove Field</button>
@@ -295,11 +295,11 @@
 
     $(document).on("change", ".kode_append", function () {
             var kodeBarang = $(this).val();
-            var supplierInput = $(this).closest('.row').find('input[name="pemasok[]"]');
+            var supplierInput = $(this).closest('.row').find('input[name="supplier[]"]');
             var namaBarangInput = $(this).closest('.row').find('input[name="nama_barang[]"]');
-            var qtyPOInput = $(this).closest('.row').find('input[name="qty_po[]"]');
+            // var qtyPOInput = $(this).closest('.row').find('input[name="qty_po[]"]');
             var kodeBatchInput = $(this).closest('.row').find('input[name="kode_batch[]"]');
-            var qtyOutstandingInpiut = $(this).closest('.row').find('input[name="qty_gr_outstd[]"]'); 
+            // var qtyOutstandingInpiut = $(this).closest('.row').find('input[name="qty_gr_outstd[]"]'); 
             var qtyDTGInput = $(this).closest('.row').find('input[name="qty_dtg[]"]');
             // var expInput = $(this).closest('.row').find('input[name="exp_date[]"]');
             var satuanInput = $(this).closest('.row').find('input[name="satuan[]"]');
@@ -349,6 +349,7 @@
                 $(wrapper).empty();
                 // Populate fields with data related to nomor_po
                 $.each(response.data, function (index, row) {
+                    
                     var fieldHtml = '<div class="row">';
                     var kodeBarangInput = '<div class="col-sm-6"><label>Kode Barang ' + (index + 1) + ' : </label><input type="text" name="kode[]" id="kode" class="form-control" value="' + row.kode + '" readonly></div>';
                     fieldHtml += kodeBarangInput;
@@ -382,11 +383,16 @@
                     // Clear existing options
                     $(wrapper).empty();
                     // Populate nama_barang, qty_po, and qty_dtg fields with all data related to nomor_po
+                    if (response.record.status == 'outstanding') {
+                        return;
+                    }
+
+
                     $.each(response.data, function (index, row) {
                         var fieldHtml = '<div class="row">';
                         var kodeBarangInput = '<div class="col-sm-6"><label>Kode Barang ' + (index + 1) + ' : </label><input type="text" name="kode[]" id="kode_' + (index + 1) + '" class="form-control" value="' + row.kode + '" readonly></div>';
                         fieldHtml += kodeBarangInput;
-                        var PemasokInput = '<div class="col-sm-6"><label>Supplier Barang ' + (index + 1) + ' : </label><input type="text" name="supplier[]" id="supplier_' + (index + 1) + '" class="form-control" value="' + row.pemasok + '" readonly></div>';
+                        var PemasokInput = '<div class="col-sm-6"><label>Supplier Barang ' + (index + 1) + ' : </label><input type="text" name="supplier[]" id="supplier_' + (index + 1) + '" class="form-control" value="' + row.supplier + '" readonly></div>';
                         fieldHtml += PemasokInput;
                         fieldHtml += '</div>';
                         $('#barang_container').append(fieldHtml);
@@ -394,7 +400,7 @@
                         fieldHtml = '<div class="row">';
                         var namaBarangInput = '<div class="col-sm-6"><label>Nama Barang ' + (index + 1) + ' : </label><input name="nama_barang[]" id="nama_barang_' + (index + 1) + '" class="form-control" value="' + row.nama_barang + '" readonly></div>';
                         fieldHtml += namaBarangInput;
-                        var qtyPoInput = '<div class="col-sm-6"><label>Qty PO ' + (index + 1) + ': </label><input type="number" name="qty_po[]" id="qty_po_' + (index + 1) + '" class="form-control" value="' + row.kuantitas + '" readonly></div>';
+                        var qtyPoInput = '<div class="col-sm-6"><label>Qty PO ' + (index + 1) + ': </label><input type="number" name="qty_po[]" id="qty_po_' + (index + 1) + '" class="form-control" value="' + row.qty_po + '" readonly></div>';
                         fieldHtml += qtyPoInput;
                         fieldHtml += '</div>';
                         $('#barang_container').append(fieldHtml);
@@ -424,7 +430,7 @@
                         var qty_dtg_input = $('#qty_dtg_' + (index + 1));
                         qty_dtg_input.on('keyup', function () {
                             var qty_dtg = $(this).val();
-                            var qty_po = parseInt(row.kuantitas); // Convert qty_po to a number
+                            var qty_po = parseInt(row.kuantitas); 
 
                             // // Remove existing alert if any
                             // $(this).closest('div').find('.alert').remove();

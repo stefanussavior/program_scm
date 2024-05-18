@@ -144,7 +144,7 @@ class MasterGRModel extends Model
     }
 
     public function GetBarangAjaxGRID($nomor_gr) {
-        return $this->where('nomor_gr',$nomor_gr)->findAll();
+        return $this->where('nomor_gr',$nomor_gr)->groupBy('kode')->findAll();
     }
 
     public function GetDataMasterGR($tanggal_awal, $tanggal_akhir) {
@@ -233,7 +233,28 @@ public function isPOFullFiled($nomor_po) {
         return $this->where('kode',$kode_barang)->first();
     }
 
-    public function getDataQtyDtg($nomor_po){
-        return $this->where('nomor_po', $nomor_po)->first();
+    public function getDataQtyDtg($nomor_po) {
+        return $this->db->table('table_gr') // primary table
+            ->select('table_gr.id, table_gr.nama_barang, table_gr.nomor_po, table_gr.supplier, SUM(table_gr.qty_po) AS qty_po, table_gr.tanggal_po, table_gr.kode, SUM(table_gr.qty_dtg) AS qty_dtg, table_gr.status_gr, table_gr.satuan', false)
+            ->where('table_gr.nomor_po', $nomor_po)
+            ->join('table_po', 'table_po.id = table_gr.po_id', 'inner') // joining with table_po
+            ->groupBy('table_gr.kode')
+            ->get()
+            ->getResult();
     }
+    
+
+
+    public function GetDataByPO($nomor_po) {
+        return $this->where('nomor_po',$nomor_po)->findAll();
+    }
+
+    public function GetBarangByPO($kode_barang) {
+        return $this->where('kode',$kode_barang)->findAll();
+    }
+
+    public function GettotalQtyDtgPerBarang(){
+        return $this->select("kode, nama_barang, (SUM(qty_po) - SUM(qty_dtg)) AS qty_total")->groupBy('kode')->get()->getResultArray();
+    }
+    
 }

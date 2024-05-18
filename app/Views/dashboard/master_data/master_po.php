@@ -66,12 +66,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
 <script>
-$(document).ready(function(){
-        var editModal = $('#editModal');
-        var editForm = $('#editForm');
+  $(document).ready(function(){
+    var editModal = $('#editModal');
+    var editForm = $('#editForm');
 
     var table = $('#master-data').DataTable({
-        
         "ajax": "<?= site_url('/ajax_get_master_po'); ?>",
         "columns": [
             { "data": "id" },
@@ -87,58 +86,61 @@ $(document).ready(function(){
                 "data": null,
                 "render": function(data, type, row) {
                     var qtyBelumTerproses = row.qty_po - row.qty_dtg;
+                    if (qtyBelumTerproses === 0) {
+                        row.status_gr = 'fulfilled';
+                    } else {
+                        row.status_gr = 'outstanding';
+                    }
                     return qtyBelumTerproses;
                 }
             },
             {
-                "data": "status_gr",
-                "render": function(data, type, row) {
-                    // Check if qty_po equals qty_dtg
-                    if (row.qty_po === row.qty_dtg) {
-                        return 'fulfilled'; // Update status to "fulfilled"
-                    } else {
-                        return data; // Keep the original status
-                    }
-                }
+                "data": "status_gr"
             },
             {
                 "data": null,
                 "render": function(data, type, row) {
-        if (row.status_gr !== 'fulfilled') {
-            return '<button class="btn btn-primary btn-edit" data-id="' + row.id + '">Edit</button>';
-        } else {
-            // Disable the button if status is fulfilled
-            return '';
-        }
-    }
+                    if (row.status_gr !== 'fulfilled') {
+                        return '<button class="btn btn-primary btn-edit" data-id="' + row.id + '">Edit</button>';
+                    } else {
+                        return '';
+                    }
+                }
             }
         ]
     });
 
-
-       // Handle edit button click
+    // Handle edit button click
     $('#master-data tbody').on('click', '.btn-edit', function() {
-            var data = table.row($(this).closest('tr')).data();
-            $('#editId').val(data.id);
-            $('#editNomorPO').val(data.nomor_po);
-            $('#editQtyPO').val(data.qty_po);
-            editModal.modal('show');
-        });
+        var data = table.row($(this).closest('tr')).data();
+        $('#editId').val(data.id);
+        $('#editNomorPO').val(data.nomor_po);
+        $('#editQtyPO').val(data.qty_po);
+        editModal.modal('show');
+    });
 
-        editForm.submit(function(e) {
-            e.preventDefault();
-            var formData = $(this).serialize();
-            $.ajax({
-                type: "POST",
-                url: "<?= site_url('/update_qty_po'); ?>", // Change the URL to your controller method
-                data: formData,
-                success: function(response) {
-                    // Reload DataTable after successful update
-                    table.ajax.reload();
-                    editModal.modal('hide');
-                }
-            });
+    editForm.submit(function(e) {
+        e.preventDefault();
+        var qty_po = parseInt($('#editQtyPO').val());
+        var qty_dtg = parseInt($('#editQtyPO').val());
+        
+        if (qty_dtg > qty_po) {
+            alert('Qty Terproses cannot be greater than Qty PO');
+            return; // Prevent form submission
+        }
+        
+        var formData = $(this).serialize();
+        $.ajax({
+            type: "POST",
+            url: "<?= site_url('/update_qty_po'); ?>", // Change the URL to your controller method
+            data: formData,
+            success: function(response) {
+                // Reload DataTable after successful update
+                table.ajax.reload();
+                editModal.modal('hide');
+            }
         });
+    });
 });
 
 </script>

@@ -51,16 +51,21 @@ class MasterBinModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
+
     public function GetDetailDataSeat($binLocation) {
         return $this->db->table('table_bin')
-        ->select('table_paletization.nomor_gr, table_paletization.total_qty, table_paletization.nama_barang, table_paletization.satuan_berat, table_bin.kode_pallet, table_bin.rack, table_bin.bin_location, table_bin.is_reserved')
-        ->join('table_paletization', 'table_bin.pallet_id = table_paletization.id', 'inner')
-        ->where('bin_location',$binLocation)
-        ->get()
-        ->getResult();
-
-        // return $this->where('bin_location',$binLocation)->first();
+            ->select('table_paletization.nomor_gr, table_paletization.total_qty, 
+            table_paletization.nama_barang, table_paletization.satuan_berat, table_bin.kode_pallet, 
+            table_bin.rack, table_bin.bin_location, table_bin.is_reserved, SUM(table_paletization.qty_dtg) AS total_qty,
+            table_gr.satuan,table_gr.exp_date
+            ')
+            ->join('table_paletization', 'table_bin.pallet_id = table_paletization.id', 'inner')
+            ->join('table_gr','table_paletization.gr_id = table_gr.id', 'inner') 
+            ->where('bin_location',$binLocation)
+            ->get()
+            ->getResult();
     }
+    
 
     public function isRackBinLocationExists($rack, $binLocation)
     {

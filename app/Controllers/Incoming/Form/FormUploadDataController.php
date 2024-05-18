@@ -38,7 +38,7 @@ class FormUploadDataController extends BaseController
     for ($row = 2; $row <= $highestRow; $row++) {
             
             $rowData = $sheet->rangeToArray('A' . $row . ':' . $highestColumn . $row, NULL, TRUE, FALSE);
-            $pemasok = $rowData[0][0];
+            $supplier = $rowData[0][0];
             $nomor_po = $rowData[0][1];
             $tanggal_po = null;
             if ($rowData[0][2] !== null) {
@@ -53,14 +53,14 @@ class FormUploadDataController extends BaseController
             $nama_barang = $rowData[0][6];
             $catatan = $rowData[0][7];
             $satuan = $rowData[0][8];
-            $kuantitas = $rowData[0][9];
+            $qty_po = $rowData[0][9];
             $qty_terproses = $rowData[0][10];
             $qty_belum_terp = $rowData[0][11];
 
  
              // Insert data into database (replace 'your_table' with your actual table name)
              $data = [
-                 'pemasok' => $pemasok,
+                 'supplier' => $supplier,
                  'nomor_po' => $nomor_po,
                  'tanggal_po' => $tanggal_po,
                  'keterangan_po' => $keterangan_po,
@@ -69,7 +69,7 @@ class FormUploadDataController extends BaseController
                  'nama_barang' => $nama_barang,
                  'catatan' => $catatan,
                  'satuan' => $satuan,
-                 'kuantitas' => $kuantitas,
+                 'qty_po' => $qty_po,
                  'qty_terproses' => $qty_terproses,
                  'qty_belum_terp' => $qty_belum_terp
              ];

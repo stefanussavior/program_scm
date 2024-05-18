@@ -33,6 +33,12 @@ class MasterPOController extends BaseController
         echo json_encode(["data" => $data]);
     }
 
+    public function GetAllDataUploadPONoGR(){
+        $dataAllUploadPO = new MasterPOModel();
+        $data = $dataAllUploadPO->GetDataPONoGR();
+        echo json_encode(["data" => $data]);
+    }
+
 
 
     public function getPODetails()

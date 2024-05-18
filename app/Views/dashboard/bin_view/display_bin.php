@@ -118,7 +118,9 @@
             <div class="modal-body">
                 <div id="kode_pallet"></div>
                 <div id="nama_barang"></div>
-                <div id="total_barang"></div>
+                <div id="total_qty_barang"></div>
+                <div id="satuan"></div>
+                <div id="exp_date"></div>
                 <div id="lokasi_rack"></div>
                 <div id="bin_location"></div>
                 <div id="modal-data"></div>
@@ -185,8 +187,11 @@
                 success: function (response) {
                     $('#kode_pallet').html("Kode Pallet : " + response[0].kode_pallet);
                     $('#nama_barang').html("Nama Barang : " + response[0].nama_barang);
+                    $('#total_qty_barang').html("Total Qty Barang : " + response[0].total_qty);
+                    $('#exp_date').html("Expired Date : " + response[0].exp_date);
+                    $('#satuan').html("Satuan Berat : " + response[0].satuan);
                     $('#lokasi_rack').html("Lokasi Rack : " + response[0].rack);
-                    $('#bin_location').html("BIN Location : " + response[0].bin_location);
+                    $('#bin_location').html("Nomor BIN Location : " + response[0].bin_location);
                     // $('#total_barang').html("Total Barang : " + response.total_qty);
                     // $('#modal-data').html("Nomor Lokasi BIN : " + bin_location);
                     $('#myModal').modal('show');
