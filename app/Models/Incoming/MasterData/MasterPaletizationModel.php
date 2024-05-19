@@ -13,17 +13,8 @@ class MasterPaletizationModel extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'gr_id',
-        'kode_pallet',
-        'nomor_gr',
-        'nama_barang',
-        'qty_po',
-        'qty_dtg',
-        'kode_prd',
-        'total_qty',
-        'max_qty',
-        'num_paletization',
-        'satuan_berat',
+        'gr_id', 'kode_pallet', 'nomor_gr', 'nama_barang', 'qty_dtg', 'total_qty', 
+        'max_qty', 'num_paletization', 'satuan_berat', 'nilai_konversi'
         // 'seat_number',
         // 'seat_group',
         // 'is_reserved'

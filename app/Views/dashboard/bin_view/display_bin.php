@@ -102,8 +102,6 @@
         <div id="seat-container"></div>
     </div>
 </div>
-</div>
-
 
 <!-- The Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -125,19 +123,19 @@
                 <div id="bin_location"></div>
                 <div id="modal-data"></div>
                 <div id="modal-status"></div>
+                <div id="qrcode"></div> <!-- QR code will be generated here -->
             </div>
             <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="generate_qr">Generate To QRCode</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
             </div>
         </div>
     </div>
 </div>
 
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
     $(document).ready(function () {
         $('.btn-ruangan').click(function () {
@@ -169,7 +167,6 @@
                     }
                     $('#seat-container').html(seatMapHtml);
                 },
-
                 error: function (xhr, status, error) {
                     console.error('Error : ', error);
                 }
@@ -192,8 +189,6 @@
                     $('#satuan').html("Satuan Berat : " + response[0].satuan);
                     $('#lokasi_rack').html("Lokasi Rack : " + response[0].rack);
                     $('#bin_location').html("Nomor BIN Location : " + response[0].bin_location);
-                    // $('#total_barang').html("Total Barang : " + response.total_qty);
-                    // $('#modal-data').html("Nomor Lokasi BIN : " + bin_location);
                     $('#myModal').modal('show');
                 },
                 error: function (xhr, status, error) {
@@ -202,12 +197,43 @@
             });
         });
 
+        // Generate QR code
+        $('#generate_qr').click(function () {
+            var qrData = {
+                kode_pallet: $('#kode_pallet').text(),
+                nama_barang: $('#nama_barang').text(),
+                total_qty_barang: $('#total_qty_barang').text(),
+                satuan: $('#satuan').text(),
+                exp_date: $('#exp_date').text(),
+                lokasi_rack: $('#lokasi_rack').text(),
+                bin_location: $('#bin_location').text()
+            };
+
+            console.log('QR Data:', qrData); // Debugging
+
+            // Construct URL with query parameters
+            var url = '<?= base_url('/show_data') ?>?' + $.param(qrData);
+
+            console.log('QR Code URL:', url); // Debugging
+
+            // Clear any existing QR code
+            $('#qrcode').html('');
+
+            // Generate QR code with the link
+            var qrcode = new QRCode(document.getElementById("qrcode"), {
+                text: url,
+                width: 128,
+                height: 128
+            });
+
+            console.log('QR Code generated');
+        });
+
         // Close the modal
         $(document).on('click', '.modal .close', function () {
             $('#myModal').modal('hide');
         });
     });
-
 </script>
 
 <?= $this->include('template/footer'); ?>

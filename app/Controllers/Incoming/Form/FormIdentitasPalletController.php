@@ -26,50 +26,114 @@ class FormIdentitasPalletController extends BaseController
 
 
 
-    public function InputIdentitasPallet() {
-        $dataPallet = new MasterPaletizationModel();
+public function InputIdentitasPallet() {
+    $dataPallet = new MasterPaletizationModel();
 
-        // $kode_pallet = $this->request->getPost('kode_pallet');
-        $nomor_gr = $this->request->getPost('nomor_gr');
-        $nama_barang_array = $this->request->getPost('nama_barang');
-        $qty_dtg_array = $this->request->getPost('qty_dtg');
-        $total_qty = $this->request->getPost('total_qty');
-        $max_qty = $this->request->getPost('max_qty');
-        $num_paletization = $this->request->getPost('num_paletization');
-        $satuan_berat_array = $this->request->getPost('satuan_berat');
-        $kode_pallet_array = $this->request->getPost('kode_pallet');
-        // $seat_number = $this->request->getPost('seat_number');
-        // $seat_group = $this->request->getPost('seat_group');
-        // $is_reserved = $this->request->getPost('is_reserved');
+    $nomor_gr = $this->request->getPost('nomor_gr');
+    $nama_barang_array = $this->request->getPost('nama_barang');
+    $qty_dtg_array = $this->request->getPost('qty_dtg');
+    $total_qty = $this->request->getPost('total_qty');
+    $max_qty = $this->request->getPost('max_qty');
+    $num_paletization = $this->request->getPost('num_paletization');
+    $satuan_berat_array = $this->request->getPost('satuan_berat');
+    $nilai_konversi_array = $this->request->getPost('nilai_konversi');
 
-        $modelGR = new MasterGRModel();
-        $GRdata = $modelGR->where('nomor_gr',$nomor_gr)->first();
+    $modelGR = new MasterGRModel();
+    $GRdata = $modelGR->where('nomor_gr', $nomor_gr)->first();
 
-        if ($GRdata) {
-            $gr_id = $GRdata['id'];
+    if ($GRdata) {
+        $gr_id = $GRdata['id'];
+        $kode_pallet_count = 0;
+        $nilai_konversi_count = 0;
+
         foreach ($nama_barang_array as $key => $nama_barang) {
             $qty_dtg = $qty_dtg_array[$key];
             $satuan_berat = $satuan_berat_array[$key];
-            $kode_pallet = $kode_pallet_array[$key];
 
-            $dataPallet->insert([
-                'gr_id' => $gr_id, 
-                'kode_pallet' => $kode_pallet,
-                'nomor_gr' => $nomor_gr,
-                'nama_barang' => $nama_barang,
-                'qty_dtg' => $qty_dtg,
-                'total_qty' => $total_qty,
-                'max_qty' => $max_qty,
-                'num_paletization' => $num_paletization,
-                'satuan_berat' => $satuan_berat,
-                // 'seat_number' => $seat_number,
-                // 'seat_group' => $seat_group,
-                // 'is_reserved' => $is_reserved
-            ]);
+            $kode_pallet_array_for_item = $this->request->getPost('kode_pallet_' . $key);
+            $nilai_konversi_array_for_item = null;
+
+            if (is_array($kode_pallet_array_for_item) && !empty($kode_pallet_array_for_item)) {
+                $nilai_konversi_array_for_item = array_slice($nilai_konversi_array, $nilai_konversi_count, count($kode_pallet_array_for_item));
+
+                if (count($kode_pallet_array_for_item) === count($nilai_konversi_array_for_item)) {
+                    foreach ($kode_pallet_array_for_item as $index => $kode_pallet) {
+                        $nilai_konversi = $nilai_konversi_array_for_item[$index];
+
+                        // Log data to debug
+                        log_message('debug', 'Inserting data: ' . json_encode([
+                            'gr_id' => $gr_id,
+                            'kode_pallet' => json_encode($kode_pallet_array_for_item), 
+                            'nomor_gr' => $nomor_gr,
+                            'nama_barang' => $nama_barang,
+                            'qty_dtg' => $qty_dtg / count($kode_pallet_array_for_item),
+                            'total_qty' => $total_qty,
+                            'max_qty' => $max_qty,
+                            'num_paletization' => $num_paletization,
+                            'satuan_berat' => $satuan_berat,
+                            'nilai_konversi' => $nilai_konversi,
+                        ]));
+
+                        $dataPallet->insert([
+                            'gr_id' => $gr_id,
+                            'kode_pallet' => json_encode($kode_pallet_array_for_item), // Store as JSON
+                            'nomor_gr' => $nomor_gr,
+                            'nama_barang' => $nama_barang,
+                            'qty_dtg' => $qty_dtg / count($kode_pallet_array_for_item),
+                            'total_qty' => $total_qty,
+                            'max_qty' => $max_qty,
+                            'num_paletization' => $num_paletization,
+                            'satuan_berat' => $satuan_berat,
+                            'nilai_konversi' => $nilai_konversi,
+                        ]);
+                    }
+                } else {
+                    // Handle the case when the lengths of $kode_pallet_array_for_item and $nilai_konversi_array_for_item are different
+                    log_message('error', 'Mismatch in lengths of $kode_pallet_array_for_item and $nilai_konversi_array_for_item for item: ' . $nama_barang);
+                }
+
+                $nilai_konversi_count += count($kode_pallet_array_for_item);
+            } else {
+                // Handle the case when $kode_pallet_array_for_item is not an array or is an empty array
+                $kode_pallet = $kode_pallet_array_for_item;
+                $nilai_konversi = $nilai_konversi_array[$nilai_konversi_count];
+
+                // Log data to debug
+                log_message('debug', 'Inserting data: ' . json_encode([
+                    'gr_id' => $gr_id,
+                    'kode_pallet' => json_encode([$kode_pallet]),
+                    'nomor_gr' => $nomor_gr,
+                    'nama_barang' => $nama_barang,
+                    'qty_dtg' => $qty_dtg,
+                    'total_qty' => $total_qty,
+                    'max_qty' => $max_qty,
+                    'num_paletization' => $num_paletization,
+                    'satuan_berat' => $satuan_berat,
+                    'nilai_konversi' => $nilai_konversi,
+                ]));
+
+                $dataPallet->insert([
+                    'gr_id' => $gr_id,
+                    'kode_pallet' => json_encode([$kode_pallet]), // Store as JSON array with one element
+                    'nomor_gr' => $nomor_gr,
+                    'nama_barang' => $nama_barang,
+                    'qty_dtg' => $qty_dtg,
+                    'total_qty' => $total_qty,
+                    'max_qty' => $max_qty,
+                    'num_paletization' => $num_paletization,
+                    'satuan_berat' => $satuan_berat,
+                    'nilai_konversi' => $nilai_konversi,
+                ]);
+
+                $nilai_konversi_count++;
+            }
         }
     }
-        return redirect()->to(base_url('master_palletization'));
-    }
+
+    return redirect()->to(base_url('master_palletization'));
+}
+
+    
 
     public function AjaxDataGRByID() {
         $nomor_gr = $this->request->getGet('nomor_gr');

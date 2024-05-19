@@ -13,6 +13,7 @@
                 <b>Form Paletization</b>
             </div>
             <div class="card-body">
+                <form action="/submit_form_identitas_pallet" method="post">
                     <div class="row">
                         <div class="col-sm-12 mb-2">
                             <div>
@@ -34,6 +35,7 @@
                     <button class="btn btn-primary" type="submit" id="submitButton">Generate to Palletization</button>
                 <div id="additional_forms_container"></div>
             </div>
+        </form>
         </div>
     </div>
 </div>
@@ -71,7 +73,7 @@
         });
 
 
-        $('#nomor_gr').on('change', function () {
+    $('#nomor_gr').on('change', function () {
     var nomor_gr = $(this).val();
     $.ajax({
         url: '<?= site_url('/ajax_get_nomor_gr') ?>',
@@ -97,29 +99,25 @@
                 var convertedValue = convertAndAppend(index, row.satuan, row.qty_dtg);
 
 
-                var NilaiKonversi = '<div class="col-sm-4 mb-4"><label>Nilai Sebelum Konversi ' + (index + 1) + ' : </label><input type="text" id="nilai_konversi_' + index + '" name="nilai_konversi[]" class="form-control nilai_konversi" value="' + convertedValue + '" readonly></div>';
+                var NilaiKonversi = '<div class="col-sm-4 mb-4"><label>Nilai Hasil Konversi Ke Pallet ' + (index + 1) + ' : </label><input type="text" id="nilai_konversi_' + index + '" name="nilai_konversi[]" class="form-control nilai_konversi" value="' + convertedValue + '" readonly></div>';
                 fieldHtml += NilaiKonversi;
 
-                
+                // var SisaBarangPallet = '<div class="col-sm-4 mb-4"><label>Nilai Sisa Barang : ' + (index + 1) + ' : </label><input type="text" id="nilai_konversi_' + index + '" name="nilai_konversi[]" class="form-control nilai_konversi" value="' + parseFloat(convertedValue) + '" readonly></div>';
+                // fieldHtml += SisaBarangPallet;
 
-                // Append kode_pallet field
-                if (convertedValue > 0) {
-                    $.ajax({
-                        url: '<?= base_url('/ambil_kode_pallet'); ?>',
-                        type: 'GET',
-                        success: function (hasil) {
-                            var kode_pallet = $.parseJSON(hasil);
-                            var KodePallet = '<div class="col-sm-4 mb-4"><label>Kode Pallet ' + (index + 1) + ' : </label><input type="text" name="kode_pallet[]" class="form-control" value="' + kode_pallet + '" readonly></div>';
-                            fieldHtml += KodePallet;
-                            $('#barang_container').append(fieldHtml);
-                        },
-                        error: function (xhr, status, error) {
-                            console.error('Error:', error);
-                        }
-                    });
-                } else {
-                    $('#barang_container').append(fieldHtml);
-                }
+                var nilai_konversi_array = [];
+
+if (convertedValue > 0) {
+    var kodePalletFields = '';
+    for (let i = 0; i < convertedValue; i++) {
+        var newKodePallet = generateKodePallet();
+        kodePalletFields += '<div class="col-sm-4 mb-4"><label>Kode Pallet ' + (index + 1) + ' (' + (i + 1) + ') : </label><input type="text" name="kode_pallet' + index + '[]" class="form-control" value="' + newKodePallet + '" readonly></div>';
+        nilai_konversi_array.push(1); // Assume nilai_konversi is 1 for each kode_pallet
+    }
+    fieldHtml += kodePalletFields;
+}
+
+    $('#barang_container').append(fieldHtml);
             });
         },
         error: function (xhr, status, error) {
@@ -127,6 +125,16 @@
         }
     });
 });
+
+
+
+function generateKodePallet() {
+    return 'PALLET-' + generateUniqueCode();
+}
+
+function generateUniqueCode() {
+    return Math.floor(Math.random() * 1000000); // Generate a random 6-digit number
+}
 
 function convertAndAppend(index, satuan, qty) {
     let convertedValue = qty;
