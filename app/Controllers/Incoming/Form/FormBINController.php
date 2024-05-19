@@ -142,4 +142,17 @@ public function DisplayBINStatus() {
         // Send JSON response
         return $this->response->setJSON(['available' => $available]);
     }
+
+    public function showData() {
+        $kode_pallet = $this->request->getVar('kode_pallet');
+        $nama_barang = $this->request->getVar('nama_barang');
+        $total_qty_barang = $this->request->getVar('total_qty_barang');
+        $satuan = $this->request->getVar('satuan');
+        $exp_date = $this->request->getVar('exp_date');
+        $lokasi_rack = $this->request->getVar('lokasi_rack');
+        $bin_location = $this->request->getVar('bin_location');
+        
+        // Pass these to the view
+        return view('show_data', compact('kode_pallet', 'nama_barang', 'total_qty_barang', 'satuan', 'exp_date', 'lokasi_rack', 'bin_location'));
+    }    
 }

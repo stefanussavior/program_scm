@@ -123,10 +123,15 @@
                 <div id="bin_location"></div>
                 <div id="modal-data"></div>
                 <div id="modal-status"></div>
-                <div id="qrcode"></div> <!-- QR code will be generated here -->
+                <br>
+                <p><b>Kode pada QRCode : </b></p>
+                <div id="qrcode">
+                    
+                </div> <!-- QR code will be generated here -->
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" id="generate_qr">Generate To QRCode</button>
+                <button type="button" class="btn btn-danger" id="print_qrcode">Print data QRCode</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
@@ -136,6 +141,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+
 <script>
     $(document).ready(function () {
         $('.btn-ruangan').click(function () {
@@ -209,31 +217,68 @@
                 bin_location: $('#bin_location').text()
             };
 
-            console.log('QR Data:', qrData); // Debugging
-
             // Construct URL with query parameters
             var url = '<?= base_url('/show_data') ?>?' + $.param(qrData);
-
-            console.log('QR Code URL:', url); // Debugging
 
             // Clear any existing QR code
             $('#qrcode').html('');
 
-            // Generate QR code with the link
+            // Generate QR code with high resolution
             var qrcode = new QRCode(document.getElementById("qrcode"), {
                 text: url,
-                width: 128,
-                height: 128
+                width: 380, // Increased width for higher resolution
+                height: 380 // Increased height for higher resolution
             });
 
             console.log('QR Code generated');
         });
-
-        // Close the modal
         $(document).on('click', '.modal .close', function () {
             $('#myModal').modal('hide');
         });
+
+
+        $('#print_qrcode').click(function () {
+            var palletData = {
+        kode_pallet: $('#kode_pallet').text(),
+        nama_barang: $('#nama_barang').text(),
+        total_qty_barang: $('#total_qty_barang').text(),
+        satuan: $('#satuan').text(),
+        exp_date: $('#exp_date').text(),
+        lokasi_rack: $('#lokasi_rack').text(),
+        bin_location: $('#bin_location').text()
+    };
+    generatePDF(palletData);
+            });
+
+            function generatePDF(palletData) {
+    // Get the QR code image data URL
+    var qrCodeImageData = $('#qrcode canvas')[0].toDataURL('image/png');
+
+    // Define the PDF document structure
+    var docDefinition = {
+        content: [
+            // { text: "Data Pallet BIN", style: 'header' },
+            { text: palletData.kode_pallet, style: 'subheader' },
+            { text: palletData.nama_barang, style: 'subheader' },
+            { text: palletData.total_qty_barang, style: 'subheader' },
+            { text: palletData.exp_date, style: 'subheader' },
+            { text: palletData.satuan, style: 'subheader' },
+            { text: palletData.lokasi_rack, style: 'subheader' },
+            { text: palletData.bin_location, style: 'subheader' },
+            { image: qrCodeImageData, width: 200, alignment: 'center', margin: [0, 20] } // Add the QR code image to the PDF
+        ],
+        styles: {
+            header: { fontSize: 18, bold: true, margin: [0, 0, 0, 10] },
+            subheader: { fontSize: 14, bold: true, margin: [0, 5] }
+        }
+    };
+
+    // Generate the PDF
+    pdfMake.createPdf(docDefinition).open();
+}
+
     });
 </script>
+
 
 <?= $this->include('template/footer'); ?>

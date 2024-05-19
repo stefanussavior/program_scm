@@ -96,6 +96,7 @@ $routes->get('/ajax_get_master_warehouse', [MasterWarehouseController::class, 'C
 $routes->get('/ajax_get_data_pallet',[MasterPalletizationController::class,'ListDataPallet']);
 
 
+
 $routes->get('/ajax_master_detail_count_po', [MasterPOController::class,'tablePODetails']);
 
 $routes->post('/fetch_kode_barang', [FormGRController::class,'fetchKodeBarang']);
@@ -129,3 +130,6 @@ $routes->post('/update_status_gr', [MasterPOController::class,'updateStatusGR'])
 $routes->post('/update_qty_po', [MasterPOController::class,'UpdateQuantity']);
 
 $routes->get('/check_kode_pallet_empty', [MasterPalletizationController::class,'checkKodePalletEmpty']);
+
+
+$routes->get('/show_data', [FormBINController::class,'GetShowData']);
