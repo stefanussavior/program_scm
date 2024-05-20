@@ -94,6 +94,7 @@ $routes->get('/ajax_get_master_po', [MasterPOController::class,'ListDataPO']);
 $routes->get('/ajax_get_master_supplier', [MasterSupplierController::class,'CariDataMasterSupplier']);
 $routes->get('/ajax_get_master_warehouse', [MasterWarehouseController::class, 'CariDataMasterWarehouse']);
 $routes->get('/ajax_get_data_pallet',[MasterPalletizationController::class,'ListDataPallet']);
+$routes->get('/ajax_get_nama_barang', [FormBINController::class,'GetNamaBarang']);
 
 
 

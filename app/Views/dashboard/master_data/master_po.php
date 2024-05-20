@@ -23,7 +23,7 @@
                 <th>Satuan</th>
                 <th>Qty Belum Terproses</th>
                 <th>Status PO</th>
-                <th>Action</th>
+                <!-- <th>Action</th> -->
             </tr>
         </thead>
         <tbody>
@@ -88,8 +88,10 @@
                     var qtyBelumTerproses = row.qty_po - row.qty_dtg;
                     if (qtyBelumTerproses === 0) {
                         row.status_gr = 'fulfilled';
-                    } else {
+                    } else if (row.qty_po > row.qty_dtg) {
                         row.status_gr = 'outstanding';
+                    } else {
+                        row.status_gr = 'reject';
                     }
                     return qtyBelumTerproses;
                 }
@@ -97,16 +99,16 @@
             {
                 "data": "status_gr"
             },
-            {
-                "data": null,
-                "render": function(data, type, row) {
-                    if (row.status_gr !== 'fulfilled') {
-                        return '<button class="btn btn-primary btn-edit" data-id="' + row.id + '">Edit</button>';
-                    } else {
-                        return '';
-                    }
-                }
-            }
+            // {
+            //     "data": null,
+            //     "render": function(data, type, row) {
+            //         if (row.status_gr !== 'fulfilled') {
+            //             return '<button class="btn btn-primary btn-edit" data-id="' + row.id + '">Edit</button>';
+            //         } else {
+            //             return '';
+            //         }
+            //     }
+            // }
         ]
     });
 

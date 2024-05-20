@@ -77,4 +77,11 @@ class MasterBinModel extends Model
         // If count is greater than 0, it means the rack and bin_location already exist
         return ($query > 0);
     }
+
+    public function getBinData($bin_location){
+        return $this->db->table($this->table)
+        ->where('bin_location', $bin_location)
+        ->get()
+        ->getRowArray();
+    }
 }

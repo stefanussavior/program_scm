@@ -15,9 +15,6 @@ class MasterPaletizationModel extends Model
     protected $allowedFields    = [
         'gr_id', 'kode_pallet', 'nomor_gr', 'nama_barang', 'qty_dtg', 'total_qty', 
         'max_qty', 'num_paletization', 'satuan_berat', 'nilai_konversi'
-        // 'seat_number',
-        // 'seat_group',
-        // 'is_reserved'
     ];
 
     protected bool $allowEmptyInserts = false;
@@ -85,8 +82,8 @@ class MasterPaletizationModel extends Model
         }
     }
 
-    public function GetSingleNoGR(){
-        return $this->select('*')->groupBy('kode_pallet')->findAll();
+    public function GetSingleData(){
+        return $this->select('*')->groupBy('nama_barang')->findAll();
     }
 
     public function GetDetailBarangPallet($binLocation){
@@ -100,5 +97,7 @@ class MasterPaletizationModel extends Model
     }
     
 
-
+    public function GetNamaBarangModel($nama_barang) {
+        return $this->select('*')->where('nama_barang',$nama_barang)->first();
+    }
 }

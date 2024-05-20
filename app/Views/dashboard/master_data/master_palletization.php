@@ -22,8 +22,9 @@
                 <th scope="col">No</th>
                 <th scope="col">Kode Pallet</th>
                 <th scope="col">Nama Barang</th>
-                <th scope="col">Total Qty</th>
+                <!-- <th scope="col">Total Qty</th>
                 <th scope="col">Max Qty</th>
+                <th scope="col">Satuan Berat</th> -->
             </b>
         </tr>
     </thead>
@@ -43,8 +44,8 @@
         {"data" : "id"},
         {"data": "kode_pallet"},
         {"data": "nama_barang"},
-        {"data": "total_qty"},
-        {"data": "max_qty"}
+        // {"data": "total_qty"},
+        // {"data": "max_qty"}
       ]
     });
   });

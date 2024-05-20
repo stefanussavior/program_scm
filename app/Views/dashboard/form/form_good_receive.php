@@ -297,10 +297,10 @@
             var kodeBarang = $(this).val();
             var supplierInput = $(this).closest('.row').find('input[name="supplier[]"]');
             var namaBarangInput = $(this).closest('.row').find('input[name="nama_barang[]"]');
-            // var qtyPOInput = $(this).closest('.row').find('input[name="qty_po[]"]');
-            var kodeBatchInput = $(this).closest('.row').find('input[name="kode_batch[]"]');
+            var qtyPOInput = $(this).closest('.row').find('input[name="qty_po[]"]');
+            // var kodeBatchInput = $(this).closest('.row').find('input[name="kode_batch[]"]');
             // var qtyOutstandingInpiut = $(this).closest('.row').find('input[name="qty_gr_outstd[]"]'); 
-            var qtyDTGInput = $(this).closest('.row').find('input[name="qty_dtg[]"]');
+            // var qtyDTGInput = $(this).closest('.row').find('input[name="qty_dtg[]"]');
             // var expInput = $(this).closest('.row').find('input[name="exp_date[]"]');
             var satuanInput = $(this).closest('.row').find('input[name="satuan[]"]');
 
@@ -315,9 +315,9 @@
                         namaBarangInput.val(response.data.nama_barang ?? "");
                         qtyPOInput.val(response.data.qty_po ?? "");
                         // kodeBatchInput.val(response.data.kode_batch ?? "");
-                        qtyOutstandingInpiut.val(response.data.qty_gr_outstd ?? "");
+                        // qtyOutstandingInpiut.val(response.data.qty_gr_outstd ?? "");
                         // qtyDTGInput.val(response.data.qty_dtg ?? "");
-                        // expInput.val(response.data.exp_date ?? "")
+                        // expInput.val(response.data.exp_date ?? "");
                         satuanInput.val(response.data.satuan ?? "");
                     } else {
                         alert(response.message);
@@ -368,7 +368,7 @@
 
         if (lastGrCreatedAt && nomorGr) {
             var formattedDate = lastGrCreatedAt.split(' ')[0];
-            $('#nomor_gr').val(`${nomorGr}/${formattedDate.replace(/-/g, '')}`);
+            // $('#nomor_gr').val(`${nomorGr}/${formattedDate.replace(/-/g, '')}`);
         }
 
             $.ajax({

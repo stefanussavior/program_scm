@@ -28,7 +28,7 @@ class FormBINController extends BaseController
         $data['master_warehouse'] = $dataWarehouse->findAll();
         $data['master_supplier'] = $dataSupplier->findAll();
         $data['master_bin'] = $dataBIN->findAll();
-        $data['master_pallet'] = $dataPallet->GetSingleNoGR();
+        $data['master_pallet'] = $dataPallet->GetSingleData();
         $data['master_bin_location'] = $dataBINLocation->findAll();
         return view('dashboard/form/form_bin', $data);
     }
@@ -64,7 +64,7 @@ class FormBINController extends BaseController
             'bin_location' => $bin_location,
             'is_reserved' => $is_reversed
         ]);
-        return redirect()->to(base_url('form_bin'));   
+        return redirect()->to(base_url('display_data_bin_view'));   
     }
     
 
@@ -154,5 +154,41 @@ public function DisplayBINStatus() {
         
         // Pass these to the view
         return view('show_data', compact('kode_pallet', 'nama_barang', 'total_qty_barang', 'satuan', 'exp_date', 'lokasi_rack', 'bin_location'));
-    }    
+    }
+    
+    public function GetNamaBarang() {
+        $nama_barang = $this->request->getGet('nama_barang');
+        $dataBIN = new MasterPaletizationModel();
+        $data = $dataBIN->GetNamaBarangModel($nama_barang);
+        return $this->response->setJSON($data);
+    }
+
+    public function GetShowData(){
+        $kode_pallet = $this->request->getGet('kode_pallet');
+        $nama_barang = $this->request->getGet('nama_barang');
+        $total_qty_barang = $this->request->getGet('total_qty_barang');
+        $satuan = $this->request->getGet('satuan');
+        $exp_date = $this->request->getGet('exp_date');
+        $lokasi_rack = $this->request->getGet('lokasi_rack');
+        $bin_location = $this->request->getGet('bin_location');
+
+        
+        $binModel = new MasterBinModel(); 
+        $binData = $binModel->getBinData($bin_location); // Implement this method in your model
+
+        // Prepare JSON response
+        $response = [
+            'kode_pallet' => $kode_pallet,
+            'nama_barang' => $nama_barang,
+            'total_qty_barang' => $total_qty_barang,
+            'satuan' => $satuan,
+            'exp_date' => $exp_date,
+            'lokasi_rack' => $lokasi_rack,
+            'bin_location' => $bin_location
+        ];
+
+        // // Return JSON response
+        // return $this->response->setJSON($response);
+        return view('/dashboard/bin_view/qrcode_data', $response);
+    }
 }

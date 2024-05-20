@@ -1,0 +1,592 @@
+INFO - 2024-05-20 00:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 00:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 00:04:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 00:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 00:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-20 00:05:01 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 58.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(58): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-20 00:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 00:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-20 00:08:50 --> ErrorException: Undefined variable $kode_pallet_array_for_item
+[Method: POST, Route: submit_form_identitas_pallet]
+in APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php on line 44.
+ 1 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kode_pallet_array_for_item', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormIdentitasPalletController.php', 44)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-20 00:10:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 00:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 00:13:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 00:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 00:22:55 --> mysqli_sql_exception: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization` in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `ta...', 0)
+#1 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ta...')
+#2 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ta...')
+#3 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#4 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert(Array)
+#8 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+#9 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+#10 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Commands/Server/rewrite.php(49): require_once('/Users/stefanus...')
+#15 {main}
+CRITICAL - 2024-05-20 00:22:55 --> CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+[Method: POST, Route: submit_form_identitas_pallet]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 2 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-20 00:22:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 4 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-20 00:22:55 --> [Caused by] mysqli_sql_exception: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 5 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+ERROR - 2024-05-20 00:23:29 --> mysqli_sql_exception: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization` in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `ta...', 0)
+#1 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ta...')
+#2 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ta...')
+#3 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#4 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert(Array)
+#8 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+#9 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+#10 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Commands/Server/rewrite.php(49): require_once('/Users/stefanus...')
+#15 {main}
+CRITICAL - 2024-05-20 00:23:29 --> CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+[Method: POST, Route: submit_form_identitas_pallet]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 2 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-20 00:23:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 4 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-20 00:23:29 --> [Caused by] mysqli_sql_exception: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 5 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+ERROR - 2024-05-20 00:25:50 --> mysqli_sql_exception: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization` in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `ta...', 0)
+#1 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ta...')
+#2 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ta...')
+#3 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#4 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert(Array)
+#8 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+#9 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+#10 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Commands/Server/rewrite.php(49): require_once('/Users/stefanus...')
+#15 {main}
+CRITICAL - 2024-05-20 00:25:50 --> CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+[Method: POST, Route: submit_form_identitas_pallet]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 2 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-20 00:25:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 4 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-20 00:25:50 --> [Caused by] mysqli_sql_exception: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 5 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+ERROR - 2024-05-20 00:26:08 --> mysqli_sql_exception: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization` in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `ta...', 0)
+#1 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ta...')
+#2 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ta...')
+#3 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#4 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert(Array)
+#8 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+#9 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+#10 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Commands/Server/rewrite.php(49): require_once('/Users/stefanus...')
+#15 {main}
+CRITICAL - 2024-05-20 00:26:08 --> CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+[Method: POST, Route: submit_form_identitas_pallet]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 2 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-20 00:26:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 4 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-20 00:26:08 --> [Caused by] mysqli_sql_exception: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 5 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+ERROR - 2024-05-20 00:26:10 --> mysqli_sql_exception: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization` in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `ta...', 0)
+#1 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ta...')
+#2 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ta...')
+#3 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#4 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert(Array)
+#8 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+#9 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+#10 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Commands/Server/rewrite.php(49): require_once('/Users/stefanus...')
+#15 {main}
+CRITICAL - 2024-05-20 00:26:10 --> CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+[Method: POST, Route: submit_form_identitas_pallet]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 2 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-20 00:26:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 4 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-20 00:26:10 --> [Caused by] mysqli_sql_exception: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-793931\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 5 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-20 00:26:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 00:27:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 00:27:43 --> mysqli_sql_exception: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization` in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `ta...', 0)
+#1 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ta...')
+#2 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ta...')
+#3 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#4 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormIdentitasPalletController.php(62): CodeIgniter\Model->insert(Array)
+#8 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+#9 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+#10 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Commands/Server/rewrite.php(49): require_once('/Users/stefanus...')
+#15 {main}
+CRITICAL - 2024-05-20 00:27:43 --> CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+[Method: POST, Route: submit_form_identitas_pallet]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 2 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(62): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-20 00:27:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-98779\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-98779\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 4 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(62): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-20 00:27:43 --> [Caused by] mysqli_sql_exception: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-98779\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-98779\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-98779\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 5 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(62): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-20 00:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 00:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 00:29:19 --> mysqli_sql_exception: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization` in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `ta...', 0)
+#1 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ta...')
+#2 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ta...')
+#3 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#4 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert(Array)
+#8 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+#9 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+#10 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Commands/Server/rewrite.php(49): require_once('/Users/stefanus...')
+#15 {main}
+CRITICAL - 2024-05-20 00:29:19 --> CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+[Method: POST, Route: submit_form_identitas_pallet]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 2 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-20 00:29:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-962618\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-962618\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 4 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-20 00:29:19 --> [Caused by] mysqli_sql_exception: CONSTRAINT `table_paletization.kode_pallet` failed for `miegacoa_scm`.`table_paletization`
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-962618\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-962618\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-962618\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 5 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-20 00:31:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-20 00:31:38 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 58.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(58): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+ERROR - 2024-05-20 00:31:42 --> mysqli_sql_exception: Column 'total_qty' cannot be null in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `ta...', 0)
+#1 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ta...')
+#2 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ta...')
+#3 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#4 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert(Array)
+#8 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+#9 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+#10 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Commands/Server/rewrite.php(49): require_once('/Users/stefanus...')
+#15 {main}
+CRITICAL - 2024-05-20 00:31:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'total_qty' cannot be null
+[Method: POST, Route: submit_form_identitas_pallet]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 2 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-20 00:31:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'total_qty' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-222794\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-222794\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 4 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-20 00:31:42 --> [Caused by] mysqli_sql_exception: Column 'total_qty' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-222794\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-222794\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (\'5\', \'PALLET-222794\', \'GR0001\', \'BUAH BELIMBING\', 10000, NULL, NULL, NULL, \'CTN\', \'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_paletization` (`gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_dtg`, `total_qty`, `max_qty`, `num_paletization`, `satuan_berat`, `nilai_konversi`) VALUES (:gr_id:, :kode_pallet:, :nomor_gr:, :nama_barang:, :qty_dtg:, :total_qty:, :max_qty:, :num_paletization:, :satuan_berat:, :nilai_konversi:)', [...], false)
+ 5 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(63): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+ERROR - 2024-05-20 00:33:47 --> Mismatch in lengths of $kode_pallet_array_for_item and $nilai_konversi_array_for_item for item: CABE RAWIT - RESTO
+INFO - 2024-05-20 00:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 00:34:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 00:34:08 --> Mismatch in lengths of $kode_pallet_array_for_item and $nilai_konversi_array_for_item for item: CABE RAWIT - RESTO
+INFO - 2024-05-20 00:34:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 00:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 00:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 00:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 00:38:47 --> Mismatch in lengths of $kode_pallet_array_for_item and $nilai_konversi_array_for_item for item: CABE RAWIT - RESTO
+INFO - 2024-05-20 00:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 00:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 00:43:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 00:43:55 --> Mismatch in lengths of $kode_pallet_array_for_item and $nilai_konversi_array_for_item for item: CABE RAWIT - RESTO
+INFO - 2024-05-20 00:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 00:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 00:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 01:06:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

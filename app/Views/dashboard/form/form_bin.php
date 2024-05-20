@@ -28,14 +28,18 @@
         <div class="card-body">
             <form action="/submit_form_bin" method="post">
                 <div>
+                    <label>Nama Barang : </label>
+                    <select name="nama_barang" id="nama_barang" class="form-control">
+                        <option value="" selected disabled>--- CARI NAMA BARANG ---</option>
+                            <?php foreach ($master_pallet as $pallet) : ?>
+                                <option value="<?php echo $pallet['nama_barang'] ?>"><?php echo $pallet['nama_barang']; ?></option>
+                            <?php endforeach; ?>
+                    </select>
+                </div>
+                <div>
                     <label>Kode Pallet : </label>
                     <br>
-                    <select name="kode_pallet" id="kode_pallet" class="form-control">
-                        <option value="" selected disabled>-- CARI NOMOR PALLET ---</option>
-                        <?php foreach ($master_pallet as $pallet) : ?>
-                            <option value="<?php echo $pallet['kode_pallet'] ?>"><?php echo $pallet['kode_pallet']; ?></option>
-                        <?php endforeach ?>
-                    </select>
+                    <input type="text" name="kode_pallet" id="kode_pallet" class="form-control" >
                 </div>
                 <div>
                     <label>Warehouse : </label>
@@ -82,10 +86,34 @@
 
 <script>
     $(document).ready(function() {
-        $('#kode_pallet').select2();
+        $('#nama_barang').select2();
         $('#po_id').select2();
         $('#no_pallet').select2();
         $('#seat_number').select2();
+
+
+
+        $('#nama_barang').on('change', function() {
+            var nama_barang = $(this).val();
+            $.ajax({
+                url: '<?= site_url('/ajax_get_nama_barang'); ?>',
+                method: 'GET',
+                data: {
+                    nama_barang: nama_barang
+                },
+                dataType: 'json',
+                success: function(response) {
+                    if (response && response.kode_pallet) {
+                        $('#kode_pallet').val(response.kode_pallet);
+                    } else {
+                        $('#kode_pallet').val('');
+                    }
+                },
+                error: function() {
+                    $('#kode_pallet').val('');
+                }
+            });
+        });
 
 
         $('#nomor_gr').on('change',function(){

@@ -18,7 +18,7 @@
         width: 40px;
         height: 40px;
         margin: 5px;
-        background-color: #ccc;
+        background-color: rgb(204, 204, 204);
         /* Default color for available seats */
         text-align: center;
         line-height: 40px;
@@ -145,49 +145,57 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
 
 <script>
-    $(document).ready(function () {
-        $('.btn-ruangan').click(function () {
-            var group = $(this).data('group');
-            $.ajax({
-                url: '<?= base_url('/group_bin_data') ?>',
-                type: 'POST',
-                data: { group: group },
-                dataType: 'json',
-                success: function (response) {
-                    let seatMapHtml = '';
-                    let x = 9;
-                    let y = 8;
-                    for (let i = 1; i <= y; i++) {
-                        seatMapHtml += '<div class="row">';
-                        for (let j = 1; j <= x; j++) {
-                            let seatNumber = (j - 1) * y + i;
-                            seatMapHtml += '<div class="column">';
-                            seatMapHtml += '<div class="seat ';
-                            if (response[seatNumber] === 1) {
-                                seatMapHtml += 'reserved';
-                            } else {
-                                seatMapHtml += 'available';
-                            }
-                            seatMapHtml += '">' + seatNumber + '</div>';
-                            seatMapHtml += '</div>';
+  $(document).ready(function () {
+    // Function to reset modal content and QR code
+    function resetModal() {
+        $('#kode_pallet, #nama_barang, #total_qty_barang, #satuan, #exp_date, #lokasi_rack, #bin_location').empty();
+        $('#qrcode').empty(); // Clear the QR code
+    }
+
+    $('.btn-ruangan').click(function () {
+        var group = $(this).data('group');
+        $.ajax({
+            url: '<?= base_url('/group_bin_data') ?>',
+            type: 'POST',
+            data: { group: group },
+            dataType: 'json',
+            success: function (response) {
+                let seatMapHtml = '';
+                let x = 9;
+                let y = 8;
+                for (let i = 1; i <= y; i++) {
+                    seatMapHtml += '<div class="row">';
+                    for (let j = 1; j <= x; j++) {
+                        let seatNumber = (j - 1) * y + i;
+                        seatMapHtml += '<div class="column">';
+                        seatMapHtml += '<div class="seat ';
+                        if (response[seatNumber] === 1) {
+                            seatMapHtml += 'reserved';
+                        } else {
+                            seatMapHtml += 'available';
                         }
+                        seatMapHtml += '">' + seatNumber + '</div>';
                         seatMapHtml += '</div>';
                     }
-                    $('#seat-container').html(seatMapHtml);
-                },
-                error: function (xhr, status, error) {
-                    console.error('Error : ', error);
+                    seatMapHtml += '</div>';
                 }
-            });
+                $('#seat-container').html(seatMapHtml);
+                resetModal(); // Reset modal content on new selection
+            },
+            error: function (xhr, status, error) {
+                console.error('Error : ', error);
+            }
         });
+    });
 
-        // Click event for reserved seats
-        $(document).on('click', '.seat', function () {
-            var bin_location = $(this).text(); // Get the seat number from the text content
+    // Click event for reserved seats
+    $(document).on('click', '.seat', function () {
+        if (!$(this).hasClass('available')) {
+            var bin_location = $(this).text();
             $.ajax({
-                url: '<?= base_url('/ajax_get_seat_data') ?>', // Correct endpoint name
+                url: '<?= base_url('/ajax_get_seat_data') ?>',
                 type: 'GET',
-                data: { bin_location: bin_location }, // Remove seatStatus if not needed
+                data: { bin_location: bin_location },
                 dataType: 'json',
                 success: function (response) {
                     $('#kode_pallet').html("Kode Pallet : " + response[0].kode_pallet);
@@ -203,81 +211,79 @@
                     console.error('Error : ', error);
                 }
             });
-        });
-
-        // Generate QR code
-        $('#generate_qr').click(function () {
-            var qrData = {
-                kode_pallet: $('#kode_pallet').text(),
-                nama_barang: $('#nama_barang').text(),
-                total_qty_barang: $('#total_qty_barang').text(),
-                satuan: $('#satuan').text(),
-                exp_date: $('#exp_date').text(),
-                lokasi_rack: $('#lokasi_rack').text(),
-                bin_location: $('#bin_location').text()
-            };
-
-            // Construct URL with query parameters
-            var url = '<?= base_url('/show_data') ?>?' + $.param(qrData);
-
-            // Clear any existing QR code
-            $('#qrcode').html('');
-
-            // Generate QR code with high resolution
-            var qrcode = new QRCode(document.getElementById("qrcode"), {
-                text: url,
-                width: 380, // Increased width for higher resolution
-                height: 380 // Increased height for higher resolution
-            });
-
-            console.log('QR Code generated');
-        });
-        $(document).on('click', '.modal .close', function () {
-            $('#myModal').modal('hide');
-        });
-
-
-        $('#print_qrcode').click(function () {
-            var palletData = {
-        kode_pallet: $('#kode_pallet').text(),
-        nama_barang: $('#nama_barang').text(),
-        total_qty_barang: $('#total_qty_barang').text(),
-        satuan: $('#satuan').text(),
-        exp_date: $('#exp_date').text(),
-        lokasi_rack: $('#lokasi_rack').text(),
-        bin_location: $('#bin_location').text()
-    };
-    generatePDF(palletData);
-            });
-
-            function generatePDF(palletData) {
-    // Get the QR code image data URL
-    var qrCodeImageData = $('#qrcode canvas')[0].toDataURL('image/png');
-
-    // Define the PDF document structure
-    var docDefinition = {
-        content: [
-            // { text: "Data Pallet BIN", style: 'header' },
-            { text: palletData.kode_pallet, style: 'subheader' },
-            { text: palletData.nama_barang, style: 'subheader' },
-            { text: palletData.total_qty_barang, style: 'subheader' },
-            { text: palletData.exp_date, style: 'subheader' },
-            { text: palletData.satuan, style: 'subheader' },
-            { text: palletData.lokasi_rack, style: 'subheader' },
-            { text: palletData.bin_location, style: 'subheader' },
-            { image: qrCodeImageData, width: 200, alignment: 'center', margin: [0, 20] } // Add the QR code image to the PDF
-        ],
-        styles: {
-            header: { fontSize: 18, bold: true, margin: [0, 0, 0, 10] },
-            subheader: { fontSize: 14, bold: true, margin: [0, 5] }
         }
-    };
-
-    // Generate the PDF
-    pdfMake.createPdf(docDefinition).open();
-}
-
     });
+
+    // Generate QR code button click event
+    $('#generate_qr').click(function () {
+        var qrData = {
+            kode_pallet: $('#kode_pallet').text(),
+            nama_barang: $('#nama_barang').text(),
+            total_qty_barang: $('#total_qty_barang').text(),
+            satuan: $('#satuan').text(),
+            exp_date: $('#exp_date').text(),
+            lokasi_rack: $('#lokasi_rack').text(),
+            bin_location: $('#bin_location').text()
+        };
+
+        var url = '<?= base_url('/show_data') ?>?' + $.param(qrData);
+
+        $('#qrcode').html('');
+
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: url,
+            width: 380,
+            height: 380
+        });
+
+        console.log('QR Code generated');
+    });
+
+    // Close modal event
+    $('#myModal').on('hidden.bs.modal', function () {
+        resetModal(); // Reset modal content when modal is closed
+    });
+
+    // Print QR code button click event
+    $('#print_qrcode').click(function () {
+        var palletData = {
+            kode_pallet: $('#kode_pallet').text(),
+            nama_barang: $('#nama_barang').text(),
+            total_qty_barang: $('#total_qty_barang').text(),
+            satuan: $('#satuan').text(),
+            exp_date: $('#exp_date').text(),
+            lokasi_rack: $('#lokasi_rack').text(),
+            bin_location: $('#bin_location').text()
+        };
+        generatePDF(palletData);
+    });
+
+    function generatePDF(palletData) {
+        var qrCodeImageData = $('#qrcode canvas')[0].toDataURL('image/png');
+
+        var docDefinition = {
+            content: [
+                { text: palletData.kode_pallet, style: 'subheader' },
+                { text: palletData.nama_barang, style: 'subheader' },
+                { text: palletData.total_qty_barang, style: 'subheader' },
+                { text: palletData.exp_date, style: 'subheader' },
+                { text: palletData.satuan, style: 'subheader' },
+                { text: palletData.lokasi_rack, style: 'subheader' },
+                { text: palletData.bin_location, style: 'subheader' },
+                { image: qrCodeImageData, width: 200, alignment: 'center', margin: [0, 20] }
+            ],
+            styles: {
+                header: { fontSize: 18, bold: true, margin: [0, 0, 0, 10] },
+                subheader: { fontSize: 14, bold: true, margin: [0, 5] }
+            }
+        };
+
+        pdfMake.createPdf(docDefinition).getBlob(function (pdfBlob) {
+            var pdfUrl = URL.createObjectURL(pdfBlob);
+            window.open(pdfUrl);
+        });
+    }
+});
 </script>
 
 

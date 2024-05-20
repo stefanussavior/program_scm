@@ -44,115 +44,91 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 <script>
     $(document).ready(function () {
-        $('#supplier').select2();
-        $('#nomor_gr').select2();
-
-       
-        $('#paletizationForm').submit(function (event) {
-            event.preventDefault(); 
-            $.ajax({
-                url: '/submit_form_identitas_pallet', 
-                method: 'POST', 
-                data: $(this).serialize(),
-                dataType: 'JSON',
-                success: function (response) {
-                    if (response.success) {
-                    
-                        $.each(response.kode_pallets, function (index, kode_pallet) {
-                            $('#nilai_konversi_' + index).val(kode_pallet);
-                        });
-                    } else {
-                        // Handle error or other conditions
-                        console.log('Error:', response.message);
-                    }
-                },
-                error: function (xhr, status, error) {
-                    console.error('Error:', error);
-                }
-            });
-        });
-
+    $('#supplier').select2();
+    $('#nomor_gr').select2();
 
     $('#nomor_gr').on('change', function () {
-    var nomor_gr = $(this).val();
-    $.ajax({
-        url: '<?= site_url('/ajax_get_nomor_gr') ?>',
-        method: 'GET',
-        data: { nomor_gr: nomor_gr },
-        dataType: 'JSON',
-        success: function (response) {
-            $('#barang_container').empty();
-            $('#additional_forms_container').empty();
+        var nomor_gr = $(this).val();
+        $.ajax({
+            url: '<?= site_url('/ajax_get_nomor_gr') ?>',
+            method: 'GET',
+            data: { nomor_gr: nomor_gr },
+            dataType: 'JSON',
+            success: function (response) {
+                $('#barang_container').empty();
+                $('#additional_forms_container').empty();
 
-            $.each(response.data, function (index, row) {
-                var fieldHtml = '<div class="row">';
+                $.each(response.data, function (index, row) {
+                    var fieldHtml = '<div class="row">';
+                    fieldHtml += '<div class="col-sm-4 mb-4"><label>Nama Barang ' + (index + 1) + ' : </label><input name="nama_barang[]" class="form-control" value="' + row.nama_barang + '" readonly></div>';
+                    fieldHtml += '<div class="col-sm-4 mb-4"><label>Jumlah Qty Barang ' + (index + 1) + ' : </label><input name="qty_dtg[]" class="form-control qty" value="' + row.qty_dtg + '" readonly></div>';
+                    fieldHtml += '<div class="col-sm-4 mb-4"><label>Satuan Berat Barang ' + (index + 1) + ' : </label><input name="satuan_berat[]" class="form-control qty" value="' + row.satuan + '" readonly></div>';
 
-                var NamaBarang = '<div class="col-sm-4 mb-4"><label>Nama Barang ' + (index + 1) + ' : </label><input name="nama_barang[]" class="form-control" value="' + row.nama_barang + '" readonly></div>';
-                fieldHtml += NamaBarang;
+                    var convertedValue = convertAndAppend(index, row.satuan, row.qty_dtg);
+                    fieldHtml += '<div class="col-sm-4 mb-4"><label>Nilai Hasil Konversi Ke Pallet ' + (index + 1) + ' : </label><input type="text" id="nilai_konversi_' + index + '" name="nilai_konversi[]" class="form-control nilai_konversi" value="' + convertedValue + '" readonly></div>';
 
-                var QtyBarang = '<div class="col-sm-4 mb-4"><label>Jumlah Qty Barang ' + (index + 1) + ' : </label><input name="qty_dtg[]" class="form-control qty" value="' + row.qty_dtg + '" readonly></div>';
-                fieldHtml += QtyBarang;
+                    if (convertedValue > 0) {
+                        for (let i = 0; i < convertedValue; i++) {
+                            var newKodePallet = generateKodePallet();
+                            fieldHtml += '<div class="col-sm-4 mb-4"><label>Kode Pallet ' + (index + 1) + ' (' + (i + 1) + ') : </label><input type="text" name="kode_pallet' + index + '[]" class="form-control" value="' + newKodePallet + '" readonly></div>';
+                        }
+                    }
 
-                var SatuanBerat = '<div class="col-sm-4 mb-4"><label>Satuan Berat Barang ' + (index + 1) + ' : </label><input name="satuan_berat[]" class="form-control qty" value="' + row.satuan + '" readonly></div>';
-                fieldHtml += SatuanBerat;
-                
-                var convertedValue = convertAndAppend(index, row.satuan, row.qty_dtg);
-
-
-                var NilaiKonversi = '<div class="col-sm-4 mb-4"><label>Nilai Hasil Konversi Ke Pallet ' + (index + 1) + ' : </label><input type="text" id="nilai_konversi_' + index + '" name="nilai_konversi[]" class="form-control nilai_konversi" value="' + convertedValue + '" readonly></div>';
-                fieldHtml += NilaiKonversi;
-
-                // var SisaBarangPallet = '<div class="col-sm-4 mb-4"><label>Nilai Sisa Barang : ' + (index + 1) + ' : </label><input type="text" id="nilai_konversi_' + index + '" name="nilai_konversi[]" class="form-control nilai_konversi" value="' + parseFloat(convertedValue) + '" readonly></div>';
-                // fieldHtml += SisaBarangPallet;
-
-                var nilai_konversi_array = [];
-
-if (convertedValue > 0) {
-    var kodePalletFields = '';
-    for (let i = 0; i < convertedValue; i++) {
-        var newKodePallet = generateKodePallet();
-        kodePalletFields += '<div class="col-sm-4 mb-4"><label>Kode Pallet ' + (index + 1) + ' (' + (i + 1) + ') : </label><input type="text" name="kode_pallet' + index + '[]" class="form-control" value="' + newKodePallet + '" readonly></div>';
-        nilai_konversi_array.push(1); // Assume nilai_konversi is 1 for each kode_pallet
-    }
-    fieldHtml += kodePalletFields;
-}
-
-    $('#barang_container').append(fieldHtml);
-            });
-        },
-        error: function (xhr, status, error) {
-            console.error('Error:', error);
-        }
+                    $('#barang_container').append(fieldHtml);
+                });
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+            }
+        });
     });
-});
 
+    $('#paletizationForm').submit(function (event) {
+        event.preventDefault();
+        $.ajax({
+            url: '/submit_form_identitas_pallet',
+            method: 'POST',
+            data: $(this).serialize(),
+            dataType: 'JSON',
+            success: function (response) {
+                if (response.success) {
+                    $.each(response.kode_pallets, function (index, kode_pallet) {
+                        $('#nilai_konversi_' + index).val(kode_pallet);
+                    });
+                } else {
+                    console.log('Error:', response.message);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+            }
+        });
+    });
 
-
-function generateKodePallet() {
-    return 'PALLET-' + generateUniqueCode();
-}
-
-function generateUniqueCode() {
-    return Math.floor(Math.random() * 1000000); // Generate a random 6-digit number
-}
-
-function convertAndAppend(index, satuan, qty) {
-    let convertedValue = qty;
-
-    if (satuan === 'KG') {
-        convertedValue = qty / 1000;
-    } else if (satuan === 'PACK') {
-        convertedValue = qty / 2000;
-    } else if (satuan === 'CTN') {
-        convertedValue = qty / 10000;
-    } else if (satuan === 'PALLET') {
-        convertedValue = qty / 450000;
+    function generateKodePallet() {
+        return 'PALLET-' + generateUniqueCode();
     }
-    convertedValue = parseInt(convertedValue);
-    $('#nilai_konversi_' + index).val(convertedValue);
-    return convertedValue;
-}
 
+    function generateUniqueCode() {
+        return Math.floor(Math.random() * 1000000); // Generate a random 6-digit number
+    }
+
+    function convertAndAppend(index, satuan, qty) {
+        let convertedValue = qty;
+        if (satuan === 'KG') {
+            convertedValue = qty / 1000;
+        } else if (satuan === 'PACK') {
+            convertedValue = qty / 2000;
+        } else if (satuan === 'CTN') {
+            convertedValue = qty / 10000;
+        } else if (satuan === 'PALLET') {
+            convertedValue = qty / 450000;
+        }
+        convertedValue = parseInt(convertedValue);
+        $('#nilai_konversi_' + index).val(convertedValue);
+        return convertedValue;
+    }
+});
 
 function fetchKodePallet(convertedValue, index) {
         $.ajax({
@@ -172,8 +148,6 @@ function fetchKodePallet(convertedValue, index) {
             }
         });
     }
-
-
     $.ajax({
             url: '<?= base_url('/ambil_kode_pallet'); ?>',
             type: 'GET',
@@ -185,7 +159,7 @@ function fetchKodePallet(convertedValue, index) {
                 console.error('Error:', error);
             }
         });
-    });
+
 </script>
 
 <?= $this->include('template/footer'); ?>
