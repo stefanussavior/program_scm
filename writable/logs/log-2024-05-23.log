@@ -1,0 +1,62 @@
+INFO - 2024-05-23 01:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 01:36:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 01:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 01:38:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 01:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 01:39:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 01:47:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 01:47:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-05-23 01:47:50 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-597554","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1","status":null}
+CRITICAL - 2024-05-23 01:47:50 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: submit_form_identitas_pallet]
+in SYSTEMPATH/BaseModel.php on line 826.
+ 1 SYSTEMPATH/BaseModel.php(826): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(96): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+DEBUG - 2024-05-23 01:49:40 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-597554","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1","status":null}
+CRITICAL - 2024-05-23 01:49:40 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: submit_form_identitas_pallet]
+in SYSTEMPATH/BaseModel.php on line 826.
+ 1 SYSTEMPATH/BaseModel.php(826): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(96): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-23 01:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 01:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-05-23 01:49:46 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-374383","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1","status":null}
+CRITICAL - 2024-05-23 01:49:46 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: submit_form_identitas_pallet]
+in SYSTEMPATH/BaseModel.php on line 826.
+ 1 SYSTEMPATH/BaseModel.php(826): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(96): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->InputIdentitasPallet()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+DEBUG - 2024-05-23 01:52:01 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-374383","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1","status":null}
+DEBUG - 2024-05-23 01:52:01 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-55947","nomor_gr":"GR0001","nama_barang":"BUAH PEER","qty_dtg":460000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PALLET","nilai_konversi":"1","status":null}
+DEBUG - 2024-05-23 01:52:01 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-103698","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":"6","status":null}
+DEBUG - 2024-05-23 01:52:01 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-975435","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 01:52:01 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-230047","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 01:52:01 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-554205","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 01:52:01 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-283403","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 01:52:01 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-619113","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+INFO - 2024-05-23 01:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 01:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

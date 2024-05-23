@@ -87,12 +87,6 @@ body{
     left: 8.5rem;
 }
 
-@media (max-width: 600px) {
-    .flex-container{
-        flex-direction: column;
-    }
-}
-
 
 
 /* body {

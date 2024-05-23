@@ -3,7 +3,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
 
 
-<title>Form Good Receive</title>
+<title>Good Receive</title>
 
 <!-- <style>
     *{
@@ -25,7 +25,7 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Form Good Receive</h1>
+        <h1 class="h3 mb-0 text-gray-800">Good Receive</h1>
         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
     </div>
@@ -154,7 +154,9 @@
     var add_button = $("#add_field"); 
     var x = 0;
 
-
+    var today = new Date().toISOString().split('T')[0];
+        $('#tanggal_gr').attr('min', today);
+        $('#est_kirim').attr('min', today);
      
       $('#po_id').on('change', function () {
         var nomor_po = $(this).val(); 
@@ -164,6 +166,7 @@
     });
 
     function checkPOStatus(nomor_po) {
+        
     $.ajax({
         url: '/check_po_fullfiled', // Update the URL as needed
         method: 'POST',
@@ -199,9 +202,10 @@
                 case 'not_fulfilled':
                     alert(response.message); // Display an alert for not fulfilled PO
                     $('input[name^="qty_dtg"]').prop('readonly', false); // Ensure it is editable if needed
-                
+                    $('#add_field').hide();
                     break;
                 default:
+                     add_button.hide(); // Hide the button
                     alert('Error occurred while checking PO status.'); // Display an error alert
                     break;
             }
@@ -209,6 +213,19 @@
         error: function () {
             alert('Error occurred while checking PO status.'); // Display an error alert
         }
+    });
+}
+
+
+
+function setMinDateForExpDateFields() {
+    var today = new Date().toISOString().split('T')[0];
+    $('.exp_date').each(function () {
+        var currentValue = $(this).val();
+        if (currentValue < today) {
+            $(this).val(today);
+        }
+        $(this).attr('min', today);
     });
 }
 
@@ -253,7 +270,7 @@
                     </div>
                     <div class="col-sm-3">
                         <label>Expired Date Barang ${x} : </label>
-                        <input type="date" class="form-control" name="exp_date[]">
+                        <input type="date" class="form-control exp_date" name="exp_date[]">
                     </div>
                     <div class="col-sm-3">
                         <button type="button" class="remove_field btn btn-danger mt-4">Remove Field</button>
@@ -284,6 +301,7 @@
                     }
                 });
             }
+            setMinDateForExpDateFields();
         }
     });
 
@@ -416,14 +434,16 @@
                         fieldHtml = '<div class="row">';
                         var kodeBatch = '<div class="col-sm-6"><label>Kode Batch Barang ' + (index + 1) + ': </label><input type="text" name="kode_batch[]" id="kode_batch_' + (index + 1) + '" class="form-control"></div>';
                         fieldHtml += kodeBatch;
-                        var expDate = '<div class="col-sm-6"><label>Expired Date Barang ' + (index + 1) + ': </label><input type="date" name="exp_date[]" id="exp_date_' + (index + 1) + '" class="form-control"></div>';
+                        var expDate = '<div class="col-sm-6"><label>Expired Date Barang ' + (index + 1) + ': </label><input type="date" name="exp_date[]" id="exp_date_' + (index + 1) + '" class="form-control exp_date"></div>';
                         fieldHtml += expDate;
 
                         var qtyOutstanding = '<div class="col-sm-6"><label>Qty Outstanding ' + (index + 1) + ': </label><input type="number" name="qty_gr_outstd[]" id="qty_gr_outstd_' + (index + 1) + '" class="form-control" readonly></div>';
                         fieldHtml += qtyOutstanding;
 
                         fieldHtml += '</div>';
+
                         $('#barang_container').append(fieldHtml);
+                        setMinDateForExpDateFields();
 
 
 

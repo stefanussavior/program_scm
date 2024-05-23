@@ -69,20 +69,20 @@ class MasterGRModel extends Model
 
     function KodeOtomatisGR() {
         $builder = $this->table('table_gr');
-        $builder->selectMax('nomor_gr','nomor_grMax');
+        $builder->selectMax('nomor_gr', 'nomor_grMax');
         $query = $builder->get()->getResult();
         $kd = '';
-        if ($query > 0) {
-            foreach ($query as $key) {
-                $ambilKode = substr($key->nomor_grMax, -4);
-                $counter = (intval($ambilKode)) + 1;
-                $kd = sprintf('%04s', $counter);
-            }
+    
+        if ($query && !empty($query[0]->nomor_grMax)) {
+            $ambilKode = substr($query[0]->nomor_grMax, -4);
+            $counter = (intval($ambilKode)) + 1;
+            $kd = sprintf('%04s', $counter);
         } else {
             $kd = '0001';
         }
-        return 'GR'.$kd;
+        return 'GR' . $kd;
     }
+    
 
     function KodeOtomatisKodeBatch() {
         $builder = $this->table('table_gr');

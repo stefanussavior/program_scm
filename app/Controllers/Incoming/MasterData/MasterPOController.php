@@ -35,7 +35,8 @@ class MasterPOController extends BaseController
 
     public function GetAllDataUploadPONoGR(){
         $dataAllUploadPO = new MasterPOModel();
-        $data = $dataAllUploadPO->GetDataPONoGR();
+        $data = $dataAllUploadPO->findAll();
+        // $data = $dataAllUploadPO->GetDataPONoGR();
         echo json_encode(["data" => $data]);
     }
 

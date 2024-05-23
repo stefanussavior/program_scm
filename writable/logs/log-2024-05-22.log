@@ -1,0 +1,591 @@
+INFO - 2024-05-22 01:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 01:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 01:06:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 01:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 01:22:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 01:24:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 01:25:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 01:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 01:27:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 01:28:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 01:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 01:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 01:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 01:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 01:34:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 01:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-22 01:34:43 --> mysqli_sql_exception: Illegal parameter data types varchar and row for operation '=' in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php(308): mysqli->query('SELECT COUNT(*)...', 0)
+#1 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(667): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Models/Incoming/MasterData/MasterBinModel.php(75): CodeIgniter\Model->countAllResults()
+#6 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormBINController.php(46): App\Models\Incoming\MasterData\MasterBinModel->isRackBinLocationExists(Array, Array)
+#7 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->InsertDataBIN()
+#8 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+#9 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Commands/Server/rewrite.php(49): require_once('/Users/stefanus...')
+#14 {main}
+CRITICAL - 2024-05-22 01:34:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types varchar and row for operation '='
+[Method: POST, Route: submit_form_bin]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `table_bin`
+WHERE `rack` = :rack:
+AND `bin_location` = :bin_location:', [...], false)
+ 2 SYSTEMPATH/Model.php(667): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH/Models/Incoming/MasterData/MasterBinModel.php(75): CodeIgniter\Model->countAllResults()
+ 4 APPPATH/Controllers/Incoming/Form/FormBINController.php(46): App\Models\Incoming\MasterData\MasterBinModel->isRackBinLocationExists([...], [...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->InsertDataBIN()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-22 01:34:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types varchar and row for operation '='
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `table_bin`
+WHERE `rack` = (\'R2\',\'R2\',\'R2\',\'R2\',\'R2\',\'R2\')
+AND `bin_location` = (\'2\',\'3\',\'4\',\'5\',\'6\',\'7\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `table_bin`
+WHERE `rack` = (\'R2\',\'R2\',\'R2\',\'R2\',\'R2\',\'R2\')
+AND `bin_location` = (\'2\',\'3\',\'4\',\'5\',\'6\',\'7\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `table_bin`
+WHERE `rack` = :rack:
+AND `bin_location` = :bin_location:', [...], false)
+ 4 SYSTEMPATH/Model.php(667): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH/Models/Incoming/MasterData/MasterBinModel.php(75): CodeIgniter\Model->countAllResults()
+ 6 APPPATH/Controllers/Incoming/Form/FormBINController.php(46): App\Models\Incoming\MasterData\MasterBinModel->isRackBinLocationExists([...], [...])
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->InsertDataBIN()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-22 01:34:43 --> [Caused by] mysqli_sql_exception: Illegal parameter data types varchar and row for operation '='
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `table_bin`
+WHERE `rack` = (\'R2\',\'R2\',\'R2\',\'R2\',\'R2\',\'R2\')
+AND `bin_location` = (\'2\',\'3\',\'4\',\'5\',\'6\',\'7\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `table_bin`
+WHERE `rack` = (\'R2\',\'R2\',\'R2\',\'R2\',\'R2\',\'R2\')
+AND `bin_location` = (\'2\',\'3\',\'4\',\'5\',\'6\',\'7\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `table_bin`
+WHERE `rack` = (\'R2\',\'R2\',\'R2\',\'R2\',\'R2\',\'R2\')
+AND `bin_location` = (\'2\',\'3\',\'4\',\'5\',\'6\',\'7\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `table_bin`
+WHERE `rack` = :rack:
+AND `bin_location` = :bin_location:', [...], false)
+ 5 SYSTEMPATH/Model.php(667): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH/Models/Incoming/MasterData/MasterBinModel.php(75): CodeIgniter\Model->countAllResults()
+ 7 APPPATH/Controllers/Incoming/Form/FormBINController.php(46): App\Models\Incoming\MasterData\MasterBinModel->isRackBinLocationExists([...], [...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->InsertDataBIN()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-22 02:03:49 --> ErrorException: foreach() argument must be of type array|object, string given
+[Method: POST, Route: submit_form_bin]
+in APPPATH/Controllers/Incoming/Form/FormBINController.php on line 46.
+ 1 APPPATH/Controllers/Incoming/Form/FormBINController.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormBINController.php', 46)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormBINController->InsertDataBIN()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormBINController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-22 02:05:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 02:08:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 02:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 02:13:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 02:18:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 02:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 02:24:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 02:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 02:25:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 02:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 02:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 02:25:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 02:27:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 02:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 03:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 03:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 03:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-22 03:20:02 --> mysqli_sql_exception: Column 'nomor_po' cannot be null in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `ta...', 0)
+#1 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ta...')
+#2 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ta...')
+#3 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#4 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormUploadDataController.php(76): CodeIgniter\Model->insert(Array)
+#8 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormUploadDataController->UploadDataExcelToDatabase()
+#9 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormUploadDataController))
+#10 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Commands/Server/rewrite.php(49): require_once('/Users/stefanus...')
+#15 {main}
+CRITICAL - 2024-05-22 03:20:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'nomor_po' cannot be null
+[Method: POST, Route: upload_data_excel_to_database]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_po` (`supplier`, `nomor_po`, `tanggal_po`, `keterangan_po`, `tanggal_pengiriman`, `kode`, `nama_barang`, `catatan`, `satuan`, `qty_po`, `qty_terproses`, `qty_belum_terp`) VALUES (:supplier:, :nomor_po:, :tanggal_po:, :keterangan_po:, :tanggal_pengiriman:, :kode:, :nama_barang:, :catatan:, :satuan:, :qty_po:, :qty_terproses:, :qty_belum_terp:)', [...], false)
+ 2 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/Incoming/Form/FormUploadDataController.php(76): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormUploadDataController->UploadDataExcelToDatabase()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormUploadDataController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-22 03:20:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'nomor_po' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `table_po` (`supplier`, `nomor_po`, `tanggal_po`, `keterangan_po`, `tanggal_pengiriman`, `kode`, `nama_barang`, `catatan`, `satuan`, `qty_po`, `qty_terproses`, `qty_belum_terp`) VALUES (\'TEST VENDOR - SCM\', NULL, \'2024-04-07\', \'AUTOPUSH 07-04-2024\', \'2024-04-07\', \'100042\', \'BUAH BELIMBING\', NULL, \'KG\', 1000, 0, NULL)')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `table_po` (`supplier`, `nomor_po`, `tanggal_po`, `keterangan_po`, `tanggal_pengiriman`, `kode`, `nama_barang`, `catatan`, `satuan`, `qty_po`, `qty_terproses`, `qty_belum_terp`) VALUES (\'TEST VENDOR - SCM\', NULL, \'2024-04-07\', \'AUTOPUSH 07-04-2024\', \'2024-04-07\', \'100042\', \'BUAH BELIMBING\', NULL, \'KG\', 1000, 0, NULL)')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_po` (`supplier`, `nomor_po`, `tanggal_po`, `keterangan_po`, `tanggal_pengiriman`, `kode`, `nama_barang`, `catatan`, `satuan`, `qty_po`, `qty_terproses`, `qty_belum_terp`) VALUES (:supplier:, :nomor_po:, :tanggal_po:, :keterangan_po:, :tanggal_pengiriman:, :kode:, :nama_barang:, :catatan:, :satuan:, :qty_po:, :qty_terproses:, :qty_belum_terp:)', [...], false)
+ 4 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/Incoming/Form/FormUploadDataController.php(76): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormUploadDataController->UploadDataExcelToDatabase()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormUploadDataController))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-22 03:20:02 --> [Caused by] mysqli_sql_exception: Column 'nomor_po' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `table_po` (`supplier`, `nomor_po`, `tanggal_po`, `keterangan_po`, `tanggal_pengiriman`, `kode`, `nama_barang`, `catatan`, `satuan`, `qty_po`, `qty_terproses`, `qty_belum_terp`) VALUES (\'TEST VENDOR - SCM\', NULL, \'2024-04-07\', \'AUTOPUSH 07-04-2024\', \'2024-04-07\', \'100042\', \'BUAH BELIMBING\', NULL, \'KG\', 1000, 0, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `table_po` (`supplier`, `nomor_po`, `tanggal_po`, `keterangan_po`, `tanggal_pengiriman`, `kode`, `nama_barang`, `catatan`, `satuan`, `qty_po`, `qty_terproses`, `qty_belum_terp`) VALUES (\'TEST VENDOR - SCM\', NULL, \'2024-04-07\', \'AUTOPUSH 07-04-2024\', \'2024-04-07\', \'100042\', \'BUAH BELIMBING\', NULL, \'KG\', 1000, 0, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `table_po` (`supplier`, `nomor_po`, `tanggal_po`, `keterangan_po`, `tanggal_pengiriman`, `kode`, `nama_barang`, `catatan`, `satuan`, `qty_po`, `qty_terproses`, `qty_belum_terp`) VALUES (\'TEST VENDOR - SCM\', NULL, \'2024-04-07\', \'AUTOPUSH 07-04-2024\', \'2024-04-07\', \'100042\', \'BUAH BELIMBING\', NULL, \'KG\', 1000, 0, NULL)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `table_po` (`supplier`, `nomor_po`, `tanggal_po`, `keterangan_po`, `tanggal_pengiriman`, `kode`, `nama_barang`, `catatan`, `satuan`, `qty_po`, `qty_terproses`, `qty_belum_terp`) VALUES (:supplier:, :nomor_po:, :tanggal_po:, :keterangan_po:, :tanggal_pengiriman:, :kode:, :nama_barang:, :catatan:, :satuan:, :qty_po:, :qty_terproses:, :qty_belum_terp:)', [...], false)
+ 5 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Incoming/Form/FormUploadDataController.php(76): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormUploadDataController->UploadDataExcelToDatabase()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormUploadDataController))
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-22 03:23:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 03:23:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 03:24:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 03:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 03:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 03:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 03:26:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 03:40:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 03:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:02:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:02:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:02:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:03:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:11:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:12:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:17:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:18:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:30:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:37:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:38:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:45:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:45:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:50:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:51:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:55:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 04:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 06:05:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-05-22 06:05:40 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-230497","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1"}
+DEBUG - 2024-05-22 06:05:40 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-509141","nomor_gr":"GR0001","nama_barang":"BUAH PEER","qty_dtg":460000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PALLET","nilai_konversi":"1"}
+DEBUG - 2024-05-22 06:05:40 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-816348","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":"6"}
+DEBUG - 2024-05-22 06:05:40 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-199953","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-22 06:05:40 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-933990","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-22 06:05:40 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-558469","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-22 06:05:40 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-6244","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-22 06:05:40 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-610928","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+INFO - 2024-05-22 06:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-05-22 06:06:43 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-230497","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1"}
+DEBUG - 2024-05-22 06:06:43 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-509141","nomor_gr":"GR0001","nama_barang":"BUAH PEER","qty_dtg":460000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PALLET","nilai_konversi":"1"}
+DEBUG - 2024-05-22 06:06:43 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-816348","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":"6"}
+DEBUG - 2024-05-22 06:06:43 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-199953","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-22 06:06:43 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-933990","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-22 06:06:43 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-558469","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-22 06:06:43 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-6244","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-22 06:06:43 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-610928","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+INFO - 2024-05-22 06:06:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 06:08:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-05-22 06:08:07 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-581353","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1"}
+DEBUG - 2024-05-22 06:08:07 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-450359","nomor_gr":"GR0001","nama_barang":"BUAH PEER","qty_dtg":460000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PALLET","nilai_konversi":"1"}
+DEBUG - 2024-05-22 06:08:07 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-106652","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":"6"}
+DEBUG - 2024-05-22 06:08:07 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-15950","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-22 06:08:07 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-369008","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-22 06:08:07 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-771105","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-22 06:08:07 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-562708","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-22 06:08:07 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-126860","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+INFO - 2024-05-22 06:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 06:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 06:26:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 06:26:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-22 06:26:25 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 58.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(58): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+DEBUG - 2024-05-22 06:26:54 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-3099","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1"}
+DEBUG - 2024-05-22 06:26:54 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-135367","nomor_gr":"GR0001","nama_barang":"BUAH PEER","qty_dtg":460000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PALLET","nilai_konversi":"1"}
+DEBUG - 2024-05-22 06:26:54 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-778864","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":"6"}
+DEBUG - 2024-05-22 06:26:54 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-646915","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-22 06:26:54 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-559419","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-22 06:26:54 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-54257","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-22 06:26:54 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-507592","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-22 06:26:54 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-567427","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+INFO - 2024-05-22 06:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 06:27:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 06:29:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 07:34:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 07:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 07:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-05-22 07:39:31 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-857742","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1","status":"1"}
+DEBUG - 2024-05-22 07:39:31 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-18735","nomor_gr":"GR0001","nama_barang":"BUAH PEER","qty_dtg":460000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PALLET","nilai_konversi":"1","status":"1"}
+DEBUG - 2024-05-22 07:39:31 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-398904","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":"6","status":"1"}
+DEBUG - 2024-05-22 07:39:31 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-385679","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+DEBUG - 2024-05-22 07:39:31 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-427828","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+DEBUG - 2024-05-22 07:39:31 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-239859","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+DEBUG - 2024-05-22 07:39:31 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-815392","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+DEBUG - 2024-05-22 07:39:31 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-791894","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+INFO - 2024-05-22 07:39:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 07:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-05-22 07:40:32 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-423453","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1","status":"1"}
+DEBUG - 2024-05-22 07:40:32 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-422247","nomor_gr":"GR0001","nama_barang":"BUAH PEER","qty_dtg":460000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PALLET","nilai_konversi":"1","status":"1"}
+DEBUG - 2024-05-22 07:40:32 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-683258","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":"6","status":"1"}
+DEBUG - 2024-05-22 07:40:32 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-639738","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+DEBUG - 2024-05-22 07:40:32 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-296880","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+DEBUG - 2024-05-22 07:40:32 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-70700","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+DEBUG - 2024-05-22 07:40:32 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-449591","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+DEBUG - 2024-05-22 07:40:32 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-678171","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+INFO - 2024-05-22 07:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 07:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 07:42:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 07:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 07:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 08:08:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-22 08:08:30 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 58.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(58): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+DEBUG - 2024-05-22 08:08:48 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-230758","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1","status":"1"}
+DEBUG - 2024-05-22 08:08:48 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-551006","nomor_gr":"GR0001","nama_barang":"BUAH PEER","qty_dtg":460000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PALLET","nilai_konversi":"1","status":"1"}
+DEBUG - 2024-05-22 08:08:48 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-646009","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":"6","status":"1"}
+DEBUG - 2024-05-22 08:08:48 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-540992","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+DEBUG - 2024-05-22 08:08:48 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-202226","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+DEBUG - 2024-05-22 08:08:48 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-964646","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+DEBUG - 2024-05-22 08:08:48 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-393654","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+DEBUG - 2024-05-22 08:08:48 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-830538","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+INFO - 2024-05-22 08:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 08:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 08:16:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-22 08:16:42 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 58.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(58): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-22 08:25:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 08:27:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 08:27:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 08:27:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 08:28:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 08:28:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 08:28:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 08:28:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 08:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-22 08:28:47 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 58.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(58): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-22 08:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 08:30:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-22 08:30:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-22 08:30:30 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 58.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(58): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-22 08:30:32 --> ErrorException: Undefined array key "status"
+[Method: GET, Route: ajax_get_nomor_gr]
+in APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php on line 270.
+ 1 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormIdentitasPalletController.php', 270)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->AjaxGetNomorGR()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-22 08:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-22 08:34:51 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 58.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(58): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-22 08:34:52 --> ErrorException: Undefined array key "status"
+[Method: GET, Route: ajax_get_nomor_gr]
+in APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php on line 270.
+ 1 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormIdentitasPalletController.php', 270)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->AjaxGetNomorGR()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-22 08:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-22 08:35:25 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 58.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(58): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-22 08:35:27 --> ErrorException: Undefined array key "status"
+[Method: GET, Route: ajax_get_nomor_gr]
+in APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php on line 270.
+ 1 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormIdentitasPalletController.php', 270)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->AjaxGetNomorGR()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-22 08:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-22 08:36:53 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 58.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(58): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-22 08:36:54 --> ErrorException: Undefined array key "status"
+[Method: GET, Route: ajax_get_nomor_gr]
+in APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php on line 270.
+ 1 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormIdentitasPalletController.php', 270)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->AjaxGetNomorGR()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-22 08:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-22 08:39:09 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 58.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(58): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-22 08:40:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-22 08:40:20 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 58.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(58): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-22 08:40:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-22 08:40:30 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 58.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(58): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-22 08:51:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-22 08:51:34 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 58.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(58): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-22 10:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-22 10:10:11 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 58.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(58): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-22 10:10:13 --> ErrorException: Undefined array key "status"
+[Method: GET, Route: ajax_get_nomor_gr]
+in APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php on line 269.
+ 1 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(269): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormIdentitasPalletController.php', 269)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->AjaxGetNomorGR()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-22 10:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-22 10:10:52 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 58.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(58): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-22 10:10:53 --> ErrorException: Undefined array key "status"
+[Method: GET, Route: ajax_get_nomor_gr]
+in APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php on line 269.
+ 1 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(269): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormIdentitasPalletController.php', 269)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->AjaxGetNomorGR()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-22 10:11:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-22 10:11:12 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 58.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(58): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-22 10:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-22 10:11:29 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 58.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(58): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+DEBUG - 2024-05-22 10:13:12 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-113802","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1","status":"1"}
+DEBUG - 2024-05-22 10:13:12 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-70128","nomor_gr":"GR0001","nama_barang":"BUAH PEER","qty_dtg":460000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PALLET","nilai_konversi":"1","status":"1"}
+DEBUG - 2024-05-22 10:13:12 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-565591","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":"6","status":"1"}
+DEBUG - 2024-05-22 10:13:12 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-423360","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+DEBUG - 2024-05-22 10:13:12 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-363769","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+DEBUG - 2024-05-22 10:13:12 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-646859","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+DEBUG - 2024-05-22 10:13:12 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-163641","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+DEBUG - 2024-05-22 10:13:12 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-829438","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":"1"}
+INFO - 2024-05-22 10:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

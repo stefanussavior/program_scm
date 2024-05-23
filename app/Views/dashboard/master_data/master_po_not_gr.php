@@ -20,8 +20,8 @@
                 <th>Kode Barang</th>
                 <th>Qty PO Barang</th>  
                 <th>Satuan Barang</th>
-                <th>Status PO</th>
-                <th>Action</th>
+                <!-- <th>Status PO</th>
+                <th>Action</th> -->
             </tr>
         </thead>
         <tbody>
@@ -73,17 +73,17 @@ $(document).ready(function() {
             { "data": "kode" },
             { "data": "qty_po" },
             { "data" : "satuan"},
-            {"data" : "status_po"},
-            {
-                "data": null,
-                "render" :  function(data, type, row) {
-                    if (row.status_po != 'fullfiled') {
-                        return '<button class="btn btn-primary btn-edit" data-id="' + row.id + '">Edit</button>';
-                    } else {
-                        return '';
-                    }
-                }
-            } 
+            // {"data" : "status_po"},
+            // {
+            //     "data": null,
+            //     "render" :  function(data, type, row) {
+            //         if (row.status_po != 'fullfiled') {
+            //             return '<button class="btn btn-primary btn-edit" data-id="' + row.id + '">Edit</button>';
+            //         } else {
+            //             return '';
+            //         }
+            //     }
+            // } 
         ],
         "createdRow": function(row, data, dataIndex) {
             $('td', row).eq(0).html(dataIndex + 1);

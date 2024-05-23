@@ -31,6 +31,7 @@
                         <div class="col-md-12 mb-1" id="barang_container">
                         </div>
                     </div>
+                    <input type="hidden" name="status_paletization" id="status_paletization" value="complete">
                     <br>
                     <button class="btn btn-primary" type="submit" id="submitButton">Generate to Palletization</button>
                 <div id="additional_forms_container"></div>
@@ -55,27 +56,54 @@
             data: { nomor_gr: nomor_gr },
             dataType: 'JSON',
             success: function (response) {
+
                 $('#barang_container').empty();
                 $('#additional_forms_container').empty();
 
-                $.each(response.data, function (index, row) {
-                    var fieldHtml = '<div class="row">';
-                    fieldHtml += '<div class="col-sm-4 mb-4"><label>Nama Barang ' + (index + 1) + ' : </label><input name="nama_barang[]" class="form-control" value="' + row.nama_barang + '" readonly></div>';
-                    fieldHtml += '<div class="col-sm-4 mb-4"><label>Jumlah Qty Barang ' + (index + 1) + ' : </label><input name="qty_dtg[]" class="form-control qty" value="' + row.qty_dtg + '" readonly></div>';
-                    fieldHtml += '<div class="col-sm-4 mb-4"><label>Satuan Berat Barang ' + (index + 1) + ' : </label><input name="satuan_berat[]" class="form-control qty" value="' + row.satuan + '" readonly></div>';
+                $(document).ready(function () {
+                        $.each(response.data, function (index, row) {
+                            var convertedValue = convertAndAppend(index, row.satuan, row.qty_dtg);
+                            var fieldHtml = '<div class="row">';
 
-                    var convertedValue = convertAndAppend(index, row.satuan, row.qty_dtg);
-                    fieldHtml += '<div class="col-sm-4 mb-4"><label>Nilai Hasil Konversi Ke Pallet ' + (index + 1) + ' : </label><input type="text" id="nilai_konversi_' + index + '" name="nilai_konversi[]" class="form-control nilai_konversi" value="' + convertedValue + '" readonly></div>';
+                            var NamaBarang = '<div class="col-sm-4 mb-4"><label>Nama Barang ' + (index + 1) + ' : </label><input name="nama_barang[]" class="form-control" value="' + row.nama_barang + '" readonly></div>';
+                            fieldHtml += NamaBarang;
 
-                    if (convertedValue > 0) {
-                        for (let i = 0; i < convertedValue; i++) {
-                            var newKodePallet = generateKodePallet();
-                            fieldHtml += '<div class="col-sm-4 mb-4"><label>Kode Pallet ' + (index + 1) + ' (' + (i + 1) + ') : </label><input type="text" name="kode_pallet' + index + '[]" class="form-control" value="' + newKodePallet + '" readonly></div>';
+                            var QtyBarang = '<div class="col-sm-4 mb-4"><label>Jumlah Qty Barang ' + (index + 1) + ' : </label><input name="qty_dtg[]" class="form-control qty" value="' + row.qty_dtg + '" readonly></div>';
+                            fieldHtml += QtyBarang;
+
+                            var SatuanBerat = '<div class="col-sm-4 mb-4"><label>Satuan Berat Barang ' + (index + 1) + ' : </label><input name="satuan_berat[]" class="form-control qty" value="' + row.satuan + '" readonly></div>';
+                            fieldHtml += SatuanBerat;
+
+                            var NilaiKonversi = '<div class="col-sm-4 mb-4"><label>Nilai Hasil Konversi Ke Pallet ' + (index + 1) + ' : </label><input type="text" id="nilai_konversi_' + index + '" name="nilai_konversi[]" class="form-control nilai_konversi" value="' + convertedValue + '" readonly></div>';
+                            fieldHtml += NilaiKonversi;
+
+                            var nilai_konversi_array = [];
+                            var kodePalletFields = '';
+
+                            if (convertedValue > 0) {
+                                for (let i = 0; i < convertedValue; i++) {
+                                    var newKodePallet = generateKodePallet();
+                                    kodePalletFields += '<div class="col-sm-4 mb-4"><label>Kode Pallet ' + (index + 1) + ' (' + (i + 1) + ') : </label><input type="text" name="kode_pallet' + index + '[]" class="form-control" value="' + newKodePallet + '" readonly></div>';
+                                    nilai_konversi_array.push(1);
+                                }
+                                fieldHtml += kodePalletFields;
+                            }
+
+                            $('#barang_container').append(fieldHtml);
+                        });
+
+                        var remainingKodePalletFields = '';
+                        var remainingConvertedValues = response.remainingConvertedValues; 
+                        if (remainingConvertedValues && remainingConvertedValues.length > 0) {
+                            var lastIndex = response.data.length - 1;
+                            remainingConvertedValues.forEach(function (value, i) {
+                                var newKodePallet = generateKodePallet();
+                                remainingKodePalletFields += '<div class="col-sm-4 mb-4"><label>Kode Pallet ' + (lastIndex + 1) + ' (Extra ' + (i + 1) + ') : </label><input type="text" name="kode_pallet' + lastIndex + '[]" class="form-control" value="' + newKodePallet + '" readonly></div>';
+                            });
+                            $('#barang_container .row:last-child').append(remainingKodePalletFields);
                         }
-                    }
+                    });
 
-                    $('#barang_container').append(fieldHtml);
-                });
             },
             error: function (xhr, status, error) {
                 console.error('Error:', error);
@@ -85,18 +113,20 @@
 
     $('#paletizationForm').submit(function (event) {
         event.preventDefault();
+        var nomor_gr = ('#nomor_gr').val();
         $.ajax({
-            url: '/submit_form_identitas_pallet',
+            url: '/check_nomor_gr_exist',
             method: 'POST',
-            data: $(this).serialize(),
+            data: {nomor_gr: nomor_gr},
             dataType: 'JSON',
             success: function (response) {
-                if (response.success) {
+                if (response.exists) {
+                    alert('Data Nomor GR tersebut sudah masuk di dalam database');
+                } else {
                     $.each(response.kode_pallets, function (index, kode_pallet) {
                         $('#nilai_konversi_' + index).val(kode_pallet);
                     });
-                } else {
-                    console.log('Error:', response.message);
+                    $('#paletizationForm')[0].submit();
                 }
             },
             error: function (xhr, status, error) {

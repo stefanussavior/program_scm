@@ -134,3 +134,5 @@ $routes->get('/check_kode_pallet_empty', [MasterPalletizationController::class,'
 
 
 $routes->get('/show_data', [FormBINController::class,'GetShowData']);
+
+$routes->post('/check_nomor_gr_exist', [FormIdentitasPalletController::class, 'checkNomorGRExists']);

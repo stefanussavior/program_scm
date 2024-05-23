@@ -33,39 +33,50 @@ class FormBINController extends BaseController
         return view('dashboard/form/form_bin', $data);
     }
 
-    public function InsertDataBIN(){
-        $masterDataBIN = new MasterBinModel();        
+    public function InsertDataBIN() {
         $kode_pallet = $this->request->getPost('kode_pallet');
         $warehouse = $this->request->getPost('warehouse');
         $rack = $this->request->getPost('rack');
         $bin_location = $this->request->getPost('bin_location');
-        $is_reversed = $this->request->getPost('is_reserved');
+        $is_reserved = $this->request->getPost('is_reserved');
     
-        // Check if rack and bin_location already exist
+        // Validate that the data is arrays
+        if (!is_array($kode_pallet) || !is_array($rack) || !is_array($bin_location)) {
+            return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid data received.']);
+        }
+    
         $binModel = new MasterBinModel();
-        if ($binModel->isRackBinLocationExists($rack, $bin_location)) {
-            return redirect()->to(base_url('form_bin'))->with('error', 'Rack dan lokasi bin sudah digunakan. coba untuk cari lokasi yang lain');
-        }
-    
         $palletModel = new MasterPaletizationModel();
-        $palletData = $palletModel->where('kode_pallet',$kode_pallet)->first();
     
-        if ($palletData) {
+        foreach ($kode_pallet as $index => $pallet) {
+            if ($binModel->isRackBinLocationExists($rack[$index], $bin_location[$index])) {
+                return $this->response->setJSON(['status' => 'error', 'message' => 'Rack dan lokasi bin sudah digunakan. Coba untuk cari lokasi yang lain.']);
+            }
+    
+            $palletData = $palletModel->where('kode_pallet', $pallet)->first();
+    
+            if (!$palletData) {
+                return $this->response->setJSON(['status' => 'error', 'message' => 'No pallet data found for the provided code.']);
+            }
+    
             $pallet_id = $palletData['id'];
-        } else {
-            return redirect()->to(base_url('form_bin'))->with('error', 'No pallet data found for the provided code.');
+    
+            $binModel->insert([
+                'pallet_id' => $pallet_id,
+                'kode_pallet' => $pallet,
+                'warehouse' => $warehouse,
+                'rack' => $rack[$index],
+                'bin_location' => $bin_location[$index],
+                'is_reserved' => $is_reserved
+            ]);
         }
     
-        $masterDataBIN->insert([
-            'pallet_id' => $pallet_id,
-            'kode_pallet' => $kode_pallet,
-            'warehouse' => $warehouse,
-            'rack' => $rack,
-            'bin_location' => $bin_location,
-            'is_reserved' => $is_reversed
-        ]);
-        return redirect()->to(base_url('display_data_bin_view'));   
+        return redirect()->to(base_url('/display_data_bin_view'));
     }
+    
+    
+    
+    
     
 
 

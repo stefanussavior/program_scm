@@ -16,27 +16,26 @@ class FormUploadDataController extends BaseController
 
     public function UploadDataExcelToDatabase() {
         set_time_limit(300);
-
-         // Handle file upload
-         $file = $this->request->getFile('excel_file');
     
-         // Get the temporary file path
-         $filePath = $file->getTempName();
-         
-         // Load Excel file
-         $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
-         $spreadsheet = $reader->load($filePath);
-         $sheet = $spreadsheet->getActiveSheet();
-
-         $dataPO = new MasterPOModel();
- 
-         // Get the highest row and column counts
-         $highestRow = $sheet->getHighestRow();
-         $highestColumn = $sheet->getHighestColumn();
- 
-         // Loop through each row of the worksheet
-    for ($row = 2; $row <= $highestRow; $row++) {
-            
+        // Handle file upload
+        $file = $this->request->getFile('excel_file');
+    
+        // Get the temporary file path
+        $filePath = $file->getTempName();
+        
+        // Load Excel file
+        $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+        $spreadsheet = $reader->load($filePath);
+        $sheet = $spreadsheet->getActiveSheet();
+    
+        $dataPO = new MasterPOModel();
+    
+        // Get the highest row and column counts
+        $highestRow = $sheet->getHighestRow();
+        $highestColumn = $sheet->getHighestColumn();
+    
+        // Loop through each row of the worksheet
+        for ($row = 2; $row <= $highestRow; $row++) {
             $rowData = $sheet->rangeToArray('A' . $row . ':' . $highestColumn . $row, NULL, TRUE, FALSE);
             $supplier = $rowData[0][0];
             $nomor_po = $rowData[0][1];
@@ -47,7 +46,7 @@ class FormUploadDataController extends BaseController
             $keterangan_po = $rowData[0][3];
             $tanggal_pengiriman = null;
             if ($rowData[0][4] !== null) {
-            $tanggal_pengiriman = Date::excelToDateTimeObject($rowData[0][4])->format('Y-m-d');
+                $tanggal_pengiriman = Date::excelToDateTimeObject($rowData[0][4])->format('Y-m-d');
             }
             $kode = $rowData[0][5];
             $nama_barang = $rowData[0][6];
@@ -56,27 +55,34 @@ class FormUploadDataController extends BaseController
             $qty_po = $rowData[0][9];
             $qty_terproses = $rowData[0][10];
             $qty_belum_terp = $rowData[0][11];
-
- 
-             // Insert data into database (replace 'your_table' with your actual table name)
-             $data = [
-                 'supplier' => $supplier,
-                 'nomor_po' => $nomor_po,
-                 'tanggal_po' => $tanggal_po,
-                 'keterangan_po' => $keterangan_po,
-                 'tanggal_pengiriman' => $tanggal_pengiriman,
-                 'kode' => $kode,
-                 'nama_barang' => $nama_barang,
-                 'catatan' => $catatan,
-                 'satuan' => $satuan,
-                 'qty_po' => $qty_po,
-                 'qty_terproses' => $qty_terproses,
-                 'qty_belum_terp' => $qty_belum_terp
-             ];
-           $dataPO->insert($data);
-         }
- 
-         // Redirect to a success page
-         return redirect()->to(site_url('/master_upload_po'));
-     }
+    
+            // Check if nomor_po is empty
+            if (empty($nomor_po)) {
+                // Set flash data for the alert message
+                session()->setFlashdata('error', 'Data belum complete coba di cek lagi pada baris ' . $row);
+                return redirect()->back();
+            }
+    
+            // Insert data into database (replace 'your_table' with your actual table name)
+            $data = [
+                'supplier' => $supplier,
+                'nomor_po' => $nomor_po,
+                'tanggal_po' => $tanggal_po,
+                'keterangan_po' => $keterangan_po,
+                'tanggal_pengiriman' => $tanggal_pengiriman,
+                'kode' => $kode,
+                'nama_barang' => $nama_barang,
+                'catatan' => $catatan,
+                'satuan' => $satuan,
+                'qty_po' => $qty_po,
+                'qty_terproses' => $qty_terproses,
+                'qty_belum_terp' => $qty_belum_terp
+            ];
+            $dataPO->insert($data);
+        }
+    
+        // Redirect to a success page
+        return redirect()->to(site_url('/master_upload_po'));
+    }
+    
 }

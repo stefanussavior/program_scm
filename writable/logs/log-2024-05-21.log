@@ -1,0 +1,29 @@
+INFO - 2024-05-21 01:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 01:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 01:09:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 01:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 21:53:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 21:53:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 21:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 21:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 22:01:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-21 22:01:07 --> Mismatch in lengths of $kode_pallet_array_for_item and $nilai_konversi_array_for_item for item: CABE RAWIT - RESTO
+INFO - 2024-05-21 22:01:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 22:01:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-21 22:01:31 --> Mismatch in lengths of $kode_pallet_array_for_item and $nilai_konversi_array_for_item for item: CABE RAWIT - RESTO
+INFO - 2024-05-21 22:01:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 22:04:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 22:04:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 22:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-05-21 22:05:03 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-390269","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1"}
+DEBUG - 2024-05-21 22:05:03 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-181611","nomor_gr":"GR0001","nama_barang":"BUAH PEER","qty_dtg":460000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PALLET","nilai_konversi":"1"}
+DEBUG - 2024-05-21 22:05:03 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-206231","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":"6"}
+DEBUG - 2024-05-21 22:05:03 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-121452","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-21 22:05:03 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-531030","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-21 22:05:03 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-102905","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-21 22:05:03 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-522522","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+DEBUG - 2024-05-21 22:05:03 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-558487","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0}
+INFO - 2024-05-21 22:05:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 22:05:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 22:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 22:05:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

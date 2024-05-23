@@ -23,15 +23,11 @@
         </div> -->
         <div class="card-body">
         <div class="container mt-3">
-		<?php
-		if(session()->getFlashdata('message')){
-		?>
-			<div class="alert alert-info">
-				<?= session()->getFlashdata('message') ?>
-			</div>
-		<?php
-		}
-		?>
+		<?php if (session()->getFlashdata('error')): ?>
+<div class="alert alert-warning">
+    <?= session()->getFlashdata('error') ?>
+</div>
+<?php endif; ?>
         <form id="uploadForm" action="<?= site_url('/upload_data_excel_to_database') ?>" method="post" enctype="multipart/form-data">
             <input type="file" name="excel_file" class="form-control">
             <br/>

@@ -14,7 +14,8 @@ class MasterPaletizationModel extends Model
     protected $protectFields    = true;
     protected $allowedFields    = [
         'gr_id', 'kode_pallet', 'nomor_gr', 'nama_barang', 'qty_dtg', 'total_qty', 
-        'max_qty', 'num_paletization', 'satuan_berat', 'nilai_konversi'
+        'max_qty', 'num_paletization', 'satuan_berat', 'nilai_konversi', 'status',
+        'status_paletization'
     ];
 
     protected bool $allowEmptyInserts = false;
@@ -98,6 +99,6 @@ class MasterPaletizationModel extends Model
     
 
     public function GetNamaBarangModel($nama_barang) {
-        return $this->select('*')->where('nama_barang',$nama_barang)->first();
+        return $this->select('*')->where('nama_barang',$nama_barang)->findAll();
     }
 }

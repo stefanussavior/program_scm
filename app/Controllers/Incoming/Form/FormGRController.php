@@ -143,7 +143,7 @@ class FormGRController extends BaseController
         $data = $modelGR->KodeOtomatisGR();
         return json_encode($data);
     }
-
+    
     public function BuatKodeBatch() {
         $modelGR = new MasterGRModel();
         $data = $modelGR->KodeOtomatisKodeBatch();
