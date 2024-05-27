@@ -76,25 +76,25 @@ class MasterPOModel extends Model
                             ->countAllResults();
 
     if ($hasStatusGr > 0) {
-        // If there are records with a non-null status_gr, run the original query
-        return $this->db->table('table_po') // primary table
+
+        return $this->db->table('table_po') 
             ->select('table_gr.id, table_gr.nama_barang, table_gr.nomor_po, table_gr.supplier, SUM(table_gr.qty_po) AS qty_po, table_gr.tanggal_po, table_gr.kode, SUM(table_gr.qty_dtg) AS qty_dtg, table_gr.status_gr, table_gr.satuan', false)
             ->where('table_gr.nomor_po', $nomor_po)
             ->where('kode',$kode)
-            ->join('table_gr', 'table_gr.po_id = table_po.id', 'inner') // joining with table_gr
+            ->join('table_gr', 'table_gr.po_id = table_po.id', 'inner')
             ->groupBy('table_gr.kode')
             ->get()
             ->getResult();
     } else {
-        // If all status_gr are null, run the alternative query
         return $this->db->table('table_po')
-            ->select('nama_barang, qty_po, kode, supplier, satuan')
-            ->where('nomor_po', $nomor_po)
-            ->get()
-            ->getResult();
-        }
+        ->select('table_po.nomor_po, table_po.nama_barang, table_po.qty_po, table_po.kode, table_po.supplier, table_po.satuan, table_gr.status_gr')
+        ->where('table_po.nomor_po', $nomor_po)
+        ->join('table_gr', 'table_gr.po_id = table_po.id', 'left')
+        ->get()
+        ->getResult();
+    }    
 
-    }
+}
     
     public function updateData($id,$data) 
     {

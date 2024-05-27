@@ -1,0 +1,460 @@
+INFO - 2024-05-24 01:02:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:02:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-24 01:04:47 --> ErrorException: Undefined variable $fulfilledCount
+[Method: POST, Route: check_po_fullfiled]
+in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 199.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(199): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fulfilledCount', '/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Models/Incoming/MasterData/MasterGRModel.php', 199)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(162): App\Models\Incoming\MasterData\MasterGRModel->isPOFullFiled('TEST.PO.2024.04.0020')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->checkPOFulfilled()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-24 01:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:12:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:24:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:25:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:26:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:30:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-24 01:35:00 --> mysqli_sql_exception: Unknown column 'table_gr.status' in 'field list' in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php(308): mysqli->query('SELECT `table_p...', 0)
+#1 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `table_p...')
+#2 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `table_p...')
+#3 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `table_p...', Array, false)
+#4 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Models/Incoming/MasterData/MasterPOModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormGRController.php(33): App\Models\Incoming\MasterData\MasterPOModel->GetBarangByPO('TEST.PO.2024.04...', NULL)
+#6 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->AjaxDataPOByID()
+#7 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+#8 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Commands/Server/rewrite.php(49): require_once('/Users/stefanus...')
+#13 {main}
+CRITICAL - 2024-05-24 01:35:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'table_gr.status' in 'field list'
+[Method: GET, Route: ajax_get_po_id]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = :nomor_po:', [...], false)
+ 2 APPPATH/Models/Incoming/MasterData/MasterPOModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/Incoming/Form/FormGRController.php(33): App\Models\Incoming\MasterData\MasterPOModel->GetBarangByPO('TEST.PO.2024.04.0020', null)
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->AjaxDataPOByID()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-24 01:35:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'table_gr.status' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = :nomor_po:', [...], false)
+ 4 APPPATH/Models/Incoming/MasterData/MasterPOModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH/Controllers/Incoming/Form/FormGRController.php(33): App\Models\Incoming\MasterData\MasterPOModel->GetBarangByPO('TEST.PO.2024.04.0020', null)
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->AjaxDataPOByID()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-24 01:35:00 --> [Caused by] mysqli_sql_exception: Unknown column 'table_gr.status' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = :nomor_po:', [...], false)
+ 5 APPPATH/Models/Incoming/MasterData/MasterPOModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Incoming/Form/FormGRController.php(33): App\Models\Incoming\MasterData\MasterPOModel->GetBarangByPO('TEST.PO.2024.04.0020', null)
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->AjaxDataPOByID()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+ERROR - 2024-05-24 01:35:00 --> mysqli_sql_exception: Unknown column 'table_gr.status' in 'field list' in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php(308): mysqli->query('SELECT `table_p...', 0)
+#1 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `table_p...')
+#2 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `table_p...')
+#3 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `table_p...', Array, false)
+#4 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Models/Incoming/MasterData/MasterPOModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormGRController.php(33): App\Models\Incoming\MasterData\MasterPOModel->GetBarangByPO('TEST.PO.2024.04...', NULL)
+#6 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->AjaxDataPOByID()
+#7 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+#8 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Commands/Server/rewrite.php(49): require_once('/Users/stefanus...')
+#13 {main}
+CRITICAL - 2024-05-24 01:35:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'table_gr.status' in 'field list'
+[Method: GET, Route: ajax_get_po_id]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = :nomor_po:', [...], false)
+ 2 APPPATH/Models/Incoming/MasterData/MasterPOModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/Incoming/Form/FormGRController.php(33): App\Models\Incoming\MasterData\MasterPOModel->GetBarangByPO('TEST.PO.2024.04.0020', null)
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->AjaxDataPOByID()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-24 01:35:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'table_gr.status' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = :nomor_po:', [...], false)
+ 4 APPPATH/Models/Incoming/MasterData/MasterPOModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH/Controllers/Incoming/Form/FormGRController.php(33): App\Models\Incoming\MasterData\MasterPOModel->GetBarangByPO('TEST.PO.2024.04.0020', null)
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->AjaxDataPOByID()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-24 01:35:00 --> [Caused by] mysqli_sql_exception: Unknown column 'table_gr.status' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = :nomor_po:', [...], false)
+ 5 APPPATH/Models/Incoming/MasterData/MasterPOModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Incoming/Form/FormGRController.php(33): App\Models\Incoming\MasterData\MasterPOModel->GetBarangByPO('TEST.PO.2024.04.0020', null)
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->AjaxDataPOByID()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-24 01:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-24 01:35:20 --> mysqli_sql_exception: Column 'nomor_po' in where clause is ambiguous in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php(308): mysqli->query('SELECT `table_p...', 0)
+#1 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `table_p...')
+#2 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `table_p...')
+#3 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `table_p...', Array, false)
+#4 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Models/Incoming/MasterData/MasterPOModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormGRController.php(33): App\Models\Incoming\MasterData\MasterPOModel->GetBarangByPO('TEST.PO.2024.04...', NULL)
+#6 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->AjaxDataPOByID()
+#7 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+#8 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Commands/Server/rewrite.php(49): require_once('/Users/stefanus...')
+#13 {main}
+CRITICAL - 2024-05-24 01:35:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'nomor_po' in where clause is ambiguous
+[Method: GET, Route: ajax_get_po_id]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status_gr`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = :nomor_po:', [...], false)
+ 2 APPPATH/Models/Incoming/MasterData/MasterPOModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/Incoming/Form/FormGRController.php(33): App\Models\Incoming\MasterData\MasterPOModel->GetBarangByPO('TEST.PO.2024.04.0020', null)
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->AjaxDataPOByID()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-24 01:35:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'nomor_po' in where clause is ambiguous
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status_gr`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status_gr`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status_gr`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = :nomor_po:', [...], false)
+ 4 APPPATH/Models/Incoming/MasterData/MasterPOModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH/Controllers/Incoming/Form/FormGRController.php(33): App\Models\Incoming\MasterData\MasterPOModel->GetBarangByPO('TEST.PO.2024.04.0020', null)
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->AjaxDataPOByID()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-24 01:35:20 --> [Caused by] mysqli_sql_exception: Column 'nomor_po' in where clause is ambiguous
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status_gr`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status_gr`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status_gr`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status_gr`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = :nomor_po:', [...], false)
+ 5 APPPATH/Models/Incoming/MasterData/MasterPOModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Incoming/Form/FormGRController.php(33): App\Models\Incoming\MasterData\MasterPOModel->GetBarangByPO('TEST.PO.2024.04.0020', null)
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->AjaxDataPOByID()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+ERROR - 2024-05-24 01:35:20 --> mysqli_sql_exception: Column 'nomor_po' in where clause is ambiguous in /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/MySQLi/Connection.php(308): mysqli->query('SELECT `table_p...', 0)
+#1 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `table_p...')
+#2 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `table_p...')
+#3 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `table_p...', Array, false)
+#4 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Models/Incoming/MasterData/MasterPOModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/app/Controllers/Incoming/Form/FormGRController.php(33): App\Models\Incoming\MasterData\MasterPOModel->GetBarangByPO('TEST.PO.2024.04...', NULL)
+#6 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->AjaxDataPOByID()
+#7 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+#8 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/system/Commands/Server/rewrite.php(49): require_once('/Users/stefanus...')
+#13 {main}
+CRITICAL - 2024-05-24 01:35:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'nomor_po' in where clause is ambiguous
+[Method: GET, Route: ajax_get_po_id]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status_gr`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = :nomor_po:', [...], false)
+ 2 APPPATH/Models/Incoming/MasterData/MasterPOModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/Incoming/Form/FormGRController.php(33): App\Models\Incoming\MasterData\MasterPOModel->GetBarangByPO('TEST.PO.2024.04.0020', null)
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->AjaxDataPOByID()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-24 01:35:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'nomor_po' in where clause is ambiguous
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status_gr`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status_gr`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status_gr`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = :nomor_po:', [...], false)
+ 4 APPPATH/Models/Incoming/MasterData/MasterPOModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH/Controllers/Incoming/Form/FormGRController.php(33): App\Models\Incoming\MasterData\MasterPOModel->GetBarangByPO('TEST.PO.2024.04.0020', null)
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->AjaxDataPOByID()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+CRITICAL - 2024-05-24 01:35:20 --> [Caused by] mysqli_sql_exception: Column 'nomor_po' in where clause is ambiguous
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status_gr`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status_gr`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status_gr`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = \'TEST.PO.2024.04.0020\'')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `table_po`.`nama_barang`, `table_po`.`qty_po`, `table_po`.`kode`, `table_po`.`supplier`, `table_po`.`satuan`, `table_gr`.`status_gr`
+FROM `table_po`
+INNER JOIN `table_gr` ON `table_gr`.`po_id` = `table_po`.`id`
+WHERE `nomor_po` = :nomor_po:', [...], false)
+ 5 APPPATH/Models/Incoming/MasterData/MasterPOModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Incoming/Form/FormGRController.php(33): App\Models\Incoming\MasterData\MasterPOModel->GetBarangByPO('TEST.PO.2024.04.0020', null)
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->AjaxDataPOByID()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-24 01:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:37:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-24 01:37:21 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 94.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(94): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(149): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisKodeBatch()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodeBatch()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+WARNING - 2024-05-24 01:37:21 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 112.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(112): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(155): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisPRD()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodePRD()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-24 01:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-24 01:38:12 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 94.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(94): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(149): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisKodeBatch()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodeBatch()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+WARNING - 2024-05-24 01:38:12 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 112.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(112): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(155): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisPRD()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodePRD()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-24 01:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-24 01:40:29 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 94.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(94): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(149): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisKodeBatch()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodeBatch()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+WARNING - 2024-05-24 01:40:29 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 112.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(112): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(155): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisPRD()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodePRD()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-24 01:45:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:46:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:47:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:47:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 01:53:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 02:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:03:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:05:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:06:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:06:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:07:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:08:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:24:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:32:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:38:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:42:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:45:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:45:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:45:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:46:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:48:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:48:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:50:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-24 03:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

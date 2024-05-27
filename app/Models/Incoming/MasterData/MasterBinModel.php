@@ -84,4 +84,9 @@ class MasterBinModel extends Model
         ->get()
         ->getRowArray();
     }
+
+    public function checkKodePalletExists($kode_pallet) {
+        return $this->where('kode_pallet', $kode_pallet)->first();
+    }
+
 }

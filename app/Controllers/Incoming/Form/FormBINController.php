@@ -202,4 +202,12 @@ public function DisplayBINStatus() {
         // return $this->response->setJSON($response);
         return view('/dashboard/bin_view/qrcode_data', $response);
     }
+
+    public function CheckKodePalletExists() {
+        $kode_pallet = $this->request->getPost('kode_pallet');
+        $dataBIN = new MasterBinModel();
+        $exists = $dataBIN->checkKodePalletExists($kode_pallet);
+
+        return $this->response->setJSON(['exists' => !empty($exists)]);
+    }
 }

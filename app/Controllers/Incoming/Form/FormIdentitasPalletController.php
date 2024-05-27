@@ -271,7 +271,7 @@ class FormIdentitasPalletController extends BaseController
 
     public function checkNomorGRExists() {
     $nomor_gr = $this->request->getPost('nomor_gr');
-    $GRmodel = new MasterGRModel();
+    $GRmodel = new MasterPaletizationModel();
     $exists = $GRmodel->where('nomor_gr', $nomor_gr)->first();
     return $this->response->setJSON(['exists' => !empty($exists)]);
 }

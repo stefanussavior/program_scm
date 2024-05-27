@@ -60,3 +60,146 @@ DEBUG - 2024-05-23 01:52:01 --> Inserting data: {"gr_id":"5","kode_pallet":"PALL
 DEBUG - 2024-05-23 01:52:01 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-619113","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
 INFO - 2024-05-23 01:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-23 01:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 02:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-05-23 02:30:59 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-457991","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1","status":null}
+DEBUG - 2024-05-23 02:30:59 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-303811","nomor_gr":"GR0001","nama_barang":"BUAH PEER","qty_dtg":460000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PALLET","nilai_konversi":"1","status":null}
+DEBUG - 2024-05-23 02:30:59 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-51896","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":"6","status":null}
+DEBUG - 2024-05-23 02:30:59 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-798685","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:30:59 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-274624","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:30:59 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-823780","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:30:59 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-859556","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:30:59 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-426542","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+INFO - 2024-05-23 02:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 02:32:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 02:32:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-23 02:32:11 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 59.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(59): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+DEBUG - 2024-05-23 02:32:15 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-78579","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1","status":null}
+DEBUG - 2024-05-23 02:32:15 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-7487","nomor_gr":"GR0001","nama_barang":"BUAH PEER","qty_dtg":460000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PALLET","nilai_konversi":"1","status":null}
+DEBUG - 2024-05-23 02:32:15 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-291788","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":"6","status":null}
+DEBUG - 2024-05-23 02:32:15 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-972181","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:32:15 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-284186","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:32:15 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-314420","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:32:15 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-107275","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:32:15 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-351499","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+INFO - 2024-05-23 02:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 02:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 02:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-05-23 02:34:34 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-364383","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1","status":null}
+DEBUG - 2024-05-23 02:34:34 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-346738","nomor_gr":"GR0001","nama_barang":"BUAH PEER","qty_dtg":460000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PALLET","nilai_konversi":"1","status":null}
+DEBUG - 2024-05-23 02:34:34 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-387080","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":"6","status":null}
+DEBUG - 2024-05-23 02:34:34 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-900389","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:34:34 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-410156","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:34:34 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-979973","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:34:34 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-880941","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:34:34 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-463663","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+INFO - 2024-05-23 02:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 02:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-05-23 02:35:22 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-417076","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1","status":null}
+DEBUG - 2024-05-23 02:35:22 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-909104","nomor_gr":"GR0001","nama_barang":"BUAH PEER","qty_dtg":460000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PALLET","nilai_konversi":"1","status":null}
+DEBUG - 2024-05-23 02:35:22 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-865015","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":"6","status":null}
+DEBUG - 2024-05-23 02:35:22 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-998032","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:35:22 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-986338","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:35:22 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-983538","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:35:22 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-811079","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:35:22 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-597805","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+INFO - 2024-05-23 02:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 02:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-05-23 02:35:35 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-156952","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1","status":null}
+DEBUG - 2024-05-23 02:35:35 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-913050","nomor_gr":"GR0001","nama_barang":"BUAH PEER","qty_dtg":460000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PALLET","nilai_konversi":"1","status":null}
+DEBUG - 2024-05-23 02:35:35 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-327341","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":"6","status":null}
+DEBUG - 2024-05-23 02:35:35 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-379476","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:35:35 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-977793","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:35:35 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-878746","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:35:35 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-522702","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:35:35 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-395266","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+INFO - 2024-05-23 02:35:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 02:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 02:38:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 02:38:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-23 02:38:49 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php on line 59.
+ 1 APPPATH/Models/Incoming/MasterData/MasterPaletizationModel.php(59): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormIdentitasPalletController.php(23): App\Models\Incoming\MasterData\MasterPaletizationModel->KodeOtomatisPallet()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormIdentitasPalletController->BuatKodePallet()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormIdentitasPalletController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+DEBUG - 2024-05-23 02:38:52 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-986616","nomor_gr":"GR0001","nama_barang":"BUAH BELIMBING","qty_dtg":10000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"CTN","nilai_konversi":"1","status":null}
+DEBUG - 2024-05-23 02:38:52 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-282396","nomor_gr":"GR0001","nama_barang":"BUAH PEER","qty_dtg":460000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PALLET","nilai_konversi":"1","status":null}
+DEBUG - 2024-05-23 02:38:52 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-239587","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":"6","status":null}
+DEBUG - 2024-05-23 02:38:52 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-159464","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:38:52 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-197409","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:38:52 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-891407","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:38:52 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-266714","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+DEBUG - 2024-05-23 02:38:52 --> Inserting data: {"gr_id":"5","kode_pallet":"PALLET-129263","nomor_gr":"GR0001","nama_barang":"CABE RAWIT - RESTO","qty_dtg":2000,"total_qty":null,"max_qty":null,"num_paletization":null,"satuan_berat":"PACK","nilai_konversi":0,"status":null}
+INFO - 2024-05-23 02:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 02:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 02:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 02:42:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 02:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 02:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 02:57:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 02:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:00:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-23 03:05:17 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 94.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(94): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(149): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisKodeBatch()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodeBatch()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+WARNING - 2024-05-23 03:05:17 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH/Models/Incoming/MasterData/MasterGRModel.php on line 112.
+ 1 APPPATH/Models/Incoming/MasterData/MasterGRModel.php(112): substr(null, -4)
+ 2 APPPATH/Controllers/Incoming/Form/FormGRController.php(155): App\Models\Incoming\MasterData\MasterGRModel->KodeOtomatisPRD()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Incoming\Form\FormGRController->BuatKodePRD()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Incoming\Form\FormGRController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/stefanus/Documents/CODING/BACKEND/PHP/PROJECT/prorgam_scm_repair/public/index.php')
+INFO - 2024-05-23 03:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:05:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:05:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:05:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:06:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:06:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:09:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:13:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:32:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:37:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:37:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:41:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 03:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 06:34:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 06:41:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-23 07:47:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -173,20 +173,24 @@ class MasterGRModel extends Model
 
    // Model: MasterGRModel.php
 
-public function isPOFullFiled($nomor_po) {
+   public function isPOFullFiled($nomor_po) {
     // Check if there are any outstanding items for the given PO
-    $outstandingCount = $this->select('COUNT(*) as count')
-                             ->where('nomor_po', $nomor_po)
-                             ->where('status_gr', 'outstanding')
-                             ->groupBy('nomor_po')
-                             ->countAllResults();
+    $outstandingCount = $this->db->table('table_gr') // Replace 'your_table_name' with the actual table name
+                                 ->select('COUNT(*) as count')
+                                 ->where('nomor_po', $nomor_po)
+                                 ->where('status_gr', 'outstanding')
+                                 ->get()
+                                 ->getRow()
+                                 ->count;
 
     // Check if there are any fulfilled items for the given PO
-    $fulfilledCount = $this->select('COUNT(*) as count')
-                           ->where('nomor_po', $nomor_po)
-                           ->where('status_gr', 'fullfiled')
-                           ->groupBy('nomor_po')
-                           ->countAllResults();
+    $fulfilledCount = $this->db->table('table_gr') // Replace 'your_table_name' with the actual table name
+                               ->select('COUNT(*) as count')
+                               ->where('nomor_po', $nomor_po)
+                               ->where('status_gr', 'fulfilled')
+                               ->get()
+                               ->getRow()
+                               ->count;
 
     // If there are any outstanding items, return 'outstanding'
     if ($outstandingCount > 0) {
@@ -195,12 +199,15 @@ public function isPOFullFiled($nomor_po) {
     
     // If there are any fulfilled items but no outstanding items, return 'fulfilled'
     if ($fulfilledCount > 0) {
-        return 'fullfiled';
+        return 'fulfilled';
     }
-
+    
     // If there are neither outstanding nor fulfilled items, return 'not_fulfilled'
     return 'not_fulfilled';
 }
+
+
+
 
     
 

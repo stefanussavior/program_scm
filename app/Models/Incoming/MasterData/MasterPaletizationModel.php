@@ -101,4 +101,10 @@ class MasterPaletizationModel extends Model
     public function GetNamaBarangModel($nama_barang) {
         return $this->select('*')->where('nama_barang',$nama_barang)->findAll();
     }
+
+    public function checkKodePalletExists($kode_pallet)
+{
+    return $this->where('kode_pallet', $kode_pallet)->first();
+}
+
 }

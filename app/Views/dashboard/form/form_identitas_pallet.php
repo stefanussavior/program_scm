@@ -13,7 +13,7 @@
                 <b>Form Paletization</b>
             </div>
             <div class="card-body">
-                <form action="/submit_form_identitas_pallet" method="post">
+                <form id="paletizationForm" action="/submit_form_identitas_pallet" method="post">
                     <div class="row">
                         <div class="col-sm-12 mb-2">
                             <div>
@@ -45,22 +45,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 <script>
     $(document).ready(function () {
-    $('#supplier').select2();
-    $('#nomor_gr').select2();
+        $('#supplier').select2();
+        $('#nomor_gr').select2();
 
-    $('#nomor_gr').on('change', function () {
-        var nomor_gr = $(this).val();
-        $.ajax({
-            url: '<?= site_url('/ajax_get_nomor_gr') ?>',
-            method: 'GET',
-            data: { nomor_gr: nomor_gr },
-            dataType: 'JSON',
-            success: function (response) {
+        $('#nomor_gr').on('change', function () {
+            var nomor_gr = $(this).val();
+            $.ajax({
+                url: '<?= site_url('/ajax_get_nomor_gr') ?>',
+                method: 'GET',
+                data: { nomor_gr: nomor_gr },
+                dataType: 'JSON',
+                success: function (response) {
+                    $('#barang_container').empty();
+                    $('#additional_forms_container').empty();
 
-                $('#barang_container').empty();
-                $('#additional_forms_container').empty();
-
-                $(document).ready(function () {
+                    $(document).ready(function () {
                         $.each(response.data, function (index, row) {
                             var convertedValue = convertAndAppend(index, row.satuan, row.qty_dtg);
                             var fieldHtml = '<div class="row">';
@@ -104,63 +103,63 @@
                         }
                     });
 
-            },
-            error: function (xhr, status, error) {
-                console.error('Error:', error);
-            }
-        });
-    });
-
-    $('#paletizationForm').submit(function (event) {
-        event.preventDefault();
-        var nomor_gr = ('#nomor_gr').val();
-        $.ajax({
-            url: '/check_nomor_gr_exist',
-            method: 'POST',
-            data: {nomor_gr: nomor_gr},
-            dataType: 'JSON',
-            success: function (response) {
-                if (response.exists) {
-                    alert('Data Nomor GR tersebut sudah masuk di dalam database');
-                } else {
-                    $.each(response.kode_pallets, function (index, kode_pallet) {
-                        $('#nilai_konversi_' + index).val(kode_pallet);
-                    });
-                    $('#paletizationForm')[0].submit();
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error:', error);
                 }
-            },
-            error: function (xhr, status, error) {
-                console.error('Error:', error);
-            }
+            });
         });
+
+        $('#paletizationForm').submit(function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            var nomor_gr = $('#nomor_gr').val();
+
+            $.ajax({
+                url: '<?= site_url('/check_nomor_gr_exist') ?>',
+                method: 'POST',
+                data: { nomor_gr: nomor_gr },
+                dataType: 'JSON',
+                success: function (response) {
+                    if (response.exists) {
+                        alert('Tidak bisa memasukkan data kode GR karena kode GR sudah ada dalam database');
+                    } else {
+                        // Submit the form if nomor_gr is not in the database
+                        $('#paletizationForm')[0].submit();
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error:', error);
+                }
+            });
+        });
+
+        function generateKodePallet() {
+            return 'PALLET-' + generateUniqueCode();
+        }
+
+        function generateUniqueCode() {
+            return Math.floor(Math.random() * 1000000); // Generate a random 6-digit number
+        }
+
+        function convertAndAppend(index, satuan, qty) {
+            let convertedValue = qty;
+            if (satuan === 'KG') {
+                convertedValue = Math.floor(qty == 1000) + 1;
+            } else if (satuan === 'PACK') {
+                convertedValue = Math.floor(qty == 2000) + 1;
+            } else if (satuan === 'CTN') {
+                convertedValue = Math.floor(qty == 10000) + 1;
+            } else if (satuan === 'PALLET') {
+                convertedValue = Math.floor(qty == 450000) + 1;
+            }
+            convertedValue = parseInt(convertedValue);
+            $('#nilai_konversi_' + index).val(convertedValue);
+            return convertedValue;
+        }
     });
 
-    function generateKodePallet() {
-        return 'PALLET-' + generateUniqueCode();
-    }
-
-    function generateUniqueCode() {
-        return Math.floor(Math.random() * 1000000); // Generate a random 6-digit number
-    }
-
-    function convertAndAppend(index, satuan, qty) {
-        let convertedValue = qty;
-        if (satuan === 'KG') {
-            convertedValue = qty / 1000;
-        } else if (satuan === 'PACK') {
-            convertedValue = qty / 2000;
-        } else if (satuan === 'CTN') {
-            convertedValue = qty / 10000;
-        } else if (satuan === 'PALLET') {
-            convertedValue = qty / 450000;
-        }
-        convertedValue = parseInt(convertedValue);
-        $('#nilai_konversi_' + index).val(convertedValue);
-        return convertedValue;
-    }
-});
-
-function fetchKodePallet(convertedValue, index) {
+    function fetchKodePallet(convertedValue, index) {
         $.ajax({
             url: '/fetch_kode_pallet', // Replace with your endpoint to fetch kode_pallet
             method: 'POST',
@@ -179,17 +178,16 @@ function fetchKodePallet(convertedValue, index) {
         });
     }
     $.ajax({
-            url: '<?= base_url('/ambil_kode_pallet'); ?>',
-            type: 'GET',
-            success: function (hasil) {
-                var code = $.parseJSON(hasil);
-                $('#kode_pallet').val(code); 
-            },
-            error: function (xhr, status, error) {
-                console.error('Error:', error);
-            }
-        });
-
+        url: '<?= base_url('/ambil_kode_pallet'); ?>',
+        type: 'GET',
+        success: function (hasil) {
+            var code = $.parseJSON(hasil);
+            $('#kode_pallet').val(code); 
+        },
+        error: function (xhr, status, error) {
+            console.error('Error:', error);
+        }
+    });
 </script>
 
 <?= $this->include('template/footer'); ?>

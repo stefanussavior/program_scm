@@ -172,7 +172,7 @@ class FormGRController extends BaseController
             case 'outstanding':
                 $message = 'Nomor PO ' . $nomor_po . ' masih outstanding. saat ini Total Qty yang belum terproses dari masing-masing barang : ' . $totalQtyString . '\nKlik Tambah Form GR untuk menambahkan data barang baru';
                 break;
-            case 'fullfiled':
+            case 'fulfilled':
                 $message = 'Nomor PO ' . $nomor_po . ' sudah selesai diproses.';
                 break;
             case 'not_fulfilled':

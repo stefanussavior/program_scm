@@ -195,14 +195,15 @@
                         }
                     });
                     break;
-                case 'fullfiled':
+                case 'fulfilled':
                     alert(response.message); // Display an alert for fulfilled PO
+                    add_button.hide();
                     $('input[name^="qty_dtg"]').prop('readonly', false); // Ensure it is editable if needed
                     break;
                 case 'not_fulfilled':
                     alert(response.message); // Display an alert for not fulfilled PO
                     $('input[name^="qty_dtg"]').prop('readonly', false); // Ensure it is editable if needed
-                    $('#add_field').hide();
+                    // $('#add_field').hide();
                     break;
                 default:
                      add_button.hide(); // Hide the button
@@ -318,7 +319,7 @@ function setMinDateForExpDateFields() {
             var qtyPOInput = $(this).closest('.row').find('input[name="qty_po[]"]');
             // var kodeBatchInput = $(this).closest('.row').find('input[name="kode_batch[]"]');
             // var qtyOutstandingInpiut = $(this).closest('.row').find('input[name="qty_gr_outstd[]"]'); 
-            // var qtyDTGInput = $(this).closest('.row').find('input[name="qty_dtg[]"]');
+            var qtyDTGInput = $(this).closest('.row').find('input[name="qty_dtg[]"]');
             // var expInput = $(this).closest('.row').find('input[name="exp_date[]"]');
             var satuanInput = $(this).closest('.row').find('input[name="satuan[]"]');
 
@@ -334,7 +335,7 @@ function setMinDateForExpDateFields() {
                         qtyPOInput.val(response.data.qty_po ?? "");
                         // kodeBatchInput.val(response.data.kode_batch ?? "");
                         // qtyOutstandingInpiut.val(response.data.qty_gr_outstd ?? "");
-                        // qtyDTGInput.val(response.data.qty_dtg ?? "");
+                        qtyDTGInput.val(response.data.qty_dtg ?? "");
                         // expInput.val(response.data.exp_date ?? "");
                         satuanInput.val(response.data.satuan ?? "");
                     } else {

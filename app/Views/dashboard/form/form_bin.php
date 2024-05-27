@@ -91,5 +91,23 @@
                 }
             });
         });
+        $('#tambahFormAppend').on('submit', function(event) {
+        event.preventDefault();
+
+        var kodePallet = $('.kode-pallet').val();
+        $.ajax({
+            url: '<?= site_url('/check_kode_pallet_exists'); ?>',
+            method: 'POST',
+            data: { kode_pallet: kodePallet },
+            dataType: 'json',
+            success: function(response) {
+                if (response.exists) {
+                    alert('Maaf, kode pallet tersebut sudah ada di dalam database');
+                } else {
+                    $('#tambahFormAppend')[0].submit();
+                }
+            }
+        });
     });
+});
 </script>
