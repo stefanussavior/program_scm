@@ -61,6 +61,18 @@ class FormUploadDataController extends BaseController
                 // Set flash data for the alert message
                 session()->setFlashdata('error', 'Data belum complete coba di cek lagi pada baris ' . $row);
                 return redirect()->back();
+            } else if(empty($kode)) {
+                session()->setFlashdata('error', 'Data kode barang masih ada yang kosong pada baris'. $row);
+                return redirect()->back();
+            } else if(empty($supplier)) {
+                session()->setFlashdata('error', 'Data Supplier masih ada yang kosong pada baris'. $row);
+                return redirect()->back();
+            } else if(empty($qty_po)){
+                session()->setFlashdata('error', 'Data Qty PO masih ada yang kosong pada baris'. $row);
+                return redirect()->back();
+            } else if(empty($tanggal_po)) {
+                session()->setFlashdata('error', 'Data Tanggal PO masih ada yang kosong pada baris'. $row);
+                return redirect()->back();
             }
     
             // Insert data into database (replace 'your_table' with your actual table name)

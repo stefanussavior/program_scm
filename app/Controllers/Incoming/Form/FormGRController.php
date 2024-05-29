@@ -29,7 +29,7 @@ class FormGRController extends BaseController
         $nomor_po = $this->request->getGet('nomor_po');
         $kode = $this->request->getGet('kode');
         $POModel = new MasterPOModel();
-        $data['record'] = $POModel->GetDataByPO($nomor_po,$kode);
+        $data['record'] = $POModel->GetDataByPO($nomor_po);
         $data['data'] = $POModel->GetBarangByPO($nomor_po,$kode);
         return $this->response->setJSON($data);
     }
@@ -60,7 +60,6 @@ class FormGRController extends BaseController
         $satuan_berat_array = $this->request->getPost('satuan');
         $qty_gr_outstd_array = $this->request->getPost('qty_gr_outstd');
 
-         // Fetch the last good receive record
     $lastGoodReceive = $GoodReceive->orderBy('created_at', 'desc')->first();
     $lastGoodReceiveCreatedAt = $lastGoodReceive ? $lastGoodReceive['created_at'] : null;
 
@@ -74,21 +73,21 @@ class FormGRController extends BaseController
         foreach ($qty_dtg_array as $key => $qty_dtg) {
 
             if (isset($qty_po_array[$key]) && isset($nama_barang_array[$key]) && isset($kode_batch_array[$key]) && isset($exp_date_array[$key]) &&
-            isset($satuan_berat_array[$key]) && isset($kode_barang_array[$key]) && isset($supplier_array[$key]) && isset($qty_gr_outstd_array[$key])
-            ) {
+                isset($satuan_berat_array[$key]) && isset($kode_barang_array[$key]) && isset($supplier_array[$key]) && isset($qty_gr_outstd_array[$key])
+                ) {
 
-            $qty_po = $qty_po_array[$key];
-            $nama_barang = $nama_barang_array[$key];
-            $kode_batch = $kode_batch_array[$key];
-            $exp_date = $exp_date_array[$key];
-            $satuan_berat = $satuan_berat_array[$key];
-            $kode_barang = $kode_barang_array[$key];
-            $supplier_barang = $supplier_array[$key];
-            $qty_gr_outstd = $qty_gr_outstd_array[$key];
-        } else {
-            log_message('error', 'Missing key at index ' . $key);
-            return redirect()->back()->withInput()->with('error', 'Missing data at index ' . $key);
-        }
+                $qty_po = $qty_po_array[$key];
+                $nama_barang = $nama_barang_array[$key];
+                $kode_batch = $kode_batch_array[$key];
+                $exp_date = $exp_date_array[$key];
+                $satuan_berat = $satuan_berat_array[$key];
+                $kode_barang = $kode_barang_array[$key];
+                $supplier_barang = $supplier_array[$key];
+                $qty_gr_outstd = $qty_gr_outstd_array[$key];
+            } else {
+                log_message('error', 'Missing key at index ' . $key);
+                return redirect()->back()->withInput()->with('error', 'Missing data at index ' . $key);
+            }
     
 
             if ($qty_dtg == $qty_po) {

@@ -94,7 +94,7 @@
                         <a class="collapse-item" href="/form_good_receive">Form Good Receive</a>
                         <a class="collapse-item" href="/form_identitas_pallet">Form Identitas Pallet</a>
                         <a class="collapse-item" href="/form_bin">Form BIN</a>
-                        <!-- <a class="collapse-item" href="/form_qc">Form Quality Control</a> -->
+                        <a class="collapse-item" href="/form_qc">Form Quality Control</a>
                         <a class="collapse-item" href="/form_tambah_data_warehouse">Form Tambah Warehouse</a>
                     </div>
                 </div>

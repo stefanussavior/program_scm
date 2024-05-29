@@ -20,26 +20,28 @@
 
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Form Quality Control</h1>
+            <h1 class="h3 mb-0 text-gray-800">Quality Control</h1>
     </div>
     <div class="card">
         <div class="card-header">
-            <b>Form Quality Control</b>
+            <b>Quality Control</b>
         </div>
         <div class="card-body" style="height:58rem;">
-            <form action="/submit_form_qc" method="post">
+            <form id="submit_form_qc" method="post">
         <div class="row">
             <div class="column">
                 <div>
-                    <label>Supplier : </label>
-                    <select name="supplier" id="supplier" class="form-control">
-                        <option value="" select disable>--- Pilih Data Warehouse ----</option>
-                        <?php foreach ($master_supplier as $supplier) : ?>
-                            <option value="<?php echo $supplier['id'] ?>"><?php echo $supplier['pemasok']; ?></option>
-                        <?php endforeach ?>
-                    </select>
+                    <label>Nomor PO : </label>
+                    <select id="po_id" class="form-control" name="nomor_po">
+                                <option value="" selected disabled>-- PILIH DATA PO ----</option>
+                                <?php foreach ($master_po2 as $po2): ?>
+                                    <option value="<?php echo $po2['nomor_po'] ?>"><?php echo $po2['nomor_po']; ?></option>
+                                <?php endforeach ?>
+                            </select>
                 </div>
-            <div>
+                <br>
+                <div id="qc_form_container"></div>
+            <!-- <div>
                 <label>Product : </label>
                 <input type="text" name="product" id="product" class="form-control" readonly>
             </div>
@@ -141,7 +143,7 @@
                     <option value="hold">Hold</option>
                     <option value="release">Release</option>
                 </select>
-            </div>
+            </div> -->
             <br/>
             <button type="submit" class="btn btn-primary">Submit</button>
             <button type="reset" class="btn btn-danger">Cancel</button>
@@ -154,27 +156,146 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    $(document).ready(function(){
-        $('#supplier').select2();
-        $('#supplier').on('change',function(){
-            var id = $(this).val();
+    $(document).ready(function() {
+
+        $('#po_id').select2();
+        $('#po_id').on('change', function(){
+            var nomor_po = $(this).val();
             $.ajax({
-                url: '<?= base_url('/get_data_ajax_supplier') ?>',
+                url: '<?= site_url('/ajax_get_data_gr_nomor_po') ?>',
                 method: 'GET',
-                data: {
-                    id: id,
+                data: { 
+                    nomor_po : nomor_po
                 },
                 dataType: 'JSON',
-                success: function (response) {
-                    $('#product').val(response.record.nama_barang);
+                success: function(response) {
+                    $('#qc_form_container').empty(); 
+
+                    $.each(response.record, function (index, row) {
+
+                        var fieldHtml = '<div class="row">';
+                        
+                        var namaBarangInput = '<div class="col-sm-6"><label>Nama Barang ' + (index + 1) + ' : </label><input name="nama_barang[]" id="nama_barang_' + (index + 1) + '" class="form-control" value="' + row.nama_barang + '" readonly></div>';
+                        fieldHtml += namaBarangInput;
+
+                        var productInput = '<div class="col-sm-6"><label>Product ' + (index + 1) + ' : </label><input name="product[]" id="product_' + (index + 1) + '" class="form-control"></div>';
+                        fieldHtml += productInput;
+
+                        var lots = '<div class="col-sm-6"><label>Lots ' + (index + 1) + ' : </label><input name="lots[]" id="lots[]_' + (index + 1) + '" class="form-control"></div><br/>';
+                        fieldHtml += lots;
+
+                        var produsen = '<div class="col-sm-6"><label>Produsen ' + (index + 1) + ' : </label><input name="produsen[]" id="produsen[]_' + (index + 1) + '" class="form-control"></div>';
+                        fieldHtml += produsen;
+
+                        var COO = '<div class="col-sm-6"><label> COO ' + (index + 1) + ' : </label><br/><div class="form-check form-check-inline"><input class="form-check-label" type="radio" name="coo[]" id="coo" value="ada"><label class="form-check-label" for="coo"> Ada </label></div><div class="form-check form-check-inline"><input class="form-check-label" type="radio" name="coo[]" id="coo" value="tidak ada"><label class="form-check-label" for="coo"> Tidak Ada </label></div></div>';
+                        fieldHtml += COO;
+
+                        var COA = '<div class="col-sm-6"><label> COA ' + (index + 1) + ' : </label><br/><div class="form-check form-check-inline"><input class="form-check-label" type="radio" name="coa[]" id="coa" value="ada"><label class="form-check-label" for="coa"> Ada </label></div><div class="form-check form-check-inline"><input class="form-check-label" type="radio" name="coa[]" id="coa" value="tidak ada"><label class="form-check-label" for="coa"> Tidak Ada </label></div></div>';
+                        fieldHtml += COA;
+
+                        var sertifikatHalal = '<div class="col-sm-6"><label> Sertifikat Halal ' + (index + 1) + ' : </label><br/><div class="form-check form-check-inline"><input class="form-check-label" type="radio" name="sertifikat_halal[]" id="sertifikat_halal" value="ada"><label class="form-check-label" for="sertifikat_halal"> Ada </label></div><div class="form-check form-check-inline"><input class="form-check-label" type="radio" name="sertifikat_halal[]" id="sertifikat_halal" value="tidak ada"><label class="form-check-label" for="sertifikat_halal"> Tidak Ada </label></div></div>';
+                        fieldHtml += sertifikatHalal;
+
+                        var uomSamplingInput = '<div class="col-sm-6"><label> UOM Sampling  ' + (index + 1) + ' : </label><input type="text" name="uom[]" id="uom[]_' + (index + 1) + '" class="form-control"></div>';
+                        fieldHtml += uomSamplingInput;
+
+                        var qtySamplingInput = '<div class="col-sm-6"><label> Qty Sampling  ' + (index + 1) + ' : </label><input type="number" name="qty_sampling[]" id="qty_sampling[]_' + (index + 1) + '" class="form-control" onkeypress="return isNumberKey(event)"></div>';
+                        fieldHtml += qtySamplingInput;
+
+                        var qtyRejectInput = '<div class="col-sm-6"><label> Qty Reject Input ' + (index + 1) + ' : </label><input type="number" name="qty_reject[]" id="qty_reject[]_' + (index + 1) + '" class="form-control" onkeypress="return isNumberKey(event)"></div>';
+                        fieldHtml += qtyRejectInput;
+
+                        var qtyGrInput = '<div class="col-sm-6"><label> Qty GR Input ' + (index + 1) + ' : </label><input type="number" name="qty_gr[]" id="qty_gr[]_' + (index + 1) + '" class="form-control" onkeypress="return isNumberKey(event)"></div>';
+                        fieldHtml += qtyGrInput;
+
+                        var packageInput = '<div class="col-sm-6"><label> Package Input ' + (index + 1) + ' : </label><input name="package[]" id="package[]_' + (index + 1) + '" class="form-control"></div>';
+                        fieldHtml += packageInput;
+
+                        var visualInput = '<div class="col-sm-6"><label> Visual Organoleptik ' + (index + 1) + ' : </label><input name="visual_organoleptik[]" id="visual_organoleptik[]_' + (index + 1) + '" class="form-control"></div>';
+                        fieldHtml += visualInput;
+
+                        var qcDescInput = '<div class="col-sm-6"><label> QC Desc ' + (index + 1) + ' : </label><input name="qc_dc[]" id="qc_dc[]_' + (index + 1) + '" class="form-control"></div>';
+                        fieldHtml += qcDescInput;
+
+                        var lotsRMInput = '<div class="col-sm-6"><label> Lots RM ' + (index + 1) + ' : </label><input name="lots_rm[]" id="lots_rm[]_' + (index + 1) + '" class="form-control"></div>';
+                        fieldHtml += lotsRMInput;
+
+                        var performInput = '<div class="col-sm-6"><label> Perform Input ' + (index + 1) + ' : </label><input name="perform[]" id="perfom[]_' + (index + 1) + '" class="form-control"></div>';
+                        fieldHtml += performInput;
+
+                        var qcRejectDescInput = '<div class="col-sm-6"><label> QC Reject Desc ' + (index + 1) + ' : </label><input name="qc_reject_desc[]" id="qc_reject_desc[]_' + (index + 1) + '" class="form-control"></div>';
+                        fieldHtml += qcRejectDescInput;
+
+                        var statusInput = '<div class="col-sm-6"><label> Status ' + (index + 1) + ' : </label><select name="status[]" id="status[]" class="form-control"><option value="" selected disable>-- PILIH STATUS ---</option><option value="reject">Reject</option><option value="hold">Hold</option><option value="release">Release</option></select></div>';
+                        fieldHtml += statusInput;
+
+                        fieldHtml += '</div><br/>';
+                        $('#qc_form_container').append(fieldHtml);
+                    });
                 },
-                error: function() {
-                    alert('Error fetching data');
+                error: function(xhr, status, error) {
+                    console.error('Error: ' + error);
+                }
+            });
+        });
+
+        $('#submit_form_qc').on('submit', function(event) {
+            event.preventDefault();
+
+            Swal.fire({
+                title: 'Konfirmasi Form QC',
+                text: 'Apakah anda yakin akan data yang sudah diisi?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ya, saya yakin'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: '<?= site_url('/submit_form_qc'); ?>',
+                        method: 'POST',
+                        data: $(this).serialize(),
+                        success: function(response) {
+
+                            Swal.fire(
+                                'Submitted!',
+                                'Your form has been submitted.',
+                                'success'
+                            );
+
+                            setTimeout(function() {
+                                Swal.fire(
+                                    'Success!',
+                                    'Data Berhasil Terkirim',
+                                    'success'
+                                );
+                            }, 2000);
+
+                            location.reload('/master_data_qc');
+                        },
+                        error: function(xhr, status, error) {
+                            Swal.fire(
+                                'Error!',
+                                'There was an error submitting your form. Please try again.',
+                                'error'
+                            );
+                        }
+                    });
                 }
             });
         });
     });
+
+
+    function isNumberKey(evt) {
+        var charCode = (evt.which) ? evt.which : evt.keyCode
+        if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+        return true;
+    }
 
     </script>
     

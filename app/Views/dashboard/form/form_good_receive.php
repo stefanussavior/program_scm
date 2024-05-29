@@ -203,7 +203,7 @@
                 case 'not_fulfilled':
                     alert(response.message); // Display an alert for not fulfilled PO
                     $('input[name^="qty_dtg"]').prop('readonly', false); // Ensure it is editable if needed
-                    // $('#add_field').hide();
+                    $('#add_field').hide();
                     break;
                 default:
                      add_button.hide(); // Hide the button

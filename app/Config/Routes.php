@@ -10,6 +10,7 @@ use App\Controllers\Incoming\MasterData\MasterPOController;
 use App\Controllers\Incoming\MasterData\MasterWarehouseController;
 use App\Controllers\Incoming\MasterData\MasterBarangController;
 use App\Controllers\Incoming\MasterData\MasterPalletizationController;
+use App\Controllers\Incoming\MasterData\MasterQCController;
 
 
 use App\Controllers\Incoming\Form\FormUploadDataController;
@@ -18,6 +19,7 @@ use App\Controllers\Incoming\Form\FormIdentitasPalletController;
 use App\Controllers\Incoming\Form\FormBINController;
 use App\Controllers\Incoming\Form\FormTambahWarehouseController;
 use App\Controllers\Incoming\Form\FormPaletizationController;
+use App\Controllers\Incoming\Form\FormQCController;
 
 
 /**
@@ -53,7 +55,7 @@ $routes->get('/form_identitas_pallet',[FormIdentitasPalletController::class,'For
 $routes->get('/form_status_inspeksi',[ScmController::class,'FormStatusInspeksi']);
 $routes->get('/form_upload_data',[FormUploadDataController::class,'FormUploadFileToExcel']);
 $routes->get('/form_bin', [FormBINController::class,'FormBIN']);
-$routes->get('/form_qc', [ScmController::class,'FormQC']);
+$routes->get('/form_qc', [FormQCController::class,'index']);
 $routes->get('/form_input_location_bin', [ScmController::class,'FormLocationBIN']);
 $routes->get('/form_tambah_data_warehouse', [FormTambahWarehouseController::class, 'ViewFormTambahDataWarehouse']);
 $routes->get('/display_data_bin_view', [FormBINController::class,'DisplayBINStatus']);
@@ -66,7 +68,6 @@ $routes->POST('/submit_form_schedule_incoming', [ScmController::class, 'InputDat
 $routes->POST('/submit_form_good_receive', [FormGRController::class, 'InputDataGoodReceive']);
 $routes->POST('/submit_form_identitas_pallet', [FormIdentitasPalletController::class, 'InputIdentitasPallet']);
 $routes->POST('/submit_form_status_inspeksi', [ScmController::class, 'InputStatusInspeksi']);
-$routes->POST('/submit_form_qc', [ScmController::class,'InsertDataQC']);
 $routes->POST('/submit_form_bin', [FormBINController::class, 'InsertDataBIN']);
 $routes->POST('/submit_form_location_bin', [ScmController::class,'reverseSeat']);
 $routes->POST('/submit_form_tambah_data_warehouse', [FormTambahWarehouseController::class,'TambahDataWarehouse']);
@@ -138,3 +139,9 @@ $routes->get('/show_data', [FormBINController::class,'GetShowData']);
 $routes->post('/check_nomor_gr_exist', [FormIdentitasPalletController::class, 'checkNomorGRExists']);
 
 $routes->post('/check_kode_pallet_exists', [FormBINController::class, 'CheckKodePalletExists']);
+
+//routes QC
+$routes->get('/master_data_qc', [MasterQCController::class,'index']);
+$routes->get('/ajax_get_data_qc', [MasterQCController::class, 'GetDataQC']);
+$routes->get('/ajax_get_data_gr_nomor_po', [FormQCController::class, 'AjaxGetDataGRNomorPO']);
+$routes->post('/submit_form_qc', [FormQCController::class,'SubmitFormQC']);

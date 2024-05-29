@@ -171,4 +171,17 @@ class MasterPOModel extends Model
         ->get()
         ->getResult();
     }
+
+    public function GetDataQCByPO($nomor_po) {
+        return $this->select('*')->where('nomor_po',$nomor_po)->first();
+    }
+
+    public function GetBarangQCByPO($nomor_po) {
+        return $this->db->table('table_po')
+        ->select('nomor_po,kode,supplier,nama_barang')
+        ->where('nomor_po',$nomor_po)
+        ->groupBy('kode')
+        ->get()
+        ->getResult();
+    }
 }

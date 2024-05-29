@@ -88,9 +88,9 @@
                     var qtyBelumTerproses = row.qty_po - row.qty_dtg;
                     if (qtyBelumTerproses === 0) {
                         row.status_gr = 'fulfilled';
-                    } else if (row.qty_po < row.qty_dtg) {
+                    } else if (row.qty_po > row.qty_dtg) {
                         row.status_gr = 'outstanding';
-                    } else {
+                    } else if (row.qty_po < row.qty_dtg) {
                         row.status_gr = 'reject';
                     }
                     return qtyBelumTerproses;
