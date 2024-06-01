@@ -1,8 +1,8 @@
 <?= $this->include('template/navigation_bar'); ?>
 
+
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
-
-
 <title>Good Receive</title>
 
 <!-- <style>
@@ -56,21 +56,16 @@
                             <input type="text" class="form-control" name="tanggal_po" id="tanggal_po" readonly>
                         </div>
                     </div>
-<div class="row">
-    <div class="col-md-12 mb-2">
-        <div id="barang_container">
-        </div>
-        <br>
-        <button type="button" id="add_field" class="btn btn-success">Tambah data Form GR Barang</button>
-    </div>
-</div>
-
-                            <!-- <button type="button" id="add_field" class="btn btn-success">Add Field</button>
-                        <button type="button" id="remove_field" class="btn btn-danger">Remove Field</button>                     -->
                             <div class=" mb-2">
                                 <label>Nomor GR : </label>
                                 <input type="text" name="nomor_gr" id="nomor_gr" class="form-control" readonly>
                             </div>
+
+                            <div id="barang_container"></div>
+                            <div class="mb-2">
+                                <button id="add_field" type="button" class="btn btn-success">Add Item</button>
+                            </div>
+                            
                             <div class="mt-2 mb-2">
                                 <label>Deskripsi GR : </label>
                                 <textarea name="desc_gr" id="desc_gr" cols="6" rows="2" class="form-control"></textarea>
@@ -82,29 +77,13 @@
                             <div class="mt-2 mb-2">
                                 <label>Warehouse : </label>
                                 <br>
-                                <input type="text" name="warehouse" id="warehouse" class="form-control" value="WHCK2"
-                                    readonly>
-                                <!-- <div class="mt-2 mb-2">
-                    <label>Supplier : </label>
-                    <br>
-                    <input type="text" name="supplier" id="supplier" class="form-control" readonly>
-                </div> -->
-                                <!-- <div class="mt-2 mb-2">
-                        <label>Nama Barang Supplier : </label>
-                        <input type="text" name="nama_barang_supplier" id="nama_barang_supplier" class="form-control" readonly>
-                    </div> -->
+                                <input type="text" name="warehouse" id="warehouse" class="form-control" value="WHCK2" readonly>
+
                                 <div class="mt-2 mb-2">
                                     <label>Estimasi Kirim : </label>
                                     <input type="date" class="form-control" name="est_kirim" id="est_kirim">
                                 </div>
-                                <!-- <div class="mt-2 mb-2">
-                    <label>Qty Dtg : </label>
-                    <input type="text" name="qty_dtg" id="qty_dtg" class="form-control">
-                </div> -->
-                                <!-- <div class="mt-2 mb-2">
-                    <label>Kode Batch : </label>
-                    <input type="text" class="form-control" id="kode_batch" name="kode_batch" readonly>
-                </div> -->
+    
                                 <div class="mt-2 mb-2">
                                     <label>Kode PRD : </label>
                                     <input type="text" name="kode_prd" id="kode_prd" class="form-control" readonly>
@@ -113,6 +92,7 @@
                                 <button type="submit" class="btn btn-primary">Submit</button>
                                 <button type="reset" class="btn btn-danger">Cancel</button>
                             </div>
+                        
                         </div>
                     </div>
             </div>
@@ -128,37 +108,21 @@
         <?php foreach ($master_gr as $gr): ?>
             <input type="hidden" id="nomor_gr" value="<?= $gr['nomor_gr'] ?>" />
         <?php endforeach ?>
-
-        <!-- <select name="po_id2" id="po_id2" class="form-control">
-
-        </select>
-
-        <div class="mt-2 mb-2">
-            <label>Nama Barang : </label>
-            <input type="text" name="nama_barang" id="nama_barang2" class="form-control" readonly>
         </div>
-
-        <div id="output">
-
-            </div> -->
-        <div class="mt-2 mb-2">
-        </div>
-    </div>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 <script>
    $(document).ready(function () {
     var max_fields = 10;
     var wrapper = $("#barang_container"); 
-    var add_button = $("#add_field"); 
     var x = 0;
+    var add_button = $('#add_field');
 
     var today = new Date().toISOString().split('T')[0];
         $('#tanggal_gr').attr('min', today);
         $('#est_kirim').attr('min', today);
-     
-      $('#po_id').on('change', function () {
+
+        $('#po_id').on('change', function () {
         var nomor_po = $(this).val(); 
         if (nomor_po) {
             checkPOStatus(nomor_po); 
@@ -180,7 +144,7 @@
                     $('input[name^="qty_dtg"]').val(0).prop('readonly', true); // Clear the value and make it readonly
                     $('input[name^="kode_batch"]').val(0).prop('readonly', true); // Clear the value and make it readonly
                     $('input[name^="qty_gr_outstd"]').val(0).prop('readonly', true);
-                    $('#barang_container').empty();
+                    // $('#barang_container').empty();
                     $.ajax({
                         url: '/fetch_qty_dtg', // Update the URL as needed
                         method: 'POST',
@@ -230,88 +194,6 @@ function setMinDateForExpDateFields() {
     });
 }
 
-
-
-    $(add_button).click(function (e) {
-        e.preventDefault();
-        if (x < max_fields) {
-            x++;
-            var fieldHtml = `
-            <br>
-            <h3> Form tambahan untuk GR </h3>
-            <br>
-                <div class="row mb-2">
-                    <div class="col-sm-3">
-                        <label>Kode Barang ${x} : </label>
-                        <select class="form-control kode_append" name="kode[]">
-                            <option></option>
-                        </select>
-                    </div>
-                    <div class="col-sm-3">
-                        <label>Supplier Barang ${x} : </label>
-                        <input type="text" class="form-control" name="supplier[]" readonly>
-                    </div>
-                    <div class="col-sm-3">
-                        <label>Nama Barang ${x} : </label>
-                        <input type="text" class="form-control" name="nama_barang[]" readonly>
-                    </div>
-                        <input type="hidden" class="form-control" name="qty_po[]" value="NULL" readonly>
-                        <input type="hidden" class="form-control" name="qty_gr_outstd[]" value="NULL" readonly>
-                    <div class="col-sm-3">
-                        <label>Kode Batch ${x} : </label>
-                        <input type="text" class="form-control" name="kode_batch[]" >
-                    </div>
-                    <div class="col-sm-3">
-                        <label>Qty Barang Datang ${x} : </label>
-                        <input type="number" class="form-control" name="qty_dtg[]">
-                    </div>
-                    <div class="col-sm-3">
-                    <label>Satuan Berat ${x} : </label>
-                    <input type="text" class="form-control" name="satuan[]" readonly>
-                    </div>
-                    <div class="col-sm-3">
-                        <label>Expired Date Barang ${x} : </label>
-                        <input type="date" class="form-control exp_date" name="exp_date[]">
-                    </div>
-                    <div class="col-sm-3">
-                        <button type="button" class="remove_field btn btn-danger mt-4">Remove Field</button>
-                    </div>
-                </div>`;
-            $(wrapper).append(fieldHtml);
-
-            $('.kode_append').select2();
-
-            var kodeBarangInput = $(wrapper).find('.kode_append').last(); 
-            var nomor_po = $('#po_id').val(); 
-            if (nomor_po) {
-                $.ajax({
-                    url: '<?= site_url("/fetch_kode_barang") ?>',
-                    method: 'POST',
-                    data: { nomor_po: nomor_po },
-                    dataType: 'json',
-                    success: function (response) {
-                        $.each(response, function (index, item) {
-                            kodeBarangInput.append($('<option>', { 
-                                value: item.kode,
-                                text : item.kode
-                            }));
-                        });
-                    },
-                    error: function () {
-                        alert('Error fetching Kode Barang');
-                    }
-                });
-            }
-            setMinDateForExpDateFields();
-        }
-    });
-
-    $(wrapper).on("click", ".remove_field", function (e) {
-        e.preventDefault();
-        $(this).closest('.row').remove(); 
-        x--;
-    });
-
     $(document).on("change", ".kode_append", function () {
             var kodeBarang = $(this).val();
             var supplierInput = $(this).closest('.row').find('input[name="supplier[]"]');
@@ -347,8 +229,6 @@ function setMinDateForExpDateFields() {
                 }
             });
         });
-
-
 
         $('#po_id').select2();
         $('#kode_append').select2();
@@ -387,7 +267,6 @@ function setMinDateForExpDateFields() {
 
         if (lastGrCreatedAt && nomorGr) {
             var formattedDate = lastGrCreatedAt.split(' ')[0];
-            // $('#nomor_gr').val(`${nomorGr}/${formattedDate.replace(/-/g, '')}`);
         }
 
             $.ajax({
@@ -405,14 +284,18 @@ function setMinDateForExpDateFields() {
                     if (response.record.status == 'outstanding') {
                         return;
                     }
-
-
                     $.each(response.data, function (index, row) {
-                        var fieldHtml = '<div class="row">';
+                        
+                        var fieldHtml = '<br><h3>Form Data Barang Good Receive ke-' + (index + 1) +'</h3><div class="row">';
+                        var nomorQCInput = '<div class="col-sm-6"><label>Nomor QC barang ' + (index + 1) + ' : </label><input type="text" name="nomor_qc[]" id="nomor_qc" class="form-control" value="' + row.nomor_qc + '"readonly></div>';
+                        fieldHtml += nomorQCInput;
+                        
                         var kodeBarangInput = '<div class="col-sm-6"><label>Kode Barang ' + (index + 1) + ' : </label><input type="text" name="kode[]" id="kode_' + (index + 1) + '" class="form-control" value="' + row.kode + '" readonly></div>';
                         fieldHtml += kodeBarangInput;
+
                         var PemasokInput = '<div class="col-sm-6"><label>Supplier Barang ' + (index + 1) + ' : </label><input type="text" name="supplier[]" id="supplier_' + (index + 1) + '" class="form-control" value="' + row.supplier + '" readonly></div>';
                         fieldHtml += PemasokInput;
+                        
                         fieldHtml += '</div>';
                         $('#barang_container').append(fieldHtml);
 
@@ -445,7 +328,6 @@ function setMinDateForExpDateFields() {
 
                         $('#barang_container').append(fieldHtml);
                         setMinDateForExpDateFields();
-
 
 
                         var qty_dtg_input = $('#qty_dtg_' + (index + 1));

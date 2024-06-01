@@ -178,7 +178,7 @@ class MasterPOModel extends Model
 
     public function GetBarangQCByPO($nomor_po) {
         return $this->db->table('table_po')
-        ->select('nomor_po,kode,supplier,nama_barang')
+        ->select('nomor_po,kode,supplier,nama_barang, satuan, qty_po')
         ->where('nomor_po',$nomor_po)
         ->groupBy('kode')
         ->get()

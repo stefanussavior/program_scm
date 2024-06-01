@@ -70,6 +70,7 @@
                         <a class="collapse-item" href="/master_data_po">Master Data PO GR</a>
                         <a class="collapse-item" href="/master_upload_po">Master Data Upload PO</a>
                         <a class="collapse-item" href="/master_gr">Master Data Good Receive</a>
+                        <a class="collapse-item" href="/master_data_qc">Master Data Quality Control <a>
                         <a class="collapse-item" href="/master_warehouse">Master Warehouse</a>
                         <a class="collapse-item" href="/master_barang">Master Barang</a>
                         <a class="collapse-item" href="/master_palletization">Master Data Pallet</a>

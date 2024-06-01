@@ -161,6 +161,7 @@
     $(document).ready(function() {
 
         $('#po_id').select2();
+
         $('#po_id').on('change', function(){
             var nomor_po = $(this).val();
             $.ajax({
@@ -175,40 +176,47 @@
 
                     $.each(response.record, function (index, row) {
 
-                        var fieldHtml = '<div class="row">';
+                        var fieldHtml = '<h2>Form Barang QC ke-'+(index + 1)+' : </h2><div class="row">';
+
+                        // var headerBarang = '<h2>Form QC Barang ke : ' + (index + 1) + '</h2><br/>';
+                        // fieldHtml += headerBarang;
                         
-                        var namaBarangInput = '<div class="col-sm-6"><label>Nama Barang ' + (index + 1) + ' : </label><input name="nama_barang[]" id="nama_barang_' + (index + 1) + '" class="form-control" value="' + row.nama_barang + '" readonly></div>';
+                        var namaBarangInput = '<div class="col-sm-6"><label>Nama Barang ' + (index + 1) + ' : </label><input type="text" name="nama_barang[]" id="nama_barang[]_' + (index + 1) + '" class="form-control" value="' + row.nama_barang + '" readonly></div>';
                         fieldHtml += namaBarangInput;
 
-                        var productInput = '<div class="col-sm-6"><label>Product ' + (index + 1) + ' : </label><input name="product[]" id="product_' + (index + 1) + '" class="form-control"></div>';
-                        fieldHtml += productInput;
+                        // var productInput = '<div class="col-sm-6"><label>Product ' + (index + 1) + ' : </label><input name="product[]" id="product_' + (index + 1) + '" class="form-control"></div>';
+                        // fieldHtml += productInput;
+
+                        var qtyPO = '<div class="col-sm-6"><label> Qty PO ' + (index + 1) + ' : </label><input type="text" name="qty_po[]" id="qty_po[]_' + (index + 1) + '" class="form-control" value="' + row.qty_po +'" readonly></div>';
+                        fieldHtml += qtyPO;
+
+                        var uomSamplingInput = '<div class="col-sm-6"><label> UOM Sampling  ' + (index + 1) + ' : </label><input type="text" name="uom[]" id="uom[]_' + (index + 1) + '" class="form-control" value="' + row.satuan +'" readonly></div>';
+                        fieldHtml += uomSamplingInput;
+
+                        var tanggalQC = '<div class="col-sm-6"><label> Tanggal QC  ' + (index + 1) + ' : </label><input type="date" name="tanggal_qc[]" id="tanggal_qc"' + (index + 1) + '" class="form-control tanggal_qc"></div>';
+                        fieldHtml += tanggalQC;
 
                         var lots = '<div class="col-sm-6"><label>Lots ' + (index + 1) + ' : </label><input name="lots[]" id="lots[]_' + (index + 1) + '" class="form-control"></div><br/>';
                         fieldHtml += lots;
 
-                        var produsen = '<div class="col-sm-6"><label>Produsen ' + (index + 1) + ' : </label><input name="produsen[]" id="produsen[]_' + (index + 1) + '" class="form-control"></div>';
+                        var produsen = '<div class="col-sm-6"><label>Produsen ' + (index + 1) + ' : </label><input name="produsen[]" id="produsen[]_' + (index + 1) + '" class="form-control"></div><br/>';
                         fieldHtml += produsen;
 
-                        var COO = '<div class="col-sm-6"><label> COO ' + (index + 1) + ' : </label><br/><div class="form-check form-check-inline"><input class="form-check-label" type="radio" name="coo[]" id="coo" value="ada"><label class="form-check-label" for="coo"> Ada </label></div><div class="form-check form-check-inline"><input class="form-check-label" type="radio" name="coo[]" id="coo" value="tidak ada"><label class="form-check-label" for="coo"> Tidak Ada </label></div></div>';
+                        var COO = '<br/><div class="col-sm-6"><label> COO ' + (index + 1) + ' : </label><br/><select name="coo[]" class="form-control"><option value="" selected disabled>-- PILIH COO ---</option><option value="ada"> Ada </option><option value="tidak ada"> Tidak Ada </option></select></div>';
                         fieldHtml += COO;
 
-                        var COA = '<div class="col-sm-6"><label> COA ' + (index + 1) + ' : </label><br/><div class="form-check form-check-inline"><input class="form-check-label" type="radio" name="coa[]" id="coa" value="ada"><label class="form-check-label" for="coa"> Ada </label></div><div class="form-check form-check-inline"><input class="form-check-label" type="radio" name="coa[]" id="coa" value="tidak ada"><label class="form-check-label" for="coa"> Tidak Ada </label></div></div>';
+                        var COA = '<br/><div class="col-sm-6"><label> COA ' + (index + 1) + ' : </label><br/><select name="coa[]" class="form-control"><option value="" selected disabled>-- PILIH COA ---</option><option value="ada"> Ada </option><option value="tidak ada"> Tidak Ada </option></select></div><br/>';
                         fieldHtml += COA;
 
-                        var sertifikatHalal = '<div class="col-sm-6"><label> Sertifikat Halal ' + (index + 1) + ' : </label><br/><div class="form-check form-check-inline"><input class="form-check-label" type="radio" name="sertifikat_halal[]" id="sertifikat_halal" value="ada"><label class="form-check-label" for="sertifikat_halal"> Ada </label></div><div class="form-check form-check-inline"><input class="form-check-label" type="radio" name="sertifikat_halal[]" id="sertifikat_halal" value="tidak ada"><label class="form-check-label" for="sertifikat_halal"> Tidak Ada </label></div></div>';
+                        var sertifikatHalal = '<br/><div class="col-sm-6"><label> Sertifikat Halal ' + (index + 1) + ' : </label><select name="sertifikat_halal[]" class="form-control"><br/><option value="" selected disabled>-- PILIH SERTIFIKAT HALAL ---</option><option value="ada"> Ada </option><option value="tidak ada"> Tidak Ada </option></select></div>';
                         fieldHtml += sertifikatHalal;
 
-                        var uomSamplingInput = '<div class="col-sm-6"><label> UOM Sampling  ' + (index + 1) + ' : </label><input type="text" name="uom[]" id="uom[]_' + (index + 1) + '" class="form-control"></div>';
-                        fieldHtml += uomSamplingInput;
 
                         var qtySamplingInput = '<div class="col-sm-6"><label> Qty Sampling  ' + (index + 1) + ' : </label><input type="number" name="qty_sampling[]" id="qty_sampling[]_' + (index + 1) + '" class="form-control" onkeypress="return isNumberKey(event)"></div>';
                         fieldHtml += qtySamplingInput;
 
                         var qtyRejectInput = '<div class="col-sm-6"><label> Qty Reject Input ' + (index + 1) + ' : </label><input type="number" name="qty_reject[]" id="qty_reject[]_' + (index + 1) + '" class="form-control" onkeypress="return isNumberKey(event)"></div>';
                         fieldHtml += qtyRejectInput;
-
-                        var qtyGrInput = '<div class="col-sm-6"><label> Qty GR Input ' + (index + 1) + ' : </label><input type="number" name="qty_gr[]" id="qty_gr[]_' + (index + 1) + '" class="form-control" onkeypress="return isNumberKey(event)"></div>';
-                        fieldHtml += qtyGrInput;
 
                         var packageInput = '<div class="col-sm-6"><label> Package Input ' + (index + 1) + ' : </label><input name="package[]" id="package[]_' + (index + 1) + '" class="form-control"></div>';
                         fieldHtml += packageInput;
@@ -228,18 +236,34 @@
                         var qcRejectDescInput = '<div class="col-sm-6"><label> QC Reject Desc ' + (index + 1) + ' : </label><input name="qc_reject_desc[]" id="qc_reject_desc[]_' + (index + 1) + '" class="form-control"></div>';
                         fieldHtml += qcRejectDescInput;
 
-                        var statusInput = '<div class="col-sm-6"><label> Status ' + (index + 1) + ' : </label><select name="status[]" id="status[]" class="form-control"><option value="" selected disable>-- PILIH STATUS ---</option><option value="reject">Reject</option><option value="hold">Hold</option><option value="release">Release</option></select></div>';
+                        var statusInput = '<div class="col-sm-6"><label> Status ' + (index + 1) + ' : </label><select name="status[]" id="status[]" class="form-control"><option value="" selected disabled>-- PILIH STATUS ---</option><option value="hold">Hold</option><option value="reject">Reject</option><option value="release">Release</option></select></div>';
                         fieldHtml += statusInput;
 
                         fieldHtml += '</div><br/>';
                         $('#qc_form_container').append(fieldHtml);
                     });
+                    setMinDateForExpDateFields();
                 },
                 error: function(xhr, status, error) {
                     console.error('Error: ' + error);
                 }
+
             });
         });
+
+
+function setMinDateForExpDateFields() {
+    var today = new Date().toISOString().split('T')[0];
+    $('#tanggal_qc').each(function () {
+        var currentValue = $(this).val();
+        if (currentValue < today) {
+            $(this).val(today);
+        }
+        $(this).attr('min', today);
+    });
+}
+
+
 
         $('#submit_form_qc').on('submit', function(event) {
             event.preventDefault();
@@ -274,7 +298,7 @@
                                 );
                             }, 2000);
 
-                            location.reload('/master_data_qc');
+                            location.reload('<?= site_url('/master_data_qc') ?>');
                         },
                         error: function(xhr, status, error) {
                             Swal.fire(

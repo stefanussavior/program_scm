@@ -10,16 +10,6 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
 
-<style>
-    @media (max-width: 800px) {
-        #card{
-            position: relative;
-            left: 0.5rem;
-            bottom: 500px;
-        }
-    }
-</style>
-
 <body>
     <div class="flex-container">
         <div class="flex-item-left"></div>

@@ -13,8 +13,9 @@ class MasterQCModel extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'product',
-        'supplier',
+        'nomor_po',
+        'nama_barang',
+        'qty_po',
         'lots',
         'produsen',
         'coo',
@@ -23,7 +24,6 @@ class MasterQCModel extends Model
         'uom',
         'qty_sampling',
         'qty_reject',
-        'qty_gr',
         'package',
         'visual_organoleptik',
         'qc_dc',

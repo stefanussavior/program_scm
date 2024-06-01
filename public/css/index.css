@@ -89,6 +89,35 @@ body{
 
 
 
+    @media screen and (max-width: 800px) {
+        .flex-container{
+            flex-direction: column;
+        }
+
+        .flex-item-right{
+            padding: 0px;
+            flex: 100%;
+            height: 100%;
+            width: 100%;
+        }
+
+        #card{
+            position: relative;
+            left: 4rem;
+            right: 1.0rem;
+            bottom: 10.0rem;
+        }
+
+        .flex-item-left{
+            background: url('../img/TRAINING-TENTANG-SUPPLY-CHAIN-MANAGEMENT.jpg');
+            padding: 0px;
+            flex: 0%;
+            opacity: 0.3;
+        }
+
+    }
+
+
 /* body {
     background: url('../img/TRAINING-TENTANG-SUPPLY-CHAIN-MANAGEMENT.jpg');
     background-size: 200vh 60vw;

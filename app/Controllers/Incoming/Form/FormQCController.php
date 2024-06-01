@@ -39,7 +39,7 @@ class FormQCController extends BaseController
         $QCModel = new MasterQCModel();
 
         $nama_barang_array = $this->request->getPost('nama_barang');
-        $product_array = $this->request->getPost('product');
+        $qty_po_array = $this->request->getPost('qty_po');
         $lots_array = $this->request->getPost('lots');
         $produsen_array = $this->request->getPost('produsen');
         $coo_array = $this->request->getPost('coo');
@@ -48,7 +48,6 @@ class FormQCController extends BaseController
         $uom_sampling_array = $this->request->getPost('uom');
         $qty_sampling_array = $this->request->getPost('qty_sampling');
         $qty_reject_array =  $this->request->getPost('qty_reject');
-        $qty_gr_array = $this->request->getPost('qty_gr');
         $package_array = $this->request->getPost('package');
         $visual_organoleptik_array = $this->request->getPost('visual_organoleptik');
         $qc_desc_array = $this->request->getPost('qc_dc');
@@ -58,7 +57,8 @@ class FormQCController extends BaseController
         $status_array = $this->request->getPost('status');
 
         foreach ($nama_barang_array as $key => $nama_barang) {
-            $product = $product_array[$key];
+            $nama_barang = $nama_barang_array[$key];
+            $qty_po = $qty_po_array[$key];
             $lots = $lots_array[$key];
             $produsen = $produsen_array[$key];
             $coo = $coo_array[$key];
@@ -67,7 +67,6 @@ class FormQCController extends BaseController
             $uom_sampling = $uom_sampling_array[$key];
             $qty_sampling = $qty_sampling_array[$key];
             $qty_reject = $qty_reject_array[$key];
-            $qty_gr = $qty_gr_array[$key];
             $package = $package_array[$key];
             $visual_organoleptik = $visual_organoleptik_array[$key];
             $qc_desc = $qc_desc_array[$key];
@@ -77,7 +76,8 @@ class FormQCController extends BaseController
             $status = $status_array[$key];
 
             $QCModel->insert([
-                'product' => $product,
+                'nama_barang' => $nama_barang,
+                'qty_po' => $qty_po,
                 'lots' => $lots,
                 'produsen' => $produsen,
                 'coo' => $coo,
@@ -86,7 +86,6 @@ class FormQCController extends BaseController
                 'uom' => $uom_sampling,
                 'qty_sampling' => $qty_sampling,
                 'qty_reject' => $qty_reject,
-                'qty_gr' => $qty_gr,
                 'package' => $package,
                 'visual_organoleptik' => $visual_organoleptik,
                 'qc_dc' => $qc_desc,
@@ -98,4 +97,17 @@ class FormQCController extends BaseController
             return redirect()->to(base_url('/master_data_qc'));
         }
     }   
+
+    public function EditDataQC() {
+        $qc_id = $this->request->getPost('id');
+        $data = [
+            'nama_barang' => $this->request->getPost('product'),
+            'status' => $this->request->getPost('status')
+        ];
+        $dataQC = new MasterQCModel();
+        $dataQC->update($qc_id,$data);
+
+        return $this->response->setJSON(['status' => 'success', 'message' => 'Data Berhasil Terupdate']);
+    }   
+
 }

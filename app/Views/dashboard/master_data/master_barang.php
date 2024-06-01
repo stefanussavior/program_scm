@@ -50,9 +50,8 @@
         <th>No</th>
         <th>Produk ID</th>
         <th>Kode Produk</th>
-        <th>Nama Produk</th>
-        <th>Produk UOM 1</th>
-        <th>Produk UOM 2</th>
+        <th>Nama Produk</th>  
+        <th>UOM</th>
         </tr>
     </thead>
 
@@ -74,7 +73,6 @@
         {"data": "prod_id"},
         {"data": "prod_code"},
         {"data": "prod_name"},
-        {"data": "prod_uom1"},
         {"data": "prod_uom2"},
       ]
     });
