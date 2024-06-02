@@ -145,5 +145,5 @@ $routes->get('/master_data_qc', [MasterQCController::class,'index']);
 $routes->get('/ajax_get_data_qc', [MasterQCController::class, 'GetDataQC']);
 $routes->get('/ajax_get_data_gr_nomor_po', [FormQCController::class, 'AjaxGetDataGRNomorPO']);
 $routes->post('/submit_form_qc', [FormQCController::class,'SubmitFormQC']);
-
 $routes->post('/edit_qc_data', [FormQCController::class, 'EditDataQC']);
+$routes->get('/ajax_get_kode_otomatis_qc', [FormQCController::class, 'BuatKodeQC']);

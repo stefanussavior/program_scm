@@ -3,20 +3,24 @@
 <title>Form Quality Control</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
 <style>
-    *{
-        box-sizing: border-box;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    .row{
-        display: flex;
-    }
+        .row {
+            display: flex;
+        }
 
-    .column {
-        flex: 50%;
-        padding: 10px;
-        height: 300px;
-    }
-</style>
+        .column {
+            flex: 50%;
+            padding: 10px;
+            height: 300px;
+        }
+
+        .alert {
+            margin-top: 10px;
+        }
+    </style>
 
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -180,6 +184,10 @@
 
                         // var headerBarang = '<h2>Form QC Barang ke : ' + (index + 1) + '</h2><br/>';
                         // fieldHtml += headerBarang;
+
+                        var nomorQC = '<div class="col-sm-6"><label> Nomor QC ' + (index + 1) + ' : </label><input type="text" name="nomor_qc[]" id="nomor_qc[]_' + (index + 1) + '" class="form-control nomor_qc" value="' + row.nomor_qc +'" readonly></div>';
+                        fieldHtml += nomorQC;
+
                         
                         var namaBarangInput = '<div class="col-sm-6"><label>Nama Barang ' + (index + 1) + ' : </label><input type="text" name="nama_barang[]" id="nama_barang[]_' + (index + 1) + '" class="form-control" value="' + row.nama_barang + '" readonly></div>';
                         fieldHtml += namaBarangInput;
@@ -187,13 +195,14 @@
                         // var productInput = '<div class="col-sm-6"><label>Product ' + (index + 1) + ' : </label><input name="product[]" id="product_' + (index + 1) + '" class="form-control"></div>';
                         // fieldHtml += productInput;
 
-                        var qtyPO = '<div class="col-sm-6"><label> Qty PO ' + (index + 1) + ' : </label><input type="text" name="qty_po[]" id="qty_po[]_' + (index + 1) + '" class="form-control" value="' + row.qty_po +'" readonly></div>';
+                        var qtyPO = '<div class="col-sm-6"><label> Qty PO ' + (index + 1) + ' : </label><input type="text" name="qty_po[]" id="qty_po_' + (index + 1) + '" class="form-control qty_po" value="' + row.qty_po +'" readonly></div>';
                         fieldHtml += qtyPO;
+
 
                         var uomSamplingInput = '<div class="col-sm-6"><label> UOM Sampling  ' + (index + 1) + ' : </label><input type="text" name="uom[]" id="uom[]_' + (index + 1) + '" class="form-control" value="' + row.satuan +'" readonly></div>';
                         fieldHtml += uomSamplingInput;
 
-                        var tanggalQC = '<div class="col-sm-6"><label> Tanggal QC  ' + (index + 1) + ' : </label><input type="date" name="tanggal_qc[]" id="tanggal_qc"' + (index + 1) + '" class="form-control tanggal_qc"></div>';
+                        var tanggalQC = '<div class="col-sm-6"><label> Tanggal QC  ' + (index + 1) + ' : </label><input type="date" name="tanggal_qc[]" id="tanggal_qc[]_' + (index + 1) + '" class="form-control tanggal_qc"></div>';
                         fieldHtml += tanggalQC;
 
                         var lots = '<div class="col-sm-6"><label>Lots ' + (index + 1) + ' : </label><input name="lots[]" id="lots[]_' + (index + 1) + '" class="form-control"></div><br/>';
@@ -212,8 +221,11 @@
                         fieldHtml += sertifikatHalal;
 
 
-                        var qtySamplingInput = '<div class="col-sm-6"><label> Qty Sampling  ' + (index + 1) + ' : </label><input type="number" name="qty_sampling[]" id="qty_sampling[]_' + (index + 1) + '" class="form-control" onkeypress="return isNumberKey(event)"></div>';
+                        var qtySamplingInput = '<div class="col-sm-6"><label> Qty Sampling  ' + (index + 1) + ' : </label><input type="number" name="qty_sampling[]" id="qty_sampling' + (index + 1) + '" class="form-control qty_sampling" onkeypress="return isNumberKey(event)"></div>';
                         fieldHtml += qtySamplingInput;
+
+                        var alertDiv = '<div class="col-sm-6 qty-alert' + (index + 1) + '"></div>';
+                        fieldHtml += alertDiv;
 
                         var qtyRejectInput = '<div class="col-sm-6"><label> Qty Reject Input ' + (index + 1) + ' : </label><input type="number" name="qty_reject[]" id="qty_reject[]_' + (index + 1) + '" class="form-control" onkeypress="return isNumberKey(event)"></div>';
                         fieldHtml += qtyRejectInput;
@@ -224,7 +236,7 @@
                         var visualInput = '<div class="col-sm-6"><label> Visual Organoleptik ' + (index + 1) + ' : </label><input name="visual_organoleptik[]" id="visual_organoleptik[]_' + (index + 1) + '" class="form-control"></div>';
                         fieldHtml += visualInput;
 
-                        var qcDescInput = '<div class="col-sm-6"><label> QC Desc ' + (index + 1) + ' : </label><input name="qc_dc[]" id="qc_dc[]_' + (index + 1) + '" class="form-control"></div>';
+                        var qcDescInput = '<div class="col-sm-6"><label> QC Desc ' + (index + 1) + ' : </label><input name="qc_desc[]" id="qc_desc[]_' + (index + 1) + '" class="form-control"></div>';
                         fieldHtml += qcDescInput;
 
                         var lotsRMInput = '<div class="col-sm-6"><label> Lots RM ' + (index + 1) + ' : </label><input name="lots_rm[]" id="lots_rm[]_' + (index + 1) + '" class="form-control"></div>';
@@ -236,25 +248,46 @@
                         var qcRejectDescInput = '<div class="col-sm-6"><label> QC Reject Desc ' + (index + 1) + ' : </label><input name="qc_reject_desc[]" id="qc_reject_desc[]_' + (index + 1) + '" class="form-control"></div>';
                         fieldHtml += qcRejectDescInput;
 
-                        var statusInput = '<div class="col-sm-6"><label> Status ' + (index + 1) + ' : </label><select name="status[]" id="status[]" class="form-control"><option value="" selected disabled>-- PILIH STATUS ---</option><option value="hold">Hold</option><option value="reject">Reject</option><option value="release">Release</option></select></div>';
+                        var statusInput = '<div class="col-sm-6"><label> Status ' + (index + 1) + ' : </label><input type="text" class="form-control" value="hold" name="status[]" id="status_[]_ ' + (index + 1) + '" readonly></div>';
                         fieldHtml += statusInput;
 
                         fieldHtml += '</div><br/>';
                         $('#qc_form_container').append(fieldHtml);
+
+
+                        $('input[name^="qty_sampling"]').on('input', function() {
+                        var index = $(this).attr('id').replace('qty_sampling', '');
+                        checkQtySamplingQtyPO(index);
+                        });
+
+                        $('input[name^="qty_po"]').on('input', function() {
+                            var index = $(this).attr('id').replace('qty_po_', '');
+                            checkQtySamplingQtyPO(index);
+                        });
+
                     });
                     setMinDateForExpDateFields();
                 },
                 error: function(xhr, status, error) {
                     console.error('Error: ' + error);
                 }
-
             });
+            $.ajax({
+                url: '<?= base_url('/ajax_get_kode_otomatis_qc'); ?>',
+                type: 'GET',
+                success: function(hasil) {
+                var codes = $.parseJSON(hasil);
+                $('.nomor_qc').each(function(index) {
+                $(this).val(codes);
+        });
+    }
+});
         });
 
 
 function setMinDateForExpDateFields() {
     var today = new Date().toISOString().split('T')[0];
-    $('#tanggal_qc').each(function () {
+    $('.tanggal_qc').each(function () {
         var currentValue = $(this).val();
         if (currentValue < today) {
             $(this).val(today);
@@ -262,8 +295,6 @@ function setMinDateForExpDateFields() {
         $(this).attr('min', today);
     });
 }
-
-
 
         $('#submit_form_qc').on('submit', function(event) {
             event.preventDefault();
@@ -320,6 +351,26 @@ function setMinDateForExpDateFields() {
             return false;
         return true;
     }
+
+    function checkQtySamplingQtyPO(index) {
+    var qtySampling = $('#qty_sampling' + index).val();
+    var qtyPO = $('#qty_po_' + index).val();
+
+    if (qtySampling > qtyPO) {
+        // Remove any existing alert div
+        $('.qty-alert' + index).find('.alert').remove();
+
+        // Create and append the warning alert div
+        var warningAlertDiv = '<div class="alert alert-warning" role="alert">Warning, Qty Sampling tidak boleh melebihi Qty PO</div>';
+        $('.qty-alert' + index).append(warningAlertDiv);
+    } else {
+        // Remove any existing alert div
+        $('.qty-alert' + index).find('.alert').remove();
+    }
+}
+
+
+
 
     </script>
     

@@ -348,6 +348,116 @@ function setMinDateForExpDateFields() {
                             //     $(this).closest('div').append('<div class="alert alert-warning" role="alert">Quantity OutStanding</div>');
                             // }
                         });
+
+                        $(add_button).click(function (e) {
+        e.preventDefault();
+        if (x < max_fields) {
+            x++;
+            var poSelectHtml = `
+            <br>
+            <br>
+                <div class="po_item">
+                    <div class="row">
+                        <div class="col-md-12 mb-2">
+                            <label>Nomor PO : </label>
+                            <br>
+                            <select id="po_id_${x}" class="form-control po_id" name="nomor_po">
+                                <option value="" selected disabled>-- PILIH DATA PO --</option>
+                                <?php foreach ($master_po2 as $po2): ?>
+                                    <option value="<?php echo $po2['nomor_po'] ?>"><?php echo $po2['nomor_po']; ?></option>
+                                <?php endforeach ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form_fields"></div>
+                    <br>
+                    <button type="button" class="remove_field btn btn-danger">Remove</button>
+                </div>
+            `;
+            $(wrapper).append(poSelectHtml);
+
+            // Initialize select2 for newly added select element
+            $(`#po_id_${x}`).select2();
+
+            $(`#po_id_${x}`).on('change', function () {
+                var nomor_po = $(this).val();
+                var formFieldsContainer = $(this).closest('.po_item').find('.form_fields');
+                if (nomor_po) {
+                    $.ajax({
+                        url: '<?= site_url("/ajax_get_po_id") ?>',
+                        method: 'GET',
+                        data: {
+                            nomor_po: nomor_po,
+                        },
+                        dataType: 'JSON',
+                        success: function (response) {
+                            $('#tanggal_po').val(response.record.tanggal_po);
+
+                            // Populate nama_barang, qty_po, and qty_dtg fields with all data related to nomor_po
+                            if (response.record.status == 'outstanding') {
+                                return;
+                            }
+
+                            $(formFieldsContainer).empty(); // Clear existing form fields
+                            
+                            $.each(response.data, function (index, row) {
+                                var fieldHtml = `
+                                    <br><h3>Form Data Barang Good Receive ke-${index + 1}</h3>
+                                    <div class="row">
+                                        <div class="col-sm-6"><label>Tanggal PO barang ${index + 1} : </label><input type="text" name="tanggal_po[]" class="form-control tanggal_po" value="${row.tanggal_po}" readonly></div>
+                                        <div class="col-sm-6"><label>Nomor QC barang ${index + 1} : </label><input type="text" name="nomor_qc[]" class="form-control" value="${row.nomor_qc}" readonly></div>
+                                        <div class="col-sm-6"><label>Nomor GR ${index + 1} : </label><input type="text" name="nomor_gr[]" class="form-control nomor_gr" readonly></div>
+                                        <div class="col-sm-6"><label>Kode Barang ${index + 1} : </label><input type="text" name="kode[]" class="form-control" value="${row.kode}" readonly></div>
+                                        <div class="col-sm-6"><label>Supplier Barang ${index + 1} : </label><input type="text" name="supplier[]" class="form-control" value="${row.supplier}" readonly></div>
+                                        <div class="col-sm-6"><label>Tanggal GR : ${index + 1} : </label><input type="date" name="tanggal_gr[]" class="form-control tanggal_gr"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6"><label>Nama Barang ${index + 1} : </label><input name="nama_barang[]" class="form-control" value="${row.nama_barang}" readonly></div>
+                                        <div class="col-sm-6"><label>Qty PO ${index + 1} : </label><input type="number" name="qty_po[]" class="form-control" value="${row.qty_po}" readonly></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6"><label>Satuan Berat ${index + 1} : </label><input name="satuan[]" class="form-control" value="${row.satuan}" readonly></div>
+                                        <div class="col-sm-6"><label>Qty DTG ${index + 1} : </label><input type="number" name="qty_dtg[]" class="form-control" onkeypress="return isNumberKey(event)"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6"><label>Kode Batch Barang ${index + 1} : </label><input type="text" name="kode_batch[]" class="form-control"></div>
+                                        <div class="col-sm-6"><label>Expired Date Barang ${index + 1} : </label><input type="date" name="exp_date[]" class="form-control exp_date"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6"><label>Qty Outstanding ${index + 1} : </label><input type="number" name="qty_gr_outstd[]" class="form-control" readonly></div>
+                                        <div class="col-sm-6"><label>Description GR ${index + 1} : </label><textarea name="desc_gr" cols="50" rows="6" class="form-control"></textarea></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6"><label>Warehouse : ${index + 1} : </label><input type="text" name="warehouse[]" class="form-control" value="WHCK2" readonly></div>
+                                        <div class="col-sm-6"><label>Tanggal Estimasi Kirim ${index + 1} : </label><input type="date" name="est_kirim[]" class="form-control est_kirim"></div>
+                                        <div class="col-sm-6"><label>Kode PRD Barang ${index + 1} : </label><input type="text" name="kode_prd[]" class="form-control kode_prd"></div>
+                                    </div>
+                                `;
+                                $(formFieldsContainer).append(fieldHtml);
+                                setMinDateForExpDateFields();
+
+                            $.ajax({
+                            url: '<?= base_url('/ambil_kode_gr'); ?>',
+                            type: 'GET',
+                            success: function (hasil) {
+                                var code = $.parseJSON(hasil);
+                                $('.nomor_gr').val(code);
+                            }
+                        });
+                            });
+                        }
+                    });
+                }
+            });
+        }
+    });
+
+    $(wrapper).on("click", ".remove_field", function (e) {
+        e.preventDefault();
+        $(this).closest('.po_item').remove();
+        x--;
+    });
+
                     });
                 },
                 error: function () {

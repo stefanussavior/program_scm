@@ -52,46 +52,51 @@
 <?= $this->include('template/footer'); ?>
 
 <script>
-    $(document).ready(function() {
-        $('#nama_barang').select2();
-        
-        $('#nama_barang').on('change', function() {
-            var nama_barang = $(this).val();
-            $.ajax({
-                url: '<?= site_url('/ajax_get_nama_barang'); ?>',
-                method: 'GET',
-                data: { nama_barang: nama_barang },
-                dataType: 'json',
-                success: function(response) {
-                    $('#form_append_bin').empty();
-                    if (response) {
-                        $.each(response, function(index, row) {
-                            var fieldHtml = '<div class="row">';
-                            var kodePallet = '<div class="col-sm-4 mb-4"><label>Kode Pallet ' + (index + 1) + ': </label><input type="text" name="kode_pallet[]" class="form-control" value="' + row.kode_pallet + '" readonly></div>';
-                            fieldHtml += kodePallet;
+  $(document).ready(function() {
+    $('#nama_barang').select2();
+    
+    $('#nama_barang').on('change', function() {
+        var nama_barang = $(this).val();
+        $.ajax({
+            url: '<?= site_url('/ajax_get_nama_barang'); ?>',
+            method: 'GET',
+            data: { nama_barang: nama_barang },
+            dataType: 'json',
+            success: function(response) {
+                $('#form_append_bin').empty();
+                if (response) {
+                    $.each(response, function(index, row) {
+                        if (row.is_reserved == 1) {
+                            return; // Skip this item if it is reserved
+                        }
 
-                            var inputRack = '<div class="col-md-3"><label>Input Rack ' + (index + 1) + ': </label><select name="rack[]" class="form-control"><option value="" selected disabled>---Pilih Nomor Rack ----</option>';
-                            for (var i = 1; i <= 13; i++) {
-                                inputRack += '<option value="R' + i + '">R' + i + '</option>';
-                            }
-                            inputRack += '</select></div>';
-                            fieldHtml += inputRack;
+                        var fieldHtml = '<div class="row">';
+                        var kodePallet = '<div class="col-sm-4 mb-4"><label>Kode Pallet ' + (index + 1) + ': </label><input type="text" name="kode_pallet[]" class="form-control" value="' + row.kode_pallet + '" readonly></div>';
+                        fieldHtml += kodePallet;
 
-                            var nomorLetakRack = '<div class="col-md-3"><label>Input Nomor Letak Rack ' + (index + 1) + ':</label><select name="bin_location[]" class="form-control"><option value="" selected disabled>--- Pilih Nomor BIN ----</option>';
-                            for (var i = 1; i <= 73; i++) {
-                                nomorLetakRack += '<option value="' + i + '">' + i + '</option>';
-                            }
-                            nomorLetakRack += '</select></div>';
-                            fieldHtml += nomorLetakRack;
-                            
-                            fieldHtml += "</div>";
-                            $('#form_append_bin').append(fieldHtml);
-                        });
-                    }
+                        var inputRack = '<div class="col-md-3"><label>Input Rack ' + (index + 1) + ': </label><select name="rack[]" class="form-control"><option value="" selected disabled>---Pilih Nomor Rack ----</option>';
+                        for (var i = 1; i <= 13; i++) {
+                            inputRack += '<option value="R' + i + '">R' + i + '</option>';
+                        }
+                        inputRack += '</select></div>';
+                        fieldHtml += inputRack;
+
+                        var nomorLetakRack = '<div class="col-md-3"><label>Input Nomor Letak Rack ' + (index + 1) + ':</label><select name="bin_location[]" class="form-control"><option value="" selected disabled>--- Pilih Nomor BIN ----</option>';
+                        for (var i = 1; i <= 73; i++) {
+                            nomorLetakRack += '<option value="' + i + '">' + i + '</option>';
+                        }
+                        nomorLetakRack += '</select></div>';
+                        fieldHtml += nomorLetakRack;
+                        
+                        fieldHtml += "</div>";
+                        $('#form_append_bin').append(fieldHtml);
+                    });
                 }
-            });
+            }
         });
-        $('#tambahFormAppend').on('submit', function(event) {
+    });
+
+    $('#tambahFormAppend').on('submit', function(event) {
         event.preventDefault();
 
         var kodePallet = $('.kode-pallet').val();
@@ -110,4 +115,5 @@
         });
     });
 });
+
 </script>

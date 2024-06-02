@@ -84,7 +84,16 @@ class MasterPaletizationModel extends Model
     }
 
     public function GetSingleData(){
-        return $this->select('*')->groupBy('nama_barang')->findAll();
+        // Perform left join using models and filter out rows with is_reserved = 1
+        $this->select('table_paletization.*, table_bin.is_reserved')
+             ->join('table_bin', 'table_bin.pallet_id = table_paletization.id', 'left')
+             ->groupStart()
+                ->where('table_bin.is_reserved IS NULL')
+                ->orWhere('table_bin.is_reserved !=', 1)
+             ->groupEnd()
+             ->groupBy('table_paletization.nama_barang');
+        
+        return $this->findAll();
     }
 
     public function GetDetailBarangPallet($binLocation){

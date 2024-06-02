@@ -78,7 +78,7 @@ class MasterPOModel extends Model
     if ($hasStatusGr > 0) {
 
         return $this->db->table('table_po') 
-            ->select('table_gr.id, table_gr.nama_barang, table_gr.nomor_po, table_gr.supplier, SUM(table_gr.qty_po) AS qty_po, table_gr.tanggal_po, table_gr.kode, SUM(table_gr.qty_dtg) AS qty_dtg, table_gr.status_gr, table_gr.satuan', false)
+            ->select('table_po.tanggal_po ,table_gr.id, table_gr.nama_barang, table_gr.nomor_po, table_gr.supplier, SUM(table_gr.qty_po) AS qty_po, table_gr.tanggal_po, table_gr.kode, SUM(table_gr.qty_dtg) AS qty_dtg, table_gr.status_gr, table_gr.satuan', false)
             ->where('table_gr.nomor_po', $nomor_po)
             ->where('kode',$kode)
             ->join('table_gr', 'table_gr.po_id = table_po.id', 'inner')
@@ -87,7 +87,7 @@ class MasterPOModel extends Model
             ->getResult();
     } else {
         return $this->db->table('table_po')
-        ->select('table_po.nomor_po, table_po.nama_barang, table_po.qty_po, table_po.kode, table_po.supplier, table_po.satuan, table_gr.status_gr')
+        ->select('table_po.nomor_po, table_po.nama_barang, table_po.qty_po, table_po.kode, table_po.supplier, table_po.satuan, table_gr.status_gr, table_po.tanggal_po')
         ->where('table_po.nomor_po', $nomor_po)
         ->join('table_gr', 'table_gr.po_id = table_po.id', 'left')
         ->get()

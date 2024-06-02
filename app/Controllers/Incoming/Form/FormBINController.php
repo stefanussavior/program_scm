@@ -34,6 +34,7 @@ class FormBINController extends BaseController
     }
 
     public function InsertDataBIN() {
+        $nama_barang = $this->request->getPost('nama_barang');
         $kode_pallet = $this->request->getPost('kode_pallet');
         $warehouse = $this->request->getPost('warehouse');
         $rack = $this->request->getPost('rack');
@@ -42,7 +43,7 @@ class FormBINController extends BaseController
     
         // Validate that the data is arrays
         if (!is_array($kode_pallet) || !is_array($rack) || !is_array($bin_location)) {
-            return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid data received.']);
+            return redirect()->to(base_url('/form_bin'))->with('error', 'Data Invalid.');
         }
     
         $binModel = new MasterBinModel();
@@ -50,19 +51,20 @@ class FormBINController extends BaseController
     
         foreach ($kode_pallet as $index => $pallet) {
             if ($binModel->isRackBinLocationExists($rack[$index], $bin_location[$index])) {
-                return $this->response->setJSON(['status' => 'error', 'message' => 'Rack dan lokasi bin sudah digunakan. Coba untuk cari lokasi yang lain.']);
+                return redirect()->to(base_url('/form_bin'))->with('error', 'Rack dan BIN Sudah digunakan. silahkan untuk mencari tempat yang lain');
             }
     
             $palletData = $palletModel->where('kode_pallet', $pallet)->first();
     
             if (!$palletData) {
-                return $this->response->setJSON(['status' => 'error', 'message' => 'No pallet data found for the provided code.']);
+                return redirect()->to(base_url('/form_bin'))->with('error', 'Maaf, Tidak ada kode pallet');
             }
     
             $pallet_id = $palletData['id'];
     
             $binModel->insert([
                 'pallet_id' => $pallet_id,
+                'nama_barang' => $nama_barang,
                 'kode_pallet' => $pallet,
                 'warehouse' => $warehouse,
                 'rack' => $rack[$index],

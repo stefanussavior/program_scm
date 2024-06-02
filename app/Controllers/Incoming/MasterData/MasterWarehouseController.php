@@ -17,4 +17,7 @@ class MasterWarehouseController extends BaseController
         $data = $dataWarehouse->findAll();
         echo json_encode(["data" => $data]);
     }
+    
 }
+
+

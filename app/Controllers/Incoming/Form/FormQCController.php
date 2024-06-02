@@ -38,7 +38,11 @@ class FormQCController extends BaseController
 
         $QCModel = new MasterQCModel();
 
+        date_default_timezone_set('Asia/Jakarta');
+
+        $nomor_po = $this->request->getPost('nomor_po');
         $nama_barang_array = $this->request->getPost('nama_barang');
+        $nomor_qc_array = $this->request->getPost('nomor_qc');
         $qty_po_array = $this->request->getPost('qty_po');
         $lots_array = $this->request->getPost('lots');
         $produsen_array = $this->request->getPost('produsen');
@@ -50,14 +54,24 @@ class FormQCController extends BaseController
         $qty_reject_array =  $this->request->getPost('qty_reject');
         $package_array = $this->request->getPost('package');
         $visual_organoleptik_array = $this->request->getPost('visual_organoleptik');
-        $qc_desc_array = $this->request->getPost('qc_dc');
+        $qc_desc_array = $this->request->getPost('qc_desc');
         $lots_rm_array = $this->request->getPost('lots_rm');
         $perform_array = $this->request->getPost('perform');
         $qc_reject_desc_array = $this->request->getPost('qc_reject_desc');
         $status_array = $this->request->getPost('status');
 
+        $lastQualityControl = $QCModel->orderBy('created_at', 'desc')->first();
+        $lastQualityControlCreatedAt = $lastQualityControl ? $lastQualityControl['created_at'] : null;
+
+        $POModel = new MasterPOModel();
+        $POData = $POModel->where('nomor_po', $nomor_po)->first();
+
+        if ($POData) {
+            $po_id = $POData['id'];
+
         foreach ($nama_barang_array as $key => $nama_barang) {
             $nama_barang = $nama_barang_array[$key];
+            $nomor_qc = $nomor_qc_array[$key];
             $qty_po = $qty_po_array[$key];
             $lots = $lots_array[$key];
             $produsen = $produsen_array[$key];
@@ -76,6 +90,9 @@ class FormQCController extends BaseController
             $status = $status_array[$key];
 
             $QCModel->insert([
+                'po_id' => $po_id,
+                'nomor_po' => $nomor_po,
+                'nomor_qc' => $nomor_qc,
                 'nama_barang' => $nama_barang,
                 'qty_po' => $qty_po,
                 'lots' => $lots,
@@ -88,13 +105,18 @@ class FormQCController extends BaseController
                 'qty_reject' => $qty_reject,
                 'package' => $package,
                 'visual_organoleptik' => $visual_organoleptik,
-                'qc_dc' => $qc_desc,
+                'qc_desc' => $qc_desc,
                 'lots_rm' => $lots_rm,
                 'perform' => $perform,
                 'qc_reject_desc' => $qc_reject_desc,
-                'status' => $status
+                'status' => $status,
+                'created_at' => date('Y-m-d H:i:s')
             ]);
             return redirect()->to(base_url('/master_data_qc'));
+            }
+        } else {
+            log_message('error', 'Missing key at index ' . $key);
+            return redirect()->back()->withInput()->with('error', 'Missing data at index ' . $key);
         }
     }   
 
@@ -106,8 +128,20 @@ class FormQCController extends BaseController
         ];
         $dataQC = new MasterQCModel();
         $dataQC->update($qc_id,$data);
-
+        
         return $this->response->setJSON(['status' => 'success', 'message' => 'Data Berhasil Terupdate']);
     }   
 
+    public function BuatKodeQC()
+    {
+        $modelQC = new MasterQCModel();
+        $data = [];
+        $startFromOne = !isset($_POST['nama_barang']);
+        $count = isset($_POST['nama_barang']) ? count($_POST['nama_barang']) : 1;
+        for ($i = 0; $i < $count; $i++) {
+            $data[] = $modelQC->KodeOtomatisQC($startFromOne);
+            $startFromOne = false; // After the first iteration, always increment
+        }
+        return json_encode($data);
+    }
 }

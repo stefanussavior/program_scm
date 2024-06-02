@@ -39,7 +39,7 @@ class FormGRController extends BaseController
         $GoodReceive = new MasterGRModel();
 
 
-    date_default_timezone_set('Asia/Jakarta');
+        date_default_timezone_set('Asia/Jakarta');
     
 
         $kode_barang_array = $this->request->getPost('kode');
