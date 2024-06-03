@@ -44,6 +44,7 @@ class FormGRController extends BaseController
 
         $kode_barang_array = $this->request->getPost('kode');
         $nomor_po = $this->request->getPost('nomor_po');
+        $nomor_qc_array = $this->request->getPost('nomor_qc');
         $tanggal_po = $this->request->getVar('tanggal_po');
         $supplier_array = $this->request->getPost('supplier');
         $est_kirim = $this->request->getPost('est_kirim');
@@ -77,6 +78,7 @@ class FormGRController extends BaseController
                 ) {
 
                 $qty_po = $qty_po_array[$key];
+                $nomor_qc = $nomor_qc_array[$key];
                 $nama_barang = $nama_barang_array[$key];
                 $kode_batch = $kode_batch_array[$key];
                 $exp_date = $exp_date_array[$key];
@@ -93,15 +95,16 @@ class FormGRController extends BaseController
             if ($qty_dtg == $qty_po) {
                 $status_gr = 'fulfilled';
             } elseif ($qty_dtg > $qty_po) { 
-                return redirect()->to(base_url('/form_good_receive'))->with('error', 'Quantity ordered cannot be less than quantity received.');
-            } else  {
                 $status_gr = 'outstanding';
+            } else  {
+                $status_gr = 'reject';
             }
     
 
             $GoodReceive->insert([
                 'po_id' => $po_id,
                 'nomor_po' => $nomor_po,
+                'nomor_qc' => $nomor_qc,
                 'tanggal_po' => $tanggal_po,
                 'kode' => $kode_barang,
                 'nama_barang' => $nama_barang,

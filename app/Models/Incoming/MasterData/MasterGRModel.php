@@ -15,6 +15,7 @@ class MasterGRModel extends Model
     protected $allowedFields    = [
         'po_id',
         'nomor_po',
+        'nomor_qc',
         'kode',
         'tanggal_po',
         'nama_barang',

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 19, 2024 at 07:50 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Waktu pembuatan: 03 Jun 2024 pada 06.34
+-- Versi server: 10.4.28-MariaDB
+-- Versi PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_barang`
+-- Struktur dari tabel `master_barang`
 --
 
 CREATE TABLE `master_barang` (
@@ -37,7 +37,7 @@ CREATE TABLE `master_barang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `master_barang`
+-- Dumping data untuk tabel `master_barang`
 --
 
 INSERT INTO `master_barang` (`id`, `prod_id`, `prod_code`, `prod_name`, `prod_uom1`, `prod_uom2`) VALUES
@@ -1068,7 +1068,7 @@ INSERT INTO `master_barang` (`id`, `prod_id`, `prod_code`, `prod_name`, `prod_uo
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_bin`
+-- Struktur dari tabel `master_bin`
 --
 
 CREATE TABLE `master_bin` (
@@ -1079,7 +1079,7 @@ CREATE TABLE `master_bin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `master_bin`
+-- Dumping data untuk tabel `master_bin`
 --
 
 INSERT INTO `master_bin` (`id`, `no_pallet`, `rack`, `warehouse`) VALUES
@@ -1951,7 +1951,7 @@ INSERT INTO `master_bin` (`id`, `no_pallet`, `rack`, `warehouse`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_bin_location`
+-- Struktur dari tabel `master_bin_location`
 --
 
 CREATE TABLE `master_bin_location` (
@@ -1960,7 +1960,7 @@ CREATE TABLE `master_bin_location` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `master_bin_location`
+-- Dumping data untuk tabel `master_bin_location`
 --
 
 INSERT INTO `master_bin_location` (`id`, `bin_location`) VALUES
@@ -1981,7 +1981,7 @@ INSERT INTO `master_bin_location` (`id`, `bin_location`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_supplier`
+-- Struktur dari tabel `master_supplier`
 --
 
 CREATE TABLE `master_supplier` (
@@ -1993,7 +1993,7 @@ CREATE TABLE `master_supplier` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `master_supplier`
+-- Dumping data untuk tabel `master_supplier`
 --
 
 INSERT INTO `master_supplier` (`id`, `kode_pemasok`, `pemasok`, `kode_barang`, `nama_barang`) VALUES
@@ -11888,7 +11888,7 @@ INSERT INTO `master_supplier` (`id`, `kode_pemasok`, `pemasok`, `kode_barang`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_warehouse`
+-- Struktur dari tabel `master_warehouse`
 --
 
 CREATE TABLE `master_warehouse` (
@@ -11900,7 +11900,7 @@ CREATE TABLE `master_warehouse` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `master_warehouse`
+-- Dumping data untuk tabel `master_warehouse`
 --
 
 INSERT INTO `master_warehouse` (`id`, `nama_kota`, `nama_jalan`, `kode_resto_baru`, `nama_gudang_baru`) VALUES
@@ -12107,7 +12107,7 @@ INSERT INTO `master_warehouse` (`id`, `nama_kota`, `nama_jalan`, `kode_resto_bar
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Struktur dari tabel `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -12121,7 +12121,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `migrations`
+-- Dumping data untuk tabel `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`, `batch`) VALUES
@@ -12147,7 +12147,7 @@ INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reservations`
+-- Struktur dari tabel `reservations`
 --
 
 CREATE TABLE `reservations` (
@@ -12160,7 +12160,7 @@ CREATE TABLE `reservations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `reservations`
+-- Dumping data untuk tabel `reservations`
 --
 
 INSERT INTO `reservations` (`id`, `seat_number`, `seat_group`, `is_reserved`, `user_name`, `created_at`) VALUES
@@ -12207,7 +12207,7 @@ INSERT INTO `reservations` (`id`, `seat_number`, `seat_group`, `is_reserved`, `u
 -- --------------------------------------------------------
 
 --
--- Table structure for table `seats`
+-- Struktur dari tabel `seats`
 --
 
 CREATE TABLE `seats` (
@@ -12218,7 +12218,7 @@ CREATE TABLE `seats` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `seats`
+-- Dumping data untuk tabel `seats`
 --
 
 INSERT INTO `seats` (`id`, `seat_number`, `status`, `group`) VALUES
@@ -12326,7 +12326,7 @@ INSERT INTO `seats` (`id`, `seat_number`, `status`, `group`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_bin`
+-- Struktur dari tabel `table_bin`
 --
 
 CREATE TABLE `table_bin` (
@@ -12340,17 +12340,17 @@ CREATE TABLE `table_bin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `table_bin`
+-- Dumping data untuk tabel `table_bin`
 --
 
 INSERT INTO `table_bin` (`id`, `pallet_id`, `kode_pallet`, `rack`, `bin_location`, `warehouse`, `is_reserved`) VALUES
-(1, 2, 'PLT0002', 'R1', '1', 'WHCK2', 1),
-(2, 52, '[null]', 'R1', '2', 'WHCK2', 1);
+(18, 187, 'PALLET-986616', 'R1', '1', 'WHCK2', 1),
+(19, 187, 'PALLET-986616', 'R1', '2', 'WHCK2', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_bin_location`
+-- Struktur dari tabel `table_bin_location`
 --
 
 CREATE TABLE `table_bin_location` (
@@ -12360,7 +12360,7 @@ CREATE TABLE `table_bin_location` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_customer`
+-- Struktur dari tabel `table_customer`
 --
 
 CREATE TABLE `table_customer` (
@@ -12381,7 +12381,7 @@ CREATE TABLE `table_customer` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_delivery`
+-- Struktur dari tabel `table_delivery`
 --
 
 CREATE TABLE `table_delivery` (
@@ -12403,7 +12403,7 @@ CREATE TABLE `table_delivery` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_gps`
+-- Struktur dari tabel `table_gps`
 --
 
 CREATE TABLE `table_gps` (
@@ -12420,17 +12420,18 @@ CREATE TABLE `table_gps` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_gr`
+-- Struktur dari tabel `table_gr`
 --
 
 CREATE TABLE `table_gr` (
   `id` int(11) NOT NULL,
-  `po_id` int(11) NOT NULL,
+  `po_id` int(11) DEFAULT NULL,
   `nomor_po` varchar(100) DEFAULT NULL,
+  `nomor_gr` varchar(100) DEFAULT NULL,
+  `nomor_qc` varchar(100) DEFAULT NULL,
   `tanggal_po` date DEFAULT NULL,
   `kode` varchar(100) DEFAULT NULL,
   `nama_barang` text DEFAULT NULL,
-  `nomor_gr` varchar(100) DEFAULT NULL,
   `supplier` varchar(100) DEFAULT NULL,
   `est_kirim` date DEFAULT NULL,
   `tanggal_gr` date DEFAULT NULL,
@@ -12438,6 +12439,7 @@ CREATE TABLE `table_gr` (
   `qty_po` int(11) DEFAULT NULL,
   `desc_gr` text DEFAULT NULL,
   `qty_dtg` int(11) DEFAULT NULL,
+  `qty_dtg_2` int(11) DEFAULT NULL,
   `qty_gr_outstd` int(11) DEFAULT NULL,
   `satuan` varchar(50) DEFAULT NULL,
   `kode_batch` varchar(100) DEFAULT NULL,
@@ -12450,27 +12452,18 @@ CREATE TABLE `table_gr` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `table_gr`
+-- Dumping data untuk tabel `table_gr`
 --
 
-INSERT INTO `table_gr` (`id`, `po_id`, `nomor_po`, `tanggal_po`, `kode`, `nama_barang`, `nomor_gr`, `supplier`, `est_kirim`, `tanggal_gr`, `warehouse`, `qty_po`, `desc_gr`, `qty_dtg`, `qty_gr_outstd`, `satuan`, `kode_batch`, `kode_prd`, `status_gr`, `exp_date`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(5, 40, 'TEST.PO.2024.04.0003', '2024-04-07', '100042', 'BUAH BELIMBING', 'GR0001', 'TEST VENDOR - SCM', NULL, '2024-05-17', 'WHCK2', 1600, NULL, 10000, 0, 'CTN', 'coba 1', 'PRD0001', 'fulfilled', '2024-05-17', '2024-05-16 14:22:10', NULL, NULL),
-(6, 40, 'TEST.PO.2024.04.0003', '2024-04-07', '100044', 'BUAH PEER', 'GR0001', 'TEST VENDOR - SCM', NULL, '2024-05-17', 'WHCK2', 6000, NULL, 460000, 1000, 'PALLET', 'coba 2', 'PRD0001', 'outstanding', '2024-05-16', '2024-05-16 14:22:10', NULL, NULL),
-(7, 40, 'TEST.PO.2024.04.0003', '2024-04-07', '100124', 'CABE RAWIT - RESTO', 'GR0001', 'TEST VENDOR - SCM', NULL, '2024-05-17', 'WHCK2', 3000, NULL, 12000, 0, 'PACK', 'coba 3', 'PRD0001', 'fulfilled', '2024-05-17', '2024-05-16 14:22:10', NULL, NULL),
-(8, 40, 'TEST.PO.2024.04.0003', '2024-04-07', '100042', 'BUAH BELIMBING', 'GR0001', 'TEST VENDOR - SCM', NULL, '2024-05-17', 'WHCK2', 1000, NULL, 10000, 600, 'KG', 'coba 4', 'PRD0001', 'outstanding', '2024-05-16', '2024-05-16 14:22:10', NULL, NULL),
-(9, 40, 'TEST.PO.2024.04.0003', '2024-04-07', '100044', 'BUAH PEER', 'GR0001', 'TEST VENDOR - SCM', NULL, '2024-05-17', 'WHCK2', 46000, NULL, 46000, 0, 'KG', 'coba 5', 'PRD0001', 'fulfilled', '2024-05-16', '2024-05-16 14:22:10', NULL, NULL),
-(10, 40, 'TEST.PO.2024.04.0003', '2024-04-07', '100124', 'CABE RAWIT - RESTO', 'GR0001', 'TEST VENDOR - SCM', NULL, '2024-05-17', 'WHCK2', 12000, NULL, 10000, 500, 'KG', 'coba 6', 'PRD0001', 'outstanding', '2024-05-16', '2024-05-16 14:22:10', NULL, NULL),
-(11, 40, 'TEST.PO.2024.04.0003', '2024-04-07', '100042', 'BUAH BELIMBING', 'GR0001', 'TEST VENDOR - SCM', NULL, '2024-05-17', 'WHCK2', 1000, NULL, 10000, 0, 'KG', 'coba 7', 'PRD0001', 'fulfilled', '2024-05-16', '2024-05-16 14:22:10', NULL, NULL),
-(12, 40, 'TEST.PO.2024.04.0003', '2024-04-07', '100044', 'BUAH PEER', 'GR0001', 'TEST VENDOR - SCM', NULL, '2024-05-17', 'WHCK2', 3000, NULL, 10000, 0, 'KG', 'coba 8', 'PRD0001', 'fulfilled', '2024-05-16', '2024-05-16 14:22:10', NULL, NULL),
-(13, 40, 'TEST.PO.2024.04.0003', '2024-04-07', '100124', 'CABE RAWIT - RESTO', 'GR0001', 'TEST VENDOR - SCM', NULL, '2024-05-17', 'WHCK2', 3000, NULL, 10000, 0, 'KG', 'coba 9', 'PRD0001', 'fulfilled', '2024-05-16', '2024-05-16 14:22:10', NULL, NULL),
-(14, 40, 'TEST.PO.2024.04.0003', '2024-04-07', '100042', 'BUAH BELIMBING', 'GR0002/20240516', 'TEST VENDOR - SCM', NULL, '2024-05-17', 'WHCK2', 0, NULL, 10000, 0, '', 'coba append', 'PRD0002', 'outstanding', '2024-05-17', '2024-05-16 14:27:04', NULL, NULL),
-(15, 40, 'TEST.PO.2024.04.0003', '2024-04-07', '100042', 'BUAH BELIMBING', 'GR0517/20240516', 'TEST VENDOR - SCM', NULL, '0000-00-00', 'WHCK2', 0, NULL, 10000, 0, '', 'coba append', 'PRD0003', 'outstanding', '2024-05-16', '2024-05-16 14:28:16', NULL, NULL),
-(16, 40, 'TEST.PO.2024.04.0003', '2024-04-07', '100044', 'BUAH PEER', 'GR0517/20240516', 'TEST VENDOR - SCM', NULL, '0000-00-00', 'WHCK2', 6000, NULL, 100000000, 0, '', 'coba 2', 'PRD0004', 'outstanding', '0000-00-00', '2024-05-16 14:42:17', NULL, NULL);
+INSERT INTO `table_gr` (`id`, `po_id`, `nomor_po`, `nomor_gr`, `nomor_qc`, `tanggal_po`, `kode`, `nama_barang`, `supplier`, `est_kirim`, `tanggal_gr`, `warehouse`, `qty_po`, `desc_gr`, `qty_dtg`, `qty_dtg_2`, `qty_gr_outstd`, `satuan`, `kode_batch`, `kode_prd`, `status_gr`, `exp_date`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(64, 73, 'TEST.PO.2024.04.0003', 'GR0001', 'undefined', '2024-04-07', '100042', 'BUAH BELIMBING', 'TEST VENDOR - SCM', NULL, '0000-00-00', 'WHCK2', 1000, NULL, 1000, NULL, 0, 'KG', 'coba 1', 'PRD0001', 'fulfilled', '2024-06-02', '2024-06-02 21:12:08', NULL, NULL),
+(65, 73, 'TEST.PO.2024.04.0003', 'GR0001', 'undefined', '2024-04-07', '100044', 'BUAH PEER', 'TEST VENDOR - SCM', NULL, '0000-00-00', 'WHCK2', 2000, NULL, 0, NULL, 0, 'KG', '', 'PRD0001', 'reject', '2024-06-02', '2024-06-02 21:12:08', NULL, NULL),
+(66, 73, 'TEST.PO.2024.04.0003', 'GR0001', 'undefined', '2024-04-07', '100124', 'CABE RAWIT - RESTO', 'TEST VENDOR - SCM', NULL, '0000-00-00', 'WHCK2', 3000, NULL, 0, NULL, 0, 'KG', '', 'PRD0001', 'reject', '2024-06-02', '2024-06-02 21:12:08', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_kendaraan`
+-- Struktur dari tabel `table_kendaraan`
 --
 
 CREATE TABLE `table_kendaraan` (
@@ -12496,7 +12489,7 @@ CREATE TABLE `table_kendaraan` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_konversi`
+-- Struktur dari tabel `table_konversi`
 --
 
 CREATE TABLE `table_konversi` (
@@ -12508,7 +12501,7 @@ CREATE TABLE `table_konversi` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_paletization`
+-- Struktur dari tabel `table_paletization`
 --
 
 CREATE TABLE `table_paletization` (
@@ -12524,25 +12517,28 @@ CREATE TABLE `table_paletization` (
   `max_qty` int(11) DEFAULT NULL,
   `nilai_konversi` int(11) DEFAULT NULL,
   `num_paletization` varchar(100) DEFAULT NULL,
-  `satuan_berat` varchar(100) DEFAULT NULL
+  `satuan_berat` varchar(100) DEFAULT NULL,
+  `status` tinyint(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `table_paletization`
+-- Dumping data untuk tabel `table_paletization`
 --
 
-INSERT INTO `table_paletization` (`id`, `gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_po`, `qty_dtg`, `kode_prd`, `total_qty`, `max_qty`, `nilai_konversi`, `num_paletization`, `satuan_berat`) VALUES
-(52, 5, '[null]', 'GR0001', 'BUAH BELIMBING', NULL, 10000, NULL, NULL, NULL, 1, NULL, 'CTN'),
-(53, 5, '[null]', 'GR0001', 'BUAH PEER', NULL, 460000, NULL, NULL, NULL, 1, NULL, 'PALLET'),
-(54, 5, '[null]', 'GR0001', 'CABE RAWIT - RESTO', NULL, 12000, NULL, NULL, NULL, 6, NULL, 'PACK'),
-(55, 5, '[null]', 'GR0001', 'BUAH BELIMBING', NULL, 10000, NULL, NULL, NULL, 1, NULL, 'CTN'),
-(56, 5, '[null]', 'GR0001', 'BUAH PEER', NULL, 460000, NULL, NULL, NULL, 1, NULL, 'PALLET'),
-(57, 5, '[null]', 'GR0001', 'CABE RAWIT - RESTO', NULL, 12000, NULL, NULL, NULL, 6, NULL, 'PACK');
+INSERT INTO `table_paletization` (`id`, `gr_id`, `kode_pallet`, `nomor_gr`, `nama_barang`, `qty_po`, `qty_dtg`, `kode_prd`, `total_qty`, `max_qty`, `nilai_konversi`, `num_paletization`, `satuan_berat`, `status`) VALUES
+(187, 5, 'PALLET-986616', 'GR0001', 'BUAH BELIMBING', NULL, 10000, NULL, NULL, NULL, 1, NULL, 'CTN', NULL),
+(188, 5, 'PALLET-282396', 'GR0001', 'BUAH PEER', NULL, 460000, NULL, NULL, NULL, 1, NULL, 'PALLET', NULL),
+(189, 5, 'PALLET-239587', 'GR0001', 'CABE RAWIT - RESTO', NULL, 2000, NULL, NULL, NULL, 6, NULL, 'PACK', NULL),
+(190, 5, 'PALLET-159464', 'GR0001', 'CABE RAWIT - RESTO', NULL, 2000, NULL, NULL, NULL, 0, NULL, 'PACK', NULL),
+(191, 5, 'PALLET-197409', 'GR0001', 'CABE RAWIT - RESTO', NULL, 2000, NULL, NULL, NULL, 0, NULL, 'PACK', NULL),
+(192, 5, 'PALLET-891407', 'GR0001', 'CABE RAWIT - RESTO', NULL, 2000, NULL, NULL, NULL, 0, NULL, 'PACK', NULL),
+(193, 5, 'PALLET-266714', 'GR0001', 'CABE RAWIT - RESTO', NULL, 2000, NULL, NULL, NULL, 0, NULL, 'PACK', NULL),
+(194, 5, 'PALLET-129263', 'GR0001', 'CABE RAWIT - RESTO', NULL, 2000, NULL, NULL, NULL, 0, NULL, 'PACK', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_po`
+-- Struktur dari tabel `table_po`
 --
 
 CREATE TABLE `table_po` (
@@ -12559,37 +12555,26 @@ CREATE TABLE `table_po` (
   `qty_po` int(50) DEFAULT NULL,
   `qty_terproses` int(11) DEFAULT NULL,
   `qty_belum_terp` int(11) DEFAULT NULL,
-  `status_po` varchar(100) DEFAULT NULL
+  `status_po` varchar(100) DEFAULT NULL,
+  `created_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `table_po`
+-- Dumping data untuk tabel `table_po`
 --
 
-INSERT INTO `table_po` (`id`, `supplier`, `nomor_po`, `tanggal_po`, `keterangan_po`, `tanggal_pengiriman`, `kode`, `nama_barang`, `satuan`, `catatan`, `qty_po`, `qty_terproses`, `qty_belum_terp`, `status_po`) VALUES
-(40, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0003', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100042, 'BUAH BELIMBING', 'KG', NULL, 1000, 0, NULL, NULL),
-(41, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0003', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100044, 'BUAH PEER', 'KG', NULL, 2000, 0, NULL, NULL),
-(42, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0003', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100124, 'CABE RAWIT - RESTO', 'KG', NULL, 3000, 0, NULL, NULL),
-(43, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0004', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100130, 'DAUN BAWANG/BRAMBANG - RESTO', 'KG', NULL, 4000, 0, NULL, NULL),
-(44, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0004', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100011, 'GULA', 'KG', NULL, 5000, 0, NULL, NULL),
-(45, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0004', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100045, 'BUAH STRAWBERRY', 'KG', NULL, 6000, 0, NULL, NULL),
-(46, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0003', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100042, 'BUAH BELIMBING', 'KG', NULL, 1000, 0, NULL, NULL),
-(47, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0003', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100044, 'BUAH PEER', 'KG', NULL, 2000, 0, NULL, NULL),
-(48, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0003', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100124, 'CABE RAWIT - RESTO', 'KG', NULL, 3000, 0, NULL, NULL),
-(49, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0004', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100130, 'DAUN BAWANG/BRAMBANG - RESTO', 'KG', NULL, 4000, 0, NULL, NULL),
-(50, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0004', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100011, 'GULA', 'KG', NULL, 5000, 0, NULL, NULL),
-(51, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0004', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100045, 'BUAH STRAWBERRY', 'KG', NULL, 6000, 0, NULL, NULL),
-(52, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0003', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100042, 'BUAH BELIMBING', 'KG', NULL, 1000, 0, NULL, NULL),
-(53, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0003', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100044, 'BUAH PEER', 'KG', NULL, 2000, 0, NULL, NULL),
-(54, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0003', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100124, 'CABE RAWIT - RESTO', 'KG', NULL, 3000, 0, NULL, NULL),
-(55, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0004', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100130, 'DAUN BAWANG/BRAMBANG - RESTO', 'KG', NULL, 4000, 0, NULL, NULL),
-(56, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0004', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100011, 'GULA', 'KG', NULL, 5000, 0, NULL, NULL),
-(57, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0004', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100045, 'BUAH STRAWBERRY', 'KG', NULL, 6000, 0, NULL, NULL);
+INSERT INTO `table_po` (`id`, `supplier`, `nomor_po`, `tanggal_po`, `keterangan_po`, `tanggal_pengiriman`, `kode`, `nama_barang`, `satuan`, `catatan`, `qty_po`, `qty_terproses`, `qty_belum_terp`, `status_po`, `created_date`) VALUES
+(73, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0003', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100042, 'BUAH BELIMBING', 'KG', NULL, 1000, 0, NULL, NULL, NULL),
+(74, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0003', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100044, 'BUAH PEER', 'KG', NULL, 2000, 0, NULL, NULL, NULL),
+(75, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0003', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100124, 'CABE RAWIT - RESTO', 'KG', NULL, 3000, 0, NULL, NULL, NULL),
+(76, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0004', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100130, 'DAUN BAWANG/BRAMBANG - RESTO', 'KG', NULL, 4000, 0, NULL, NULL, NULL),
+(77, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0004', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100011, 'GULA', 'KG', NULL, 5000, 0, NULL, NULL, NULL),
+(78, 'TEST VENDOR - SCM', 'TEST.PO.2024.04.0004', '2024-04-07', 'AUTOPUSH 07-04-2024', '2024-04-07', 100045, 'BUAH STRAWBERRY', 'KG', NULL, 6000, 0, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_purchase_detail`
+-- Struktur dari tabel `table_purchase_detail`
 --
 
 CREATE TABLE `table_purchase_detail` (
@@ -12606,35 +12591,45 @@ CREATE TABLE `table_purchase_detail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_qc`
+-- Struktur dari tabel `table_qc`
 --
 
 CREATE TABLE `table_qc` (
   `id` int(11) NOT NULL,
-  `product` text NOT NULL,
-  `supplier` varchar(100) NOT NULL,
+  `po_id` varchar(100) DEFAULT NULL,
+  `nomor_po` varchar(100) DEFAULT NULL,
+  `nomor_qc` varchar(100) DEFAULT NULL,
+  `nama_barang` varchar(100) NOT NULL,
   `lots` varchar(100) NOT NULL,
-  `produsen` varchar(100) NOT NULL,
-  `coo` varchar(100) NOT NULL,
-  `coa` varchar(100) NOT NULL,
-  `sertifikat_halal` varchar(100) NOT NULL,
-  `uom` varchar(100) NOT NULL,
-  `qty_sampling` varchar(100) NOT NULL,
-  `qty_reject` varchar(100) NOT NULL,
-  `qty_gr` varchar(100) NOT NULL,
-  `package` varchar(100) NOT NULL,
-  `visual_organoleptik` varchar(100) NOT NULL,
-  `qc_dc` varchar(100) NOT NULL,
-  `lots_rm` varchar(50) NOT NULL,
-  `perform` varchar(100) NOT NULL,
-  `qc_reject_desc` varchar(100) NOT NULL,
-  `status` varchar(100) NOT NULL
+  `produsen` varchar(100) DEFAULT NULL,
+  `coo` varchar(100) DEFAULT NULL,
+  `coa` varchar(100) DEFAULT NULL,
+  `sertifikat_halal` varchar(100) DEFAULT NULL,
+  `uom` varchar(100) DEFAULT NULL,
+  `qty_po` int(11) DEFAULT NULL,
+  `qty_sampling` int(11) DEFAULT NULL,
+  `qty_reject` int(11) DEFAULT NULL,
+  `package` varchar(100) DEFAULT NULL,
+  `visual_organoleptik` varchar(100) DEFAULT NULL,
+  `qc_desc` varchar(100) DEFAULT NULL,
+  `lots_rm` varchar(50) DEFAULT NULL,
+  `perform` varchar(100) DEFAULT NULL,
+  `qc_reject_desc` varchar(100) DEFAULT NULL,
+  `status` varchar(100) NOT NULL,
+  `created_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `table_qc`
+--
+
+INSERT INTO `table_qc` (`id`, `po_id`, `nomor_po`, `nomor_qc`, `nama_barang`, `lots`, `produsen`, `coo`, `coa`, `sertifikat_halal`, `uom`, `qty_po`, `qty_sampling`, `qty_reject`, `package`, `visual_organoleptik`, `qc_desc`, `lots_rm`, `perform`, `qc_reject_desc`, `status`, `created_at`) VALUES
+(27, '73', 'TEST.PO.2024.04.0003', 'QC20240603001', 'BUAH BELIMBING', 'coba 1', 'coba 1', 'ada', 'tidak ada', 'tidak ada', 'KG', 1000, 100, 100, 'coba 1', 'coba 1 ', 'coba 1', 'coba 1', 'coba 1', 'coba 1', 'hold', '2024-06-03 09:52:47');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_request`
+-- Struktur dari tabel `table_request`
 --
 
 CREATE TABLE `table_request` (
@@ -12651,7 +12646,7 @@ CREATE TABLE `table_request` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_request_detail`
+-- Struktur dari tabel `table_request_detail`
 --
 
 CREATE TABLE `table_request_detail` (
@@ -12669,7 +12664,7 @@ CREATE TABLE `table_request_detail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_satuan_berat`
+-- Struktur dari tabel `table_satuan_berat`
 --
 
 CREATE TABLE `table_satuan_berat` (
@@ -12678,7 +12673,7 @@ CREATE TABLE `table_satuan_berat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `table_satuan_berat`
+-- Dumping data untuk tabel `table_satuan_berat`
 --
 
 INSERT INTO `table_satuan_berat` (`id`, `satuan_berat`) VALUES
@@ -12694,7 +12689,7 @@ INSERT INTO `table_satuan_berat` (`id`, `satuan_berat`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_schedule_incoming`
+-- Struktur dari tabel `table_schedule_incoming`
 --
 
 CREATE TABLE `table_schedule_incoming` (
@@ -12710,7 +12705,7 @@ CREATE TABLE `table_schedule_incoming` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_service_kendaraan`
+-- Struktur dari tabel `table_service_kendaraan`
 --
 
 CREATE TABLE `table_service_kendaraan` (
@@ -12733,7 +12728,7 @@ CREATE TABLE `table_service_kendaraan` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_status_inspeksi`
+-- Struktur dari tabel `table_status_inspeksi`
 --
 
 CREATE TABLE `table_status_inspeksi` (
@@ -12751,7 +12746,7 @@ CREATE TABLE `table_status_inspeksi` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_tracking`
+-- Struktur dari tabel `table_tracking`
 --
 
 CREATE TABLE `table_tracking` (
@@ -12766,7 +12761,7 @@ CREATE TABLE `table_tracking` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_user`
+-- Struktur dari tabel `table_user`
 --
 
 CREATE TABLE `table_user` (
@@ -12778,7 +12773,7 @@ CREATE TABLE `table_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `table_user`
+-- Dumping data untuk tabel `table_user`
 --
 
 INSERT INTO `table_user` (`id`, `nik`, `password`, `nama`, `jabatan`) VALUES
@@ -12795,351 +12790,339 @@ INSERT INTO `table_user` (`id`, `nik`, `password`, `nama`, `jabatan`) VALUES
 --
 
 --
--- Indexes for table `master_barang`
+-- Indeks untuk tabel `master_barang`
 --
 ALTER TABLE `master_barang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `master_bin`
+-- Indeks untuk tabel `master_bin`
 --
 ALTER TABLE `master_bin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `master_bin_location`
+-- Indeks untuk tabel `master_bin_location`
 --
 ALTER TABLE `master_bin_location`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `master_supplier`
+-- Indeks untuk tabel `master_supplier`
 --
 ALTER TABLE `master_supplier`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `master_warehouse`
+-- Indeks untuk tabel `master_warehouse`
 --
 ALTER TABLE `master_warehouse`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `migrations`
+-- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `reservations`
+-- Indeks untuk tabel `reservations`
 --
 ALTER TABLE `reservations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `seats`
+-- Indeks untuk tabel `seats`
 --
 ALTER TABLE `seats`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_bin`
+-- Indeks untuk tabel `table_bin`
 --
 ALTER TABLE `table_bin`
   ADD PRIMARY KEY (`id`),
   ADD KEY `table_bin_ibfk_2` (`pallet_id`);
 
 --
--- Indexes for table `table_customer`
+-- Indeks untuk tabel `table_customer`
 --
 ALTER TABLE `table_customer`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_delivery`
+-- Indeks untuk tabel `table_delivery`
 --
 ALTER TABLE `table_delivery`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_gps`
+-- Indeks untuk tabel `table_gps`
 --
 ALTER TABLE `table_gps`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_gr`
+-- Indeks untuk tabel `table_gr`
 --
 ALTER TABLE `table_gr`
   ADD PRIMARY KEY (`id`),
   ADD KEY `po_id` (`po_id`);
 
 --
--- Indexes for table `table_kendaraan`
+-- Indeks untuk tabel `table_kendaraan`
 --
 ALTER TABLE `table_kendaraan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_konversi`
+-- Indeks untuk tabel `table_konversi`
 --
 ALTER TABLE `table_konversi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_paletization`
+-- Indeks untuk tabel `table_paletization`
 --
 ALTER TABLE `table_paletization`
   ADD PRIMARY KEY (`id`),
   ADD KEY `table_paletization_ibfk_1` (`gr_id`);
 
 --
--- Indexes for table `table_po`
+-- Indeks untuk tabel `table_po`
 --
 ALTER TABLE `table_po`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_purchase_detail`
+-- Indeks untuk tabel `table_purchase_detail`
 --
 ALTER TABLE `table_purchase_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_qc`
+-- Indeks untuk tabel `table_qc`
 --
 ALTER TABLE `table_qc`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_request`
+-- Indeks untuk tabel `table_request`
 --
 ALTER TABLE `table_request`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_request_detail`
+-- Indeks untuk tabel `table_request_detail`
 --
 ALTER TABLE `table_request_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_satuan_berat`
+-- Indeks untuk tabel `table_satuan_berat`
 --
 ALTER TABLE `table_satuan_berat`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_schedule_incoming`
+-- Indeks untuk tabel `table_schedule_incoming`
 --
 ALTER TABLE `table_schedule_incoming`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_service_kendaraan`
+-- Indeks untuk tabel `table_service_kendaraan`
 --
 ALTER TABLE `table_service_kendaraan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_status_inspeksi`
+-- Indeks untuk tabel `table_status_inspeksi`
 --
 ALTER TABLE `table_status_inspeksi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_tracking`
+-- Indeks untuk tabel `table_tracking`
 --
 ALTER TABLE `table_tracking`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_user`
+-- Indeks untuk tabel `table_user`
 --
 ALTER TABLE `table_user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `master_barang`
+-- AUTO_INCREMENT untuk tabel `master_barang`
 --
 ALTER TABLE `master_barang`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1023;
 
 --
--- AUTO_INCREMENT for table `master_bin`
+-- AUTO_INCREMENT untuk tabel `master_bin`
 --
 ALTER TABLE `master_bin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=865;
 
 --
--- AUTO_INCREMENT for table `master_supplier`
+-- AUTO_INCREMENT untuk tabel `master_supplier`
 --
 ALTER TABLE `master_supplier`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9874;
 
 --
--- AUTO_INCREMENT for table `master_warehouse`
+-- AUTO_INCREMENT untuk tabel `master_warehouse`
 --
 ALTER TABLE `master_warehouse`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=200;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- AUTO_INCREMENT for table `reservations`
+-- AUTO_INCREMENT untuk tabel `reservations`
 --
 ALTER TABLE `reservations`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
--- AUTO_INCREMENT for table `seats`
+-- AUTO_INCREMENT untuk tabel `seats`
 --
 ALTER TABLE `seats`
   MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 
 --
--- AUTO_INCREMENT for table `table_bin`
+-- AUTO_INCREMENT untuk tabel `table_bin`
 --
 ALTER TABLE `table_bin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `table_customer`
+-- AUTO_INCREMENT untuk tabel `table_customer`
 --
 ALTER TABLE `table_customer`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `table_delivery`
+-- AUTO_INCREMENT untuk tabel `table_delivery`
 --
 ALTER TABLE `table_delivery`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `table_gps`
+-- AUTO_INCREMENT untuk tabel `table_gps`
 --
 ALTER TABLE `table_gps`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `table_gr`
+-- AUTO_INCREMENT untuk tabel `table_gr`
 --
 ALTER TABLE `table_gr`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
--- AUTO_INCREMENT for table `table_kendaraan`
+-- AUTO_INCREMENT untuk tabel `table_kendaraan`
 --
 ALTER TABLE `table_kendaraan`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `table_konversi`
+-- AUTO_INCREMENT untuk tabel `table_konversi`
 --
 ALTER TABLE `table_konversi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `table_paletization`
+-- AUTO_INCREMENT untuk tabel `table_paletization`
 --
 ALTER TABLE `table_paletization`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=195;
 
 --
--- AUTO_INCREMENT for table `table_po`
+-- AUTO_INCREMENT untuk tabel `table_po`
 --
 ALTER TABLE `table_po`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
--- AUTO_INCREMENT for table `table_purchase_detail`
+-- AUTO_INCREMENT untuk tabel `table_purchase_detail`
 --
 ALTER TABLE `table_purchase_detail`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `table_qc`
+-- AUTO_INCREMENT untuk tabel `table_qc`
 --
 ALTER TABLE `table_qc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- AUTO_INCREMENT for table `table_request`
+-- AUTO_INCREMENT untuk tabel `table_request`
 --
 ALTER TABLE `table_request`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `table_request_detail`
+-- AUTO_INCREMENT untuk tabel `table_request_detail`
 --
 ALTER TABLE `table_request_detail`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `table_satuan_berat`
+-- AUTO_INCREMENT untuk tabel `table_satuan_berat`
 --
 ALTER TABLE `table_satuan_berat`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `table_schedule_incoming`
+-- AUTO_INCREMENT untuk tabel `table_schedule_incoming`
 --
 ALTER TABLE `table_schedule_incoming`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `table_service_kendaraan`
+-- AUTO_INCREMENT untuk tabel `table_service_kendaraan`
 --
 ALTER TABLE `table_service_kendaraan`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `table_status_inspeksi`
+-- AUTO_INCREMENT untuk tabel `table_status_inspeksi`
 --
 ALTER TABLE `table_status_inspeksi`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `table_tracking`
+-- AUTO_INCREMENT untuk tabel `table_tracking`
 --
 ALTER TABLE `table_tracking`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `table_user`
+-- AUTO_INCREMENT untuk tabel `table_user`
 --
 ALTER TABLE `table_user`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `table_bin`
---
-ALTER TABLE `table_bin`
-  ADD CONSTRAINT `table_bin_ibfk_1` FOREIGN KEY (`pallet_id`) REFERENCES `table_paletization` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `table_gr`
+-- Ketidakleluasaan untuk tabel `table_gr`
 --
 ALTER TABLE `table_gr`
   ADD CONSTRAINT `table_gr_ibfk_1` FOREIGN KEY (`po_id`) REFERENCES `table_po` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `table_paletization`
---
-ALTER TABLE `table_paletization`
-  ADD CONSTRAINT `table_paletization_ibfk_1` FOREIGN KEY (`gr_id`) REFERENCES `table_gr` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

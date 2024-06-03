@@ -167,10 +167,10 @@
                 case 'not_fulfilled':
                     alert(response.message); // Display an alert for not fulfilled PO
                     $('input[name^="qty_dtg"]').prop('readonly', false); // Ensure it is editable if needed
-                    $('#add_field').hide();
+                    // $('#add_field').hide();
                     break;
                 default:
-                     add_button.hide(); // Hide the button
+                    //  add_button.hide(); // Hide the button
                     alert('Error occurred while checking PO status.'); // Display an error alert
                     break;
             }
@@ -287,6 +287,7 @@ function setMinDateForExpDateFields() {
                     $.each(response.data, function (index, row) {
                         
                         var fieldHtml = '<br><h3>Form Data Barang Good Receive ke-' + (index + 1) +'</h3><div class="row">';
+                        
                         var nomorQCInput = '<div class="col-sm-6"><label>Nomor QC barang ' + (index + 1) + ' : </label><input type="text" name="nomor_qc[]" id="nomor_qc" class="form-control" value="' + row.nomor_qc + '"readonly></div>';
                         fieldHtml += nomorQCInput;
                         

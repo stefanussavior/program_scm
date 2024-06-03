@@ -59,6 +59,7 @@ class FormQCController extends BaseController
         $perform_array = $this->request->getPost('perform');
         $qc_reject_desc_array = $this->request->getPost('qc_reject_desc');
         $status_array = $this->request->getPost('status');
+        
 
         $lastQualityControl = $QCModel->orderBy('created_at', 'desc')->first();
         $lastQualityControlCreatedAt = $lastQualityControl ? $lastQualityControl['created_at'] : null;

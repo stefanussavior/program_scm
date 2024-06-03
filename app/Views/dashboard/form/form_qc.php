@@ -148,6 +148,8 @@
                     <option value="release">Release</option>
                 </select>
             </div> -->
+
+            
             <br/>
             <button type="submit" class="btn btn-primary">Submit</button>
             <button type="reset" class="btn btn-danger">Cancel</button>
@@ -248,7 +250,7 @@
                         var qcRejectDescInput = '<div class="col-sm-6"><label> QC Reject Desc ' + (index + 1) + ' : </label><input name="qc_reject_desc[]" id="qc_reject_desc[]_' + (index + 1) + '" class="form-control"></div>';
                         fieldHtml += qcRejectDescInput;
 
-                        var statusInput = '<div class="col-sm-6"><label> Status ' + (index + 1) + ' : </label><input type="text" class="form-control" value="hold" name="status[]" id="status_[]_ ' + (index + 1) + '" readonly></div>';
+                        var statusInput = '<div class="col-sm-6"><label> Status ' + (index + 1) + ' : </label><select name="status[]" id="status" class="form-control"><option value="" selected disabled>-- PILIH STATUS QC ---</option><option value="hold">Hold</option><option value="release">Release</option><option value="reject">Reject</option></select></div>';
                         fieldHtml += statusInput;
 
                         fieldHtml += '</div><br/>';
@@ -356,7 +358,7 @@ function setMinDateForExpDateFields() {
     var qtySampling = $('#qty_sampling' + index).val();
     var qtyPO = $('#qty_po_' + index).val();
 
-    if (qtySampling > qtyPO) {
+    if (parseInt(qtySampling) > parseInt(qtyPO)) {
         // Remove any existing alert div
         $('.qty-alert' + index).find('.alert').remove();
 

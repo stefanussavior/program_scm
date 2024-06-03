@@ -17,6 +17,7 @@
                 <th>Lots</th>
                 <th>COO</th>
                 <th>COA</th>
+                <th>UOM</th>
                 <th>Qty Sampling</th>
                 <th>Qty Reject</th>
                 <th>Desc QC</th>
@@ -81,12 +82,13 @@
         "ajax": "<?= site_url('/ajax_get_data_qc'); ?>",
         "columns": [
             { "data": "id" },
-            { "data": "nama_barang" },
             { "data" : "nomor_qc"},
+            { "data": "nama_barang" },
             { "data": "qty_po" },
             { "data": "lots" },
             { "data": "coo"},
             { "data": "coa" },
+            { "data" : "uom"},
             { "data" : "qty_sampling"},
             { "data": "qty_reject" },
             { "data" : "qc_desc"},
